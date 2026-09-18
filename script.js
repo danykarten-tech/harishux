@@ -190,7 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
       url: "https://www.invisalearn.com/",
       image: "assets/images/portfolio_extracted_3.jpg",
       sections: [
-        { num: "01", title: "Overview", content: "Invisalearn is a web and mobile EdTech platform connecting students with expert educators." }
+        { num: "01", title: "Overview", content: "Invisalearn is a web and mobile EdTech platform connecting students with expert educators through interactive courses, live sessions, and progress tracking." },
+        { num: "02", title: "Learner Experience", content: "Designed personalized learning dashboards, video course players, interactive quiz modules, and certificate generation features." }
       ]
     },
     'skin-pal': {
@@ -200,7 +201,74 @@ document.addEventListener('DOMContentLoaded', () => {
       url: "https://skin-pal.in/",
       image: "assets/images/portfolio_extracted_4.jpg",
       sections: [
-        { num: "01", title: "Overview", content: "Personalized skincare analysis app using AI computer vision to recommend tailored routines." }
+        { num: "01", title: "Overview", content: "Personalized skincare analysis app using AI computer vision to analyze skin conditions and recommend tailored skincare routines." },
+        { num: "02", title: "AI Scan UX", content: "Guided camera scan interface with real-time positioning feedback, immediate skin health metrics, and customized product pairing recommendations." }
+      ]
+    },
+    'reign-pilates': {
+      title: "Reign Pilates",
+      category: "Wellness & Studio Platform",
+      role: "UI/UX & Brand Designer",
+      url: "https://reignpilates.com/",
+      image: "assets/images/portfolio_extracted_5.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "Reign Pilates is a luxury wellness studio digital experience featuring online class bookings, trainer schedules, and membership portal." },
+        { num: "02", title: "Booking UX", content: "Seamless class reservation flow with interactive calendar, instructor preference selection, and instant confirmation notifications." }
+      ]
+    },
+    'lifehub-education': {
+      title: "LifeHub Education",
+      category: "EdTech & Learn & Earn Platform",
+      role: "Product Designer",
+      url: "https://lifehub.education/",
+      image: "assets/images/portfolio_extracted_6.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "LifeHub Education combines real-world skill learning with gamified achievement rewards for modern students." },
+        { num: "02", title: "Gamified Learning UI", content: "Interactive skill trees, badge unlocks, and peer collaboration leaderboards designed to maximize course completion rates." }
+      ]
+    },
+    'drivex': {
+      title: "DriveX",
+      category: "Mobility & Vehicle Rental App",
+      role: "Lead Mobile App UI/UX",
+      url: "https://drivex.in/",
+      image: "assets/images/portfolio_extracted_7.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "DriveX is a multi-service mobility platform offering vehicle subscriptions, electric bike rentals, and instant parcel delivery." },
+        { num: "02", title: "Fleet Management UI", content: "Real-time vehicle map tracking, digital key unlock via Bluetooth, and dynamic trip pricing calculations." }
+      ]
+    },
+    'betbricks7': {
+      title: "BetBricks7",
+      category: "Online Sports Betting Platform",
+      role: "Senior UI/UX Designer",
+      url: "https://betbricks7.com/",
+      image: "assets/images/portfolio_extracted_8.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "High-density online sports betting platform providing live match statistics, real-time odds updates, and fast bet slip processing." },
+        { num: "02", title: "Data Density UX", content: "Crafted compact, high-performance dashboards allowing bettors to monitor multiple live sports events simultaneously." }
+      ]
+    },
+    'bhutan-travel-now': {
+      title: "Bhutan Travel Now",
+      category: "Travel & Tourism Platform",
+      role: "UI/UX & Web Designer",
+      url: "https://bhutantravelnow.com/",
+      image: "assets/images/portfolio_extracted_10.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "Conversion-focused tourism portal showcasing Bhutan's cultural tours, trekking itineraries, and luxury resort bookings." },
+        { num: "02", title: "Editorial Travel UX", content: "Immersive full-screen imagery, custom itinerary builder, visa guidance assistant, and instant tour inquiry workflows." }
+      ]
+    },
+    'per-diem': {
+      title: "Per Diem",
+      category: "Restaurant Technology Platform",
+      role: "UI/UX & SaaS Product Designer",
+      url: "https://perdiem.ai/",
+      image: "assets/images/portfolio_extracted_11.jpg",
+      sections: [
+        { num: "01", title: "Overview", content: "White-label restaurant digital ordering platform and recurring loyalty subscription management system." },
+        { num: "02", title: "Merchant Dashboard", content: "Order dispatch management, automated customer retention campaigns, and menu customization dashboard for restaurant owners." }
       ]
     }
   };
@@ -222,9 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modalBody) {
       let html = `
-        <div style="margin-bottom: 28px; padding: 20px 24px; background: var(--bg-tertiary); border-radius: var(--radius-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+        <div style="margin-bottom: 28px; padding: 20px 24px; background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
           <div>
-            <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">${data.title} Case Study</h4>
+            <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">${data.title} Case Study</h4>
             <p style="font-size: 0.875rem; color: var(--text-muted);">Role: <strong>${data.role}</strong> | Category: <strong>${data.category}</strong></p>
           </div>
           ${data.url ? `<a href="${data.url}" target="_blank" rel="noopener" class="btn btn-accent" style="padding: 8px 18px; font-size: 0.8125rem;">Visit Live Project ↗</a>` : ''}
@@ -233,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (data.image) {
         html += `
-          <div style="margin-bottom: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+          <div style="margin-bottom: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
             <img src="${data.image}" alt="${data.title} Cover" style="width: 100%; display: block;" />
           </div>
         `;
@@ -241,10 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       data.sections.forEach(sec => {
         html += `
-          <div class="cs-section">
-            <div class="cs-num">SECTION ${sec.num}</div>
-            <h4 class="cs-title">${sec.title}</h4>
-            <p class="cs-text">${sec.content}</p>
+          <div class="cs-section" style="margin-bottom: 24px; padding: 24px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+            <div class="cs-num" style="font-size: 0.75rem; font-weight: 800; color: #60A5FA; margin-bottom: 4px;">SECTION ${sec.num}</div>
+            <h4 class="cs-title" style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">${sec.title}</h4>
+            <p class="cs-text" style="font-size: 0.90625rem; color: #94A3B8; line-height: 1.6;">${sec.content}</p>
           </div>
         `;
       });
