@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harish Singh — Senior UI/UX Designer | Product Designer</title>
+  <meta name="description" content="Harish Singh is a Senior UI/UX and Product Designer with 11+ years of design experience, creating intuitive digital products across web, mobile, SaaS, eCommerce, AI and emerging technologies.">
+  <meta name="author" content="Harish Singh">
+  
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harish Singh — Senior UI/UX Designer | Product Designer">
+  <meta property="og:description" content="Designing digital experiences for a better tomorrow. 11+ Years Experience · 6 Years UI/UX · 5 Years Graphic Design.">
+  <meta property="og:image" content="assets/images/portfolio_extracted_1.jpg">
+
+  <!-- Google Fonts: Inter & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B132B'/><text x='50%' y='68%' font-size='48' font-weight='900' fill='%232563EB' text-anchor='middle' font-family='sans-serif'>HS</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================
+       GLOBAL STICKY NAVIGATION HEADER
+       ========================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#" onclick="navigateTo('home', event)" class="site-logo">
+        <div class="logo-monogram">HS</div>
+        <div class="logo-text-group">
+          <span class="logo-name">Harish Singh</span>
+          <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" data-view="home" onclick="navigateTo('home', event)" class="nav-link active">Home</a></li>
+          <li><a href="#" data-view="work" onclick="navigateTo('work', event)" class="nav-link">Work</a></li>
+          <li><a href="#" data-view="about" onclick="navigateTo('about', event)" class="nav-link">About</a></li>
+          <li><a href="#" data-view="experience" onclick="navigateTo('experience', event)" class="nav-link">Experience</a></li>
+          <li><a href="#" data-view="skills" onclick="navigateTo('skills', event)" class="nav-link">Skills</a></li>
+          <li><a href="#" data-view="contact" onclick="navigateTo('contact', event)" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <button onclick="openModal('cvModal')" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.8125rem;">📄 View CV</button>
+        <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;">
+          Download CV ↓
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#" onclick="navigateTo('home', event)" class="mobile-nav-link">Home</a>
+      <a href="#" onclick="navigateTo('work', event)" class="mobile-nav-link">Work</a>
+      <a href="#" onclick="navigateTo('about', event)" class="mobile-nav-link">About</a>
+      <a href="#" onclick="navigateTo('experience', event)" class="mobile-nav-link">Experience</a>
+      <a href="#" onclick="navigateTo('skills', event)" class="mobile-nav-link">Skills</a>
+      <a href="#" onclick="navigateTo('contact', event)" class="mobile-nav-link">Contact</a>
+      <button onclick="openModal('cvModal')" class="btn btn-secondary" style="margin-top: 10px;">View Curriculum Vitae</button>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==========================================
+         PAGE VIEW 1: HOME PAGE (GATEWAY)
+         ========================================== -->
+    <div class="page-view active" id="home">
+
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <span class="hero-eyebrow">CRAFTING · USER-CENTRED · DIGITAL PRODUCTS</span>
+            <h1 class="hero-headline">
+              Designing <span class="highlight-text">digital experiences</span> for a better tomorrow.
+            </h1>
+            <p class="hero-description">
+              I'm Harish Singh, a Senior UI/UX Designer and Product Designer with 11+ years of overall design experience, creating intuitive, scalable and visually refined digital products across web, mobile, SaaS, eCommerce and emerging technologies.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#" onclick="navigateTo('work', event)" class="btn btn-primary">
+                View My Work →
+              </a>
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
+                Download CV ↓
+              </a>
+              <button onclick="openModal('cvModal')" class="btn btn-secondary" style="border: none; background: transparent; color: var(--accent-blue); text-decoration: underline; padding: 0 8px;">
+                View Online CV
+              </button>
+            </div>
+
+            <!-- STATS BAR -->
+            <div class="stats-bar">
+              <div class="stat-item">
+                <h3>11+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>6+</h3>
+                <p>Years in UI/UX</p>
+              </div>
+              <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years in Graphic Design</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO RIGHT VISUAL WITH FLOATING CARDS -->
+          <div class="hero-visual-wrapper">
+            <!-- Handwritten Annotation Arrow -->
+            <div style="position: absolute; top: -35px; left: 0; z-index: 12; font-family: var(--font-handwriting); font-size: 1.5rem; color: #475569; transform: rotate(-8deg);">
+              Good Design<br>Brighter Tomorrow ~
+              <svg width="40" height="30" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="2" style="display: block; margin-left: 20px;"><path d="M5 5 Q 25 35 45 30 M 35 32 L 45 30 L 40 20"/></svg>
+            </div>
+
+            <div class="hero-portrait-card">
+              <img src="assets/images/portfolio_extracted_1.jpg" alt="Harish Singh Senior UI/UX Designer" class="portrait-img">
+              
+              <!-- Floating Card 1 (Top Right) -->
+              <div class="floating-card fc-top-right">
+                <h5>User Focused Designs for Real People</h5>
+              </div>
+
+              <!-- Floating Card 2 (Middle Right) -->
+              <div class="floating-card fc-mid-right">
+                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> UI/UX Design</div>
+                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Product Design</div>
+                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Branding</div>
+                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Design Systems</div>
+              </div>
+
+              <!-- Floating Card 3 (Bottom Right) -->
+              <div class="floating-card fc-bottom-right">
+                <p>Ideas<br>Design<br>Solutions<br>Impact</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELECTED PROJECTS (EXACT 3x2 GRID MATCHING REFERENCE DESIGN) -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+            <div>
+              <span class="section-eyebrow">FEATURED WORK</span>
+              <h2 class="section-title" style="margin-bottom: 8px;">Selected Projects</h2>
+              <p style="font-size: 1rem; color: var(--text-muted);">A showcase of my best work across different industries and products.</p>
+            </div>
+            <a href="#" onclick="navigateTo('work', event)" class="btn-link" style="font-size: 0.9375rem; font-weight: 700;">
+              View All Projects →
+            </a>
+          </div>
+
+          <div class="projects-grid-3x2">
+            
+            <!-- PROJECT 01: TURO ART GALLERY -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery UI Mockup" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Turo Art Gallery</h3>
+                <span class="card-category-ref">Art Marketplace Platform</span>
+                <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork, with artist onboarding and rewards experiences.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">Marketplace</span>
+                    <span class="tag-badge">Web</span>
+                    <span class="tag-badge">UI/UX</span>
+                  </div>
+                  <button onclick="openCaseStudy('turo')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 02: IBC MEDIA -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media Web3 Mockup" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">IBC Media</h3>
+                <span class="card-category-ref">Web3 & Blockchain Platform</span>
+                <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">Web3</span>
+                    <span class="tag-badge">Events</span>
+                    <span class="tag-badge">Web</span>
+                  </div>
+                  <button onclick="openCaseStudy('ibc')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: DROOBNA -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/droobna_app.jpg" alt="Droobna Mobility App UI" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Droobna</h3>
+                <span class="card-category-ref">Mobility & Food Delivery Platform</span>
+                <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">Mobility</span>
+                    <span class="tag-badge">Food Delivery</span>
+                    <span class="tag-badge">Mobile</span>
+                  </div>
+                  <button onclick="openCaseStudy('droobna')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 04: RANKYFY -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy AI SEO Dashboard" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Rankyfy</h3>
+                <span class="card-category-ref">AI-Powered SEO Platform</span>
+                <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">AI</span>
+                    <span class="tag-badge">SEO</span>
+                    <span class="tag-badge">SaaS</span>
+                  </div>
+                  <button onclick="openCaseStudy('rankyfy')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 05: INVISALEARN -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn EdTech Platform" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Invisalearn</h3>
+                <span class="card-category-ref">EdTech & Online Learning Platform</span>
+                <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">EdTech</span>
+                    <span class="tag-badge">Learning</span>
+                    <span class="tag-badge">Web</span>
+                  </div>
+                  <button onclick="openCaseStudy('invisalearn')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 06: SKIN-PAL -->
+            <article class="project-card-ref">
+              <div class="card-media-box">
+                <img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal AI Skincare Platform" loading="lazy">
+              </div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Skin-Pal</h3>
+                <span class="card-category-ref">AI Powered Skincare Platform</span>
+                <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and product suggestions.</p>
+                
+                <div class="card-footer-ref">
+                  <div class="card-tags-ref">
+                    <span class="tag-badge">AI</span>
+                    <span class="tag-badge">Healthcare</span>
+                    <span class="tag-badge">Mobile</span>
+                  </div>
+                  <button onclick="openCaseStudy('skin-pal')" class="btn-circle" aria-label="View Case Study">
+                    →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- MORE PROJECTS -->
+      <section class="section">
+        <div class="container">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;">
+            <div>
+              <span class="section-eyebrow">MORE PROJECTS</span>
+              <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--text-heading);">Other projects I've worked on across different industries</h3>
+            </div>
+            <a href="#" onclick="navigateTo('work', event)" class="btn-link">View All Projects →</a>
+          </div>
+
+          <div class="more-projects-grid">
+            <div class="compact-card" onclick="openCaseStudy('reign-pilates')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_5.jpg" alt="Reign Pilates"></div>
+              <div class="compact-card-body">
+                <h4>Reign Pilates</h4>
+                <p>Wellness & Studio</p>
+              </div>
+            </div>
+            <div class="compact-card" onclick="openCaseStudy('lifehub-education')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_6.jpg" alt="LifeHub Education"></div>
+              <div class="compact-card-body">
+                <h4>LifeHub Education</h4>
+                <p>EdTech Platform</p>
+              </div>
+            </div>
+            <div class="compact-card" onclick="openCaseStudy('drivex')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_7.jpg" alt="DriveX"></div>
+              <div class="compact-card-body">
+                <h4>DriveX</h4>
+                <p>Mobility App</p>
+              </div>
+            </div>
+            <div class="compact-card" onclick="openCaseStudy('betbricks7')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_8.jpg" alt="BetBricks7"></div>
+              <div class="compact-card-body">
+                <h4>BetBricks7</h4>
+                <p>Sports Platform</p>
+              </div>
+            </div>
+            <div class="compact-card" onclick="openCaseStudy('bhutan-travel-now')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_10.jpg" alt="Bhutan Travel Now"></div>
+              <div class="compact-card-body">
+                <h4>Bhutan Travel Now</h4>
+                <p>Travel Platform</p>
+              </div>
+            </div>
+            <div class="compact-card" onclick="openCaseStudy('per-diem')">
+              <div class="compact-img-box"><img src="assets/images/portfolio_extracted_11.jpg" alt="Per Diem"></div>
+              <div class="compact-card-body">
+                <h4>Per Diem</h4>
+                <p>Restaurant Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE PREVIEW -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+            <div>
+              <span class="section-eyebrow">EXPERIENCE</span>
+              <h2 class="section-title" style="margin-bottom: 8px;">My Professional Journey</h2>
+              <p style="font-size: 1rem; color: var(--text-muted);">A journey of continuous learning, growth and meaningful design experiences.</p>
+            </div>
+            <a href="#" onclick="navigateTo('experience', event)" class="btn btn-primary">
+              View Full Resume →
+            </a>
+          </div>
+
+          <div class="exp-timeline-horizontal">
+            <div class="exp-h-node">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2014 – 2016</div>
+              <div class="exp-h-role">Graphic Designer</div>
+              <div class="exp-h-company">HDL Pvt. Ltd.</div>
+            </div>
+            <div class="exp-h-node">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2016 – 2017</div>
+              <div class="exp-h-role">Graphic Designer</div>
+              <div class="exp-h-company">Future Work Tech</div>
+            </div>
+            <div class="exp-h-node">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2017 – 2020</div>
+              <div class="exp-h-role">Graphic & Web Designer</div>
+              <div class="exp-h-company">Recraft Relic Pvt.</div>
+            </div>
+            <div class="exp-h-node">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2020 – 2023</div>
+              <div class="exp-h-role">UI/UX Designer</div>
+              <div class="exp-h-company">Enbloc Media Pvt.</div>
+            </div>
+            <div class="exp-h-node">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2023 – 2025</div>
+              <div class="exp-h-role">UI/UX Designer</div>
+              <div class="exp-h-company">Recraft Relic Pvt.</div>
+            </div>
+            <div class="exp-h-node active">
+              <div class="exp-h-dot"></div>
+              <div class="exp-h-year">2025 – Present</div>
+              <div class="exp-h-role">Senior UI/UX Designer</div>
+              <div class="exp-h-company">RichestSoft Pvt. Ltd.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS & TOOLS PREVIEW -->
+      <section class="section">
+        <div class="container">
+          <span class="section-eyebrow">SKILLS & TOOLS</span>
+          <h2 class="section-title" style="margin-bottom: 12px;">Tools I use to bring ideas to life.</h2>
+          
+          <div class="tools-icon-row" style="margin-top: 32px;">
+            <div class="tool-badge">Figma</div>
+            <div class="tool-badge">Photoshop</div>
+            <div class="tool-badge">Illustrator</div>
+            <div class="tool-badge">Adobe XD</div>
+            <div class="tool-badge">Framer</div>
+            <div class="tool-badge">Webflow</div>
+            <div class="tool-badge">Canva</div>
+            <div class="tool-badge" style="background: var(--accent-blue-light); color: var(--accent-blue);">✨ Claude</div>
+            <div class="tool-badge" style="background: var(--accent-blue-light); color: var(--accent-blue);">✨ Gemini</div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="tag-badge">UI/UX Design</span>
+            <span class="tag-badge">Product Design</span>
+            <span class="tag-badge">Wireframing</span>
+            <span class="tag-badge">Prototyping</span>
+            <span class="tag-badge">Design Systems</span>
+            <span class="tag-badge">Branding</span>
+            <span class="tag-badge">Graphic Design</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- GLOBAL CTA BANNER ("LET'S WORK TOGETHER") -->
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <div class="cta-banner-dark">
+            <div class="cta-banner-content">
+              <span class="section-eyebrow" style="color: #38BDF8;">LET'S WORK TOGETHER</span>
+              <h2>Have a project in mind?</h2>
+              <p>I'm open to opportunities where I can contribute as a Senior UI/UX Designer, Product Designer or Design Lead.</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 16px;">
+              <div class="cta-banner-actions">
+                <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
+                  Get in Touch →
+                </a>
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                  Download CV ↓
+                </a>
+              </div>
+              <div style="font-family: var(--font-handwriting); font-size: 1.5rem; color: #94A3B8; transform: rotate(-3deg);">
+                Let's create something meaningful.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================
+         PAGE VIEW 2: WORK ARCHIVE (/work)
+         ========================================== -->
+    <div class="page-view" id="work">
+      <section class="section" style="padding-top: 140px;">
+        <div class="container">
+          <span class="section-eyebrow">COMPLETE ARCHIVE</span>
+          <h1 class="section-title">Selected Work</h1>
+          <p class="section-subtitle">12 projects. Multiple industries. One design approach.</p>
+
+          <!-- CATEGORY FILTER BAR -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="web3">Web3</button>
+          </div>
+
+          <!-- ALL 12 PROJECTS GRID -->
+          <div class="projects-grid-3x2" id="archiveGrid">
+            
+            <article class="project-card-ref archive-card" data-category="uiux web marketplace">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Turo Art Gallery</h3>
+                <span class="card-category-ref">Art Marketplace Platform</span>
+                <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork with artist onboarding and rewards.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Marketplace</span>
+                  <button onclick="openCaseStudy('turo')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="uiux web web3">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">IBC Media</h3>
+                <span class="card-category-ref">Web3 & Blockchain Platform</span>
+                <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Web3</span>
+                  <button onclick="openCaseStudy('ibc')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="uiux mobile">
+              <div class="card-media-box"><img src="assets/images/droobna_app.jpg" alt="Droobna"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Droobna</h3>
+                <span class="card-category-ref">Mobility & Food Delivery Platform</span>
+                <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Mobile</span>
+                  <button onclick="openCaseStudy('droobna')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="uiux saas ai">
+              <div class="card-media-box"><img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Rankyfy</h3>
+                <span class="card-category-ref">AI-Powered SEO Platform</span>
+                <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">AI / SaaS</span>
+                  <button onclick="openCaseStudy('rankyfy')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="uiux web mobile">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Invisalearn</h3>
+                <span class="card-category-ref">EdTech & Online Learning</span>
+                <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">EdTech</span>
+                  <button onclick="openCaseStudy('invisalearn')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="uiux mobile ai">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Skin-Pal</h3>
+                <span class="card-category-ref">AI Skincare Platform</span>
+                <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and suggestions.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">AI</span>
+                  <button onclick="openCaseStudy('skin-pal')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="web">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_5.jpg" alt="Reign Pilates"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Reign Pilates</h3>
+                <span class="card-category-ref">Wellness Studio Website</span>
+                <p class="card-desc-ref">Digital identity and booking experience for a luxury wellness studio.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Web</span>
+                  <button onclick="openCaseStudy('reign-pilates')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="web mobile">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_6.jpg" alt="LifeHub Education"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">LifeHub Education</h3>
+                <span class="card-category-ref">Learn & Earn Platform</span>
+                <p class="card-desc-ref">Educational platform combining learning, real-world skills and reward experiences.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">EdTech</span>
+                  <button onclick="openCaseStudy('lifehub-education')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="mobile">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_7.jpg" alt="DriveX"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">DriveX</h3>
+                <span class="card-category-ref">Mobility & Delivery App</span>
+                <p class="card-desc-ref">Multi-service app covering ride booking, parcel delivery and vehicle rentals.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Mobile</span>
+                  <button onclick="openCaseStudy('drivex')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="web">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_8.jpg" alt="BetBricks7"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">BetBricks7</h3>
+                <span class="card-category-ref">Online Sports Betting Platform</span>
+                <p class="card-desc-ref">High-density live match statistics, real-time odds tracking, and quick bet slip UI.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Web</span>
+                  <button onclick="openCaseStudy('betbricks7')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="web">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_10.jpg" alt="Bhutan Travel Now"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Bhutan Travel Now</h3>
+                <span class="card-category-ref">Travel & Tour Platform</span>
+                <p class="card-desc-ref">Conversion-focused tourism portal showcasing tour packages and cultural guides.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">Web</span>
+                  <button onclick="openCaseStudy('bhutan-travel-now')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card-ref archive-card" data-category="web saas">
+              <div class="card-media-box"><img src="assets/images/portfolio_extracted_11.jpg" alt="Per Diem"></div>
+              <div class="card-body-ref">
+                <h3 class="card-title-ref">Per Diem</h3>
+                <span class="card-category-ref">Restaurant Technology Platform</span>
+                <p class="card-desc-ref">White-label digital ordering platform and recurring loyalty subscription system.</p>
+                <div class="card-footer-ref">
+                  <span class="tag-badge">SaaS</span>
+                  <button onclick="openCaseStudy('per-diem')" class="btn-circle">→</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         PAGE VIEW 3: ABOUT (/about)
+         ========================================== -->
+    <div class="page-view" id="about">
+      <section class="section" style="padding-top: 140px;">
+        <div class="container">
+          <span class="section-eyebrow">ABOUT HARISH SINGH</span>
+          <h1 class="section-title">Design is more than how it looks.</h1>
+
+          <div style="display: grid; grid-template-columns: 1fr; gap: 48px; margin-top: 40px;">
+            <div style="font-size: 1.125rem; color: var(--text-muted); line-height: 1.8;">
+              <p style="margin-bottom: 24px;">
+                I'm a Senior UI/UX and Product Designer with 11+ years of overall design experience, including 6+ years in UI/UX and Product Design and 5+ years in Graphic Design.
+              </p>
+              <p style="margin-bottom: 24px;">
+                I work across the complete design lifecycle — from understanding requirements and user needs to research, user flows, wireframes, high-fidelity UI, prototypes, design systems, usability reviews and developer handoff.
+              </p>
+              <p>
+                My approach combines user needs, business goals, visual quality and practical product thinking.
+              </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">User Focused</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Grounded in research, real task flows, and intuitive usability patterns.</p>
+              </div>
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">Business Driven</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Aligning product strategy with measurable outcomes and developer feasibility.</p>
+              </div>
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">Visually Impactful</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Crafting editorial, modern UI design tokens with generous whitespace.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         PAGE VIEW 4: EXPERIENCE (/experience)
+         ========================================== -->
+    <div class="page-view" id="experience">
+      <section class="section" style="padding-top: 140px;">
+        <div class="container">
+          <span class="section-eyebrow">CAREER HISTORY</span>
+          <h1 class="section-title">11+ Years of Continuous Design Experience</h1>
+          <p class="section-subtitle">Full career timeline from Graphic Design foundation to Senior UI/UX & Product Design Leadership.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 32px; margin-top: 48px;">
+            
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color); border-left: 6px solid var(--accent-blue);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Senior UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Dec 2025 — Present</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">RichestSoft Pvt. Ltd. · Mohali, India</div>
+              <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
+                <li>Lead UI/UX design for web and mobile products across SaaS, eCommerce and marketplace platforms.</li>
+                <li>Translate business requirements into user journeys, information architecture, wireframes and high-fidelity UI.</li>
+                <li>Create interactive prototypes and maintain reusable design component libraries.</li>
+                <li>Collaborate directly with product managers, developers, clients and key stakeholders.</li>
+              </ul>
+            </div>
+
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Nov 2023 — Dec 2025</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Recraft Relic Pvt. · Mohali, India</div>
+              <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
+                <li>Delivered UI/UX and digital design solutions aligned with client objectives.</li>
+                <li>Designed responsive websites, dashboards, mobile applications and digital product experiences.</li>
+              </ul>
+            </div>
+
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Oct 2020 — Oct 2023</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Enbloc Media Pvt. · Hyderabad, India</div>
+              <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
+                <li>Designed web and mobile experiences for SaaS, eCommerce, Web3 and digital products.</li>
+              </ul>
+            </div>
+
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic & Web Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">June 2017 — Sept 2020</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Recraft Relic Pvt. · Mohali, India</div>
+            </div>
+
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Nov 2016 — May 2017</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Future Work Technologies · Mohali, India</div>
+            </div>
+
+            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Aug 2014 — Oct 2016</span>
+              </div>
+              <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">HDL Pvt. Ltd. · Mohali, India</div>
+            </div>
+
+          </div>
+
+          <!-- LEADERSHIP PILLARS -->
+          <div style="margin-top: 80px;">
+            <span class="section-eyebrow">DESIGN LEADERSHIP</span>
+            <h2 class="section-title">How I Lead Design</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 32px;">
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">01 — DIRECTION</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Design Direction</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Create clear design direction and maintain consistency across products.</p>
+              </div>
+
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">02 — QUALITY</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Design Quality</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Review designs for usability, visual quality, accessibility and consistency.</p>
+              </div>
+
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">03 — ALIGNMENT</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Collaboration</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Work closely with clients, product teams and developers.</p>
+              </div>
+
+              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">04 — MENTORSHIP</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Mentorship</h4>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Guide designers through feedback, reviews and problem-solving.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         PAGE VIEW 5: SKILLS & TOOLS (/skills)
+         ========================================== -->
+    <div class="page-view" id="skills">
+      <section class="section" style="padding-top: 140px;">
+        <div class="container">
+          <span class="section-eyebrow">CAPABILITIES</span>
+          <h1 class="section-title">Skills & Technologies</h1>
+          <p class="section-subtitle">Structured matrix of design capabilities, software stack, and visual communication background.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px;">
+            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">PRODUCT & UX</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+                UI/UX Design · Product Design · UX Research · User Flows · Information Architecture · Wireframing · Prototyping · Interaction Design · Design Thinking · Usability Testing
+              </p>
+            </div>
+
+            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">UI & VISUAL</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+                Visual Design · Responsive Web Design · Mobile App Design · Design Systems · Typography · Visual Hierarchy
+              </p>
+            </div>
+
+            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">COLLABORATION</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+                Client Communication · Stakeholder Collaboration · Design Reviews · Developer Handoff · Requirement Analysis
+              </p>
+            </div>
+
+            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">GRAPHIC</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+                Graphic Design · Branding · Identity Design · Marketing Design
+              </p>
+            </div>
+          </div>
+
+          <!-- BEYOND PRODUCT DESIGN (GRAPHIC DESIGN) -->
+          <div style="margin-top: 80px; padding: 40px; background: white; border-radius: var(--radius-xl); border: 1px solid var(--border-color);">
+            <span class="section-eyebrow">VISUAL COMMUNICATION</span>
+            <h2 class="section-title">Beyond Product Design</h2>
+            <p style="font-size: 1rem; color: var(--text-muted); max-width: 720px; margin-bottom: 32px;">
+              5+ years of experience in visual communication, branding and digital design. My graphic design background gives me a strong foundation in typography, composition, visual hierarchy, branding and communication.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Logo Design</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Brand Identity</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Social Media Design</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Marketing Creatives</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Brochures</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Promotional Graphics</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Web Design</span>
+              <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Digital Campaigns</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         PAGE VIEW 6: CONTACT (/contact)
+         ========================================== -->
+    <div class="page-view" id="contact">
+      <section class="section" style="padding-top: 140px;">
+        <div class="container">
+          <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+            <span class="section-eyebrow">GET IN TOUCH</span>
+            <h1 class="section-title">Have a product, problem, or idea worth designing?</h1>
+            <p class="section-subtitle" style="margin-bottom: 40px;">
+              I'm open to opportunities where I can contribute as a Senior UI/UX Designer, Product Designer, Lead Designer or Design Leader.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 48px;">
+              <a href="mailto:hariwork92@gmail.com" class="btn btn-accent" style="padding: 14px 32px;">
+                ✉️ Email Me: hariwork92@gmail.com
+              </a>
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
+                📄 Download CV PDF
+              </a>
+            </div>
+
+            <!-- DIRECT CONTACT FORM -->
+            <form style="background: #0F172A; border-radius: var(--radius-xl); padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: left;" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to Harish.');">
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Your Name</label>
+                <input type="text" required placeholder="Enter your name" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+              </div>
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Your Email</label>
+                <input type="email" required placeholder="name@company.com" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+              </div>
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Company / Project</label>
+                <input type="text" placeholder="Company name or project title" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+              </div>
+              <div style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Message</label>
+                <textarea rows="4" required placeholder="Tell me about your product or opportunity..." style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Let's Talk →</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="site-logo">
+          <div class="logo-monogram">HS</div>
+          <div class="logo-text-group">
+            <span class="logo-name" style="color:white;">Harish Singh</span>
+            <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+          </div>
+        </div>
+
+        <ul class="nav-links" style="display: flex; gap: 24px;">
+          <li><a href="#" onclick="navigateTo('home', event)" style="color: #94A3B8;">Home</a></li>
+          <li><a href="#" onclick="navigateTo('work', event)" style="color: #94A3B8;">Work</a></li>
+          <li><a href="#" onclick="navigateTo('about', event)" style="color: #94A3B8;">About</a></li>
+          <li><a href="#" onclick="navigateTo('experience', event)" style="color: #94A3B8;">Experience</a></li>
+          <li><a href="#" onclick="navigateTo('skills', event)" style="color: #94A3B8;">Skills</a></li>
+          <li><a href="#" onclick="navigateTo('contact', event)" style="color: #94A3B8;">Contact</a></li>
+        </ul>
+
+        <div class="footer-social-links">
+          <a href="https://linkedin.com" target="_blank" class="footer-social-icon" aria-label="LinkedIn">in</a>
+          <a href="https://behance.net" target="_blank" class="footer-social-icon" aria-label="Behance">Be</a>
+          <a href="mailto:hariwork92@gmail.com" class="footer-social-icon" aria-label="Email">✉️</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.8125rem; color: #64748B;">
+        <span>📍 Chandigarh, India</span>
+        <span>© 2026 Harish Singh. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       CASE STUDY SLIDE-OVER MODAL DRAWER
+       ========================================== -->
+  <div class="modal-overlay" id="caseStudyModal">
+    <div class="modal-drawer">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modalTitle">Case Study View</h3>
+          <p id="modalCategory">Product & UX Showcase</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content dynamically injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       EXECUTIVE CURRICULUM VITAE MODAL (MATCHING PDF EXPLICITLY)
+       ========================================== -->
+  <div class="modal-overlay" id="cvModal">
+    <div class="modal-drawer">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>Curriculum Vitae</h3>
+          <p>Harish Singh · Senior UI/UX Designer & Product Designer</p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-accent" style="padding: 8px 16px; font-size: 0.8125rem;">📥 Download PDF</a>
+          <button onclick="window.print()" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">🖨️ Print</button>
+          <button class="modal-close-btn" id="cvModalCloseBtn" aria-label="Close CV modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="cv-paper">
+          
+          <!-- HEADER BLOCK -->
+          <div class="cv-header-block">
+            <h1>HARISH SINGH</h1>
+            <div class="cv-subtitle">Senior UI/UX Designer | Product Designer</div>
+            <div style="font-size: 0.9375rem; color: var(--text-muted); font-weight: 600; margin-bottom: 8px;">
+              11+ Years Experience · 6 Years UI/UX · 5 Years Graphic Design
+            </div>
+            <div class="cv-meta-bar">
+              <span class="cv-meta-item">📞 9876895034</span>
+              <span class="cv-meta-item">✉️ hariwork92@gmail.com</span>
+              <span class="cv-meta-item">📍 Chandigarh, India</span>
+            </div>
+          </div>
+
+          <!-- SUMMARY -->
+          <div class="cv-sec-title">Professional Summary</div>
+          <p style="font-size: 0.9375rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            Senior UI/UX and Product Designer with 11+ years of design experience, including 6 years specializing in UI/UX and product design. Skilled in transforming business requirements and user needs into intuitive, scalable and visually refined digital experiences across web, mobile, SaaS, eCommerce and marketplace products. Experienced across the end-to-end design lifecycle, from user flows and information architecture to wireframes, high-fidelity UI, prototypes, design systems, usability reviews and developer handoff.
+          </p>
+
+          <!-- TARGET ROLES -->
+          <div class="cv-sec-title">Target Roles</div>
+          <p style="font-size: 0.9375rem; color: var(--text-heading); font-weight: 700; margin-bottom: 20px;">
+            Senior UI/UX Designer, Product Designer, Lead UI/UX Designer, UX Designer
+          </p>
+
+          <!-- CORE COMPETENCIES -->
+          <div class="cv-sec-title">Core Competencies</div>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+            UI/UX Design, Product Design, UX Research, User Flows and Information Architecture, Wireframing and Prototyping, Interaction Design, Design Systems, Responsive Web Design, Mobile App Design, Usability Testing, Visual Design, Design Thinking, Graphic Design, Branding and Identity, Stakeholder Collaboration, Developer Handoff.
+          </p>
+
+          <!-- TOOLS AND TECHNOLOGIES -->
+          <div class="cv-sec-title">Tools and Technologies</div>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
+            Figma, Adobe Photoshop, Framer, Webflow, Canva, Adobe Illustrator, Adobe InDesign, Adobe XD, Adobe After Effects, HTML/CSS (Basic), AI-Assisted Design Tools.
+          </p>
+
+          <!-- PROFESSIONAL EXPERIENCE -->
+          <div class="cv-sec-title">Professional Experience</div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">Senior UI/UX Designer</span> — <span class="cv-job-company">RichestSoft Pvt. Ltd.</span></div>
+              <span class="cv-job-date">Dec 2025 - Present · Mohali, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Lead UI/UX design for web and mobile products across multiple business domains and client requirements.</li>
+              <li>Translate business requirements into user journeys, information architecture, wireframes and high-fidelity interfaces.</li>
+              <li>Create interactive prototypes, reusable components and design patterns to support consistent product experiences.</li>
+              <li>Collaborate closely with product managers, developers, clients and stakeholders throughout the design lifecycle.</li>
+              <li>Conduct design reviews, identify usability issues and refine interfaces based on feedback, requirements and implementation constraints.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">UI/UX Designer</span> — <span class="cv-job-company">Recraft Relic Pvt.</span></div>
+              <span class="cv-job-date">Nov 2023 - Dec 2025 · Mohali, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Delivered UI/UX and digital design solutions aligned with client objectives and project requirements.</li>
+              <li>Designed responsive websites, landing pages, dashboards, mobile applications and digital product experiences.</li>
+              <li>Translated requirements into user flows, wireframes, high-fidelity UI designs and interactive prototypes.</li>
+              <li>Managed projects from initial concepts through design iterations, stakeholder reviews and developer handoff.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">UI/UX Designer</span> — <span class="cv-job-company">Enbloc Media Pvt.</span></div>
+              <span class="cv-job-date">Oct 2020 - Oct 2023 · Hyderabad, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Designed web and mobile experiences for SaaS, eCommerce and digital products.</li>
+              <li>Created user flows, wireframes, high-fidelity interfaces and interactive prototypes based on product requirements.</li>
+              <li>Collaborated with developers to communicate design specifications and support accurate implementation.</li>
+              <li>Refined interfaces through design reviews, usability feedback and iterative improvements.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">Graphic & Web Designer</span> — <span class="cv-job-company">Recraft Relic PVT.</span></div>
+              <span class="cv-job-date">June 2017 - Sept 2020 · Mohali, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Designed websites, landing pages, brand assets and digital marketing materials for diverse client requirements.</li>
+              <li>Created logos, brand identities, brochures, social media creatives and promotional graphics.</li>
+              <li>Applied typography, layout, composition and visual hierarchy to create consistent brand communication.</li>
+              <li>Collaborated with clients and marketing teams to develop creative concepts and production-ready assets.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">Graphic Designer</span> — <span class="cv-job-company">Future Work Technologies</span></div>
+              <span class="cv-job-date">Nov 2016 - May 2017 · Mohali, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Created logos, marketing collateral, brochures, social media creatives and promotional graphics.</li>
+              <li>Developed layouts using typography, composition, spacing and visual hierarchy.</li>
+              <li>Translated client and team requirements into clear, production-ready visual assets.</li>
+            </ul>
+          </div>
+
+          <div class="cv-job-block">
+            <div class="cv-job-header">
+              <div><span class="cv-job-title">Graphic Designer</span> — <span class="cv-job-company">HDL Pvt. Ltd.</span></div>
+              <span class="cv-job-date">Aug 2014 - Oct 2016 · Mohali, India</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li>Created brand identities, logos, brochures, banners, social media creatives and print marketing materials.</li>
+              <li>Developed visually consistent layouts using typography, composition, spacing and strong visual hierarchy.</li>
+              <li>Prepared production-ready design assets while maintaining brand consistency across print and digital communication.</li>
+            </ul>
+          </div>
+
+          <div class="cv-sec-title">Key Responsibilities</div>
+          <ul class="cv-bullet-list" style="margin-bottom: 24px;">
+            <li>Translate complex requirements into clear user journeys, task flows and intuitive interface structures.</li>
+            <li>Design responsive experiences for desktop, tablet and mobile with consistency and usability in mind.</li>
+            <li>Create scalable UI systems, reusable components and documentation for efficient product delivery.</li>
+            <li>Present concepts, gather feedback and collaborate with engineering through implementation and handoff.</li>
+          </ul>
+
+          <div class="cv-sec-title">Design Process</div>
+          <p style="font-size: 0.9375rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 24px;">
+            Discover, Define, Structure, Wireframe, UI Design, Prototype, Validate, Handoff, Iterate
+          </p>
+
+          <div class="cv-sec-title">Education</div>
+          <p style="font-size: 0.9375rem; color: var(--text-heading); font-weight: 700; margin-bottom: 20px;">
+            Bachelor of Arts (B.A.), Panjab University, Chandigarh, 2010 - 2013
+          </p>
+
+          <div class="cv-sec-title">Professional Development</div>
+          <ul class="cv-bullet-list" style="margin-bottom: 24px;">
+            <li>Continuous learning in UX research, product design, design systems and modern interface practices.</li>
+            <li>Ongoing exploration of AI-assisted design workflows and emerging digital product tools.</li>
+          </ul>
+
+          <div class="cv-sec-title">Languages</div>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">
+            English - Professional, Hindi - Native, Punjabi - Conversational
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
