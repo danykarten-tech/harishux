@@ -1135,8 +1135,7 @@ main {
   width: 100%;
 }
 
-.page-view.active,
-.page-view:target {
+.page-view.active {
   display: block !important;
   opacity: 1 !important;
   visibility: visible !important;
