@@ -51,9 +51,8 @@
       </nav>
 
       <div class="header-right">
-        <button onclick="openModal('cvModal')" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.8125rem;">📄 View CV</button>
-        <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;">
-          Download CV ↓
+        <a href="#" onclick="navigateTo('contact', event)" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
+          Let's Talk →
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
           <span></span>
@@ -127,9 +126,9 @@
           <!-- HERO RIGHT VISUAL WITH FLOATING CARDS -->
           <div class="hero-visual-wrapper">
             <!-- Handwritten Annotation Arrow -->
-            <div style="position: absolute; top: -35px; left: 0; z-index: 12; font-family: var(--font-handwriting); font-size: 1.5rem; color: #475569; transform: rotate(-8deg);">
-              Good Design<br>Brighter Tomorrow ~
-              <svg width="40" height="30" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="2" style="display: block; margin-left: 20px;"><path d="M5 5 Q 25 35 45 30 M 35 32 L 45 30 L 40 20"/></svg>
+            <div class="hero-annotation">
+              <span class="annotation-text">Good Design<br>Brighter<br>Tomorrow</span>
+              <svg width="45" height="35" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="2" class="annotation-svg"><path d="M5 5 Q 25 35 45 30 M 35 32 L 45 30 L 40 20"/></svg>
             </div>
 
             <div class="hero-portrait-card">
@@ -137,20 +136,26 @@
               
               <!-- Floating Card 1 (Top Right) -->
               <div class="floating-card fc-top-right">
-                <h5>User Focused Designs for Real People</h5>
+                <div class="fc-accent-bar"></div>
+                <h5>User Focused<br>Designs for<br>Real People</h5>
               </div>
 
               <!-- Floating Card 2 (Middle Right) -->
               <div class="floating-card fc-mid-right">
-                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> UI/UX Design</div>
-                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Product Design</div>
-                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Branding</div>
-                <div class="fc-pill-item"><span style="color:var(--accent-blue);">✦</span> Design Systems</div>
+                <div class="fc-pill-item"><span class="fc-icon">🎨</span> UI/UX Design</div>
+                <div class="fc-pill-item"><span class="fc-icon">💎</span> Product Design</div>
+                <div class="fc-pill-item"><span class="fc-icon">✨</span> Branding</div>
+                <div class="fc-pill-item"><span class="fc-icon">📐</span> Design Systems</div>
               </div>
 
               <!-- Floating Card 3 (Bottom Right) -->
               <div class="floating-card fc-bottom-right">
-                <p>Ideas<br>Design<br>Solutions<br>Impact</p>
+                <div class="fc-stack-text">
+                  <div class="fc-stack-row">Ideas <span class="plus-accent">+</span></div>
+                  <div>Design</div>
+                  <div>Solutions</div>
+                  <div>Impact</div>
+                </div>
               </div>
             </div>
           </div>
@@ -179,9 +184,10 @@
                 <img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery UI Mockup" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">01</span>
                 <h3 class="card-title-ref">Turo Art Gallery</h3>
                 <span class="card-category-ref">Art Marketplace Platform</span>
-                <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork, with artist onboarding and rewards experiences.</p>
+                <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork, with artist onboarding and rewards.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -202,6 +208,7 @@
                 <img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media Web3 Mockup" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">02</span>
                 <h3 class="card-title-ref">IBC Media</h3>
                 <span class="card-category-ref">Web3 & Blockchain Platform</span>
                 <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
@@ -225,6 +232,7 @@
                 <img src="assets/images/droobna_app.jpg" alt="Droobna Mobility App UI" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">03</span>
                 <h3 class="card-title-ref">Droobna</h3>
                 <span class="card-category-ref">Mobility & Food Delivery Platform</span>
                 <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
@@ -248,6 +256,7 @@
                 <img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy AI SEO Dashboard" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">04</span>
                 <h3 class="card-title-ref">Rankyfy</h3>
                 <span class="card-category-ref">AI-Powered SEO Platform</span>
                 <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
@@ -271,6 +280,7 @@
                 <img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn EdTech Platform" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">05</span>
                 <h3 class="card-title-ref">Invisalearn</h3>
                 <span class="card-category-ref">EdTech & Online Learning Platform</span>
                 <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
@@ -294,6 +304,7 @@
                 <img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal AI Skincare Platform" loading="lazy">
               </div>
               <div class="card-body-ref">
+                <span class="card-num-ref">06</span>
                 <h3 class="card-title-ref">Skin-Pal</h3>
                 <span class="card-category-ref">AI Powered Skincare Platform</span>
                 <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and product suggestions.</p>
@@ -368,6 +379,64 @@
                 <h4>Per Diem</h4>
                 <p>Restaurant Tech</p>
               </div>
+            </div>
+          </div>
+      <!-- MY DESIGN PROCESS -->
+      <section class="section section-process">
+        <div class="container">
+          <div class="process-header">
+            <div>
+              <span class="section-eyebrow">MY DESIGN PROCESS</span>
+              <h2 class="section-title">From idea to impactful products.</h2>
+              <p class="section-subtitle">A clear and focused process to create user-centred, scalable and visually refined digital experiences.</p>
+            </div>
+            <a href="#" onclick="navigateTo('about', event)" class="btn btn-secondary">Learn More →</a>
+          </div>
+
+          <div class="process-pipeline">
+            <div class="process-step">
+              <div class="process-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              </div>
+              <span class="process-num">01</span>
+              <h4 class="process-title">Discover</h4>
+              <p class="process-desc">Understand users & goals</p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <span class="process-num">02</span>
+              <h4 class="process-title">Define</h4>
+              <p class="process-desc">Identify core problems</p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <span class="process-num">03</span>
+              <h4 class="process-title">Design</h4>
+              <p class="process-desc">Create solutions & visuals</p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span class="process-num">04</span>
+              <h4 class="process-title">Validate</h4>
+              <p class="process-desc">Test & refine</p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+              <span class="process-num">05</span>
+              <h4 class="process-title">Deliver</h4>
+              <p class="process-desc">Handoff & support</p>
             </div>
           </div>
         </div>
@@ -695,16 +764,16 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">User Focused</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">User Focused</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Grounded in research, real task flows, and intuitive usability patterns.</p>
               </div>
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">Business Driven</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Business Driven</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Aligning product strategy with measurable outcomes and developer feasibility.</p>
               </div>
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">Visually Impactful</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Visually Impactful</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Crafting editorial, modern UI design tokens with generous whitespace.</p>
               </div>
             </div>
@@ -725,10 +794,10 @@
 
           <div style="display: flex; flex-direction: column; gap: 32px; margin-top: 48px;">
             
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color); border-left: 6px solid var(--accent-blue);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08); border-left: 6px solid var(--accent-blue);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Senior UI/UX Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Dec 2025 — Present</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Senior UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">Dec 2025 — Present</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">RichestSoft Pvt. Ltd. · Mohali, India</div>
               <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
@@ -739,10 +808,10 @@
               </ul>
             </div>
 
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">UI/UX Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Nov 2023 — Dec 2025</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">Nov 2023 — Dec 2025</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Recraft Relic Pvt. · Mohali, India</div>
               <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
@@ -751,10 +820,10 @@
               </ul>
             </div>
 
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">UI/UX Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Oct 2020 — Oct 2023</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">UI/UX Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">Oct 2020 — Oct 2023</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Enbloc Media Pvt. · Hyderabad, India</div>
               <ul style="padding-left: 20px; font-size: 0.90625rem; color: var(--text-muted); line-height: 1.7;">
@@ -762,26 +831,26 @@
               </ul>
             </div>
 
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic & Web Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">June 2017 — Sept 2020</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Graphic & Web Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">June 2017 — Sept 2020</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Recraft Relic Pvt. · Mohali, India</div>
             </div>
 
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Nov 2016 — May 2017</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Graphic Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">Nov 2016 — May 2017</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">Future Work Technologies · Mohali, India</div>
             </div>
 
-            <div style="background: white; border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color);">
+            <div style="background: #0F172A; border-radius: var(--radius-lg); padding: 36px; border: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-heading);">Graphic Designer</h3>
-                <span style="font-size: 0.875rem; font-weight: 700; color: var(--accent-blue);">Aug 2014 — Oct 2016</span>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Graphic Designer</h3>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">Aug 2014 — Oct 2016</span>
               </div>
               <div style="font-size: 0.9375rem; color: var(--text-subtle); margin-bottom: 16px;">HDL Pvt. Ltd. · Mohali, India</div>
             </div>
@@ -794,27 +863,27 @@
             <h2 class="section-title">How I Lead Design</h2>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 32px;">
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">01 — DIRECTION</div>
-                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Design Direction</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: #60A5FA; margin-bottom: 8px;">01 — DIRECTION</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Design Direction</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Create clear design direction and maintain consistency across products.</p>
               </div>
 
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">02 — QUALITY</div>
-                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Design Quality</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: #60A5FA; margin-bottom: 8px;">02 — QUALITY</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Design Quality</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Review designs for usability, visual quality, accessibility and consistency.</p>
               </div>
 
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">03 — ALIGNMENT</div>
-                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Collaboration</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: #60A5FA; margin-bottom: 8px;">03 — ALIGNMENT</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Collaboration</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Work closely with clients, product teams and developers.</p>
               </div>
 
-              <div style="padding: 28px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                <div style="font-size: 0.8125rem; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">04 — MENTORSHIP</div>
-                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px;">Mentorship</h4>
+              <div style="padding: 28px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 0.8125rem; font-weight: 800; color: #60A5FA; margin-bottom: 8px;">04 — MENTORSHIP</div>
+                <h4 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 8px; color: #FFFFFF;">Mentorship</h4>
                 <p style="font-size: 0.875rem; color: var(--text-muted);">Guide designers through feedback, reviews and problem-solving.</p>
               </div>
             </div>
@@ -834,29 +903,29 @@
           <p class="section-subtitle">Structured matrix of design capabilities, software stack, and visual communication background.</p>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px;">
-            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">PRODUCT & UX</h3>
+            <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">PRODUCT & UX</h3>
               <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
                 UI/UX Design · Product Design · UX Research · User Flows · Information Architecture · Wireframing · Prototyping · Interaction Design · Design Thinking · Usability Testing
               </p>
             </div>
 
-            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">UI & VISUAL</h3>
+            <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">UI & VISUAL</h3>
               <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
                 Visual Design · Responsive Web Design · Mobile App Design · Design Systems · Typography · Visual Hierarchy
               </p>
             </div>
 
-            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">COLLABORATION</h3>
+            <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">COLLABORATION</h3>
               <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
                 Client Communication · Stakeholder Collaboration · Design Reviews · Developer Handoff · Requirement Analysis
               </p>
             </div>
 
-            <div style="padding: 32px; background: white; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-              <h3 style="font-size: 1.125rem; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">GRAPHIC</h3>
+            <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+              <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">GRAPHIC</h3>
               <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
                 Graphic Design · Branding · Identity Design · Marketing Design
               </p>
@@ -864,7 +933,7 @@
           </div>
 
           <!-- BEYOND PRODUCT DESIGN (GRAPHIC DESIGN) -->
-          <div style="margin-top: 80px; padding: 40px; background: white; border-radius: var(--radius-xl); border: 1px solid var(--border-color);">
+          <div style="margin-top: 80px; padding: 40px; background: #0F172A; border-radius: var(--radius-xl); border: 1px solid rgba(255,255,255,0.08);">
             <span class="section-eyebrow">VISUAL COMMUNICATION</span>
             <h2 class="section-title">Beyond Product Design</h2>
             <p style="font-size: 1rem; color: var(--text-muted); max-width: 720px; margin-bottom: 32px;">
