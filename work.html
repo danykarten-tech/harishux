@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Work Archive — Harish Singh | Senior UI/UX & Product Designer</title>
+  <meta name="description" content="Complete portfolio archive of 12 selected digital product design, UI/UX, mobile app, SaaS, EdTech, Web3, and AI projects by Harish Singh.">
+  <meta name="author" content="Harish Singh">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B132B'/><text x='50%' y='68%' font-size='48' font-weight='900' fill='%232563EB' text-anchor='middle' font-family='sans-serif'>HS</text></svg>">
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-monogram">HS</div>
+        <div class="logo-text-group">
+          <span class="logo-name">Harish Singh</span>
+          <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
+          Let's Talk →
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link active">Work</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="experience.html" class="mobile-nav-link">Experience</a>
+      <a href="skills.html" class="mobile-nav-link">Skills</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <button onclick="openModal('cvModal')" class="btn btn-secondary" style="margin-top: 10px;">View Curriculum Vitae</button>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
+    </div>
+  </header>
+
+  <main style="padding-top: 100px;">
+    <!-- WORK ARCHIVE PAGE CONTENT -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <span class="section-eyebrow">COMPLETE ARCHIVE</span>
+        <h1 class="section-title">Selected Work</h1>
+        <p class="section-subtitle">12 projects. Multiple industries. One design approach.</p>
+
+        <!-- CATEGORY FILTER BAR -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="saas">SaaS</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="web3">Web3</button>
+        </div>
+
+        <!-- ALL 12 PROJECTS GRID -->
+        <div class="projects-grid-3x2" id="archiveGrid">
+          
+          <article class="project-card-ref archive-card" data-category="uiux web marketplace">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">01</span>
+              <h3 class="card-title-ref">Turo Art Gallery</h3>
+              <span class="card-category-ref">Art Marketplace Platform</span>
+              <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork with artist onboarding and rewards.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Marketplace</span>
+                <button onclick="openCaseStudy('turo')" class="btn-circle" aria-label="View Turo Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web web3">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">02</span>
+              <h3 class="card-title-ref">IBC Media</h3>
+              <span class="card-category-ref">Web3 & Blockchain Platform</span>
+              <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Web3</span>
+                <button onclick="openCaseStudy('ibc')" class="btn-circle" aria-label="View IBC Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux mobile">
+            <div class="card-media-box"><img src="assets/images/droobna_app.jpg" alt="Droobna"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">03</span>
+              <h3 class="card-title-ref">Droobna</h3>
+              <span class="card-category-ref">Mobility & Food Delivery Platform</span>
+              <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Mobile</span>
+                <button onclick="openCaseStudy('droobna')" class="btn-circle" aria-label="View Droobna Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux saas ai">
+            <div class="card-media-box"><img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">04</span>
+              <h3 class="card-title-ref">Rankyfy</h3>
+              <span class="card-category-ref">AI-Powered SEO Platform</span>
+              <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">AI / SaaS</span>
+                <button onclick="openCaseStudy('rankyfy')" class="btn-circle" aria-label="View Rankyfy Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web mobile">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">05</span>
+              <h3 class="card-title-ref">Invisalearn</h3>
+              <span class="card-category-ref">EdTech & Online Learning</span>
+              <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">EdTech</span>
+                <button onclick="openCaseStudy('invisalearn')" class="btn-circle" aria-label="View Invisalearn Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux mobile ai">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">06</span>
+              <h3 class="card-title-ref">Skin-Pal</h3>
+              <span class="card-category-ref">AI Powered Skincare Platform</span>
+              <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and product suggestions.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">AI / Mobile</span>
+                <button onclick="openCaseStudy('skin-pal')" class="btn-circle" aria-label="View Skin-Pal Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_5.jpg" alt="Reign Pilates"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">07</span>
+              <h3 class="card-title-ref">Reign Pilates</h3>
+              <span class="card-category-ref">Wellness & Studio Platform</span>
+              <p class="card-desc-ref">Luxury studio booking system with trainer schedules and membership portal.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Wellness</span>
+                <button onclick="openCaseStudy('reign-pilates')" class="btn-circle" aria-label="View Reign Pilates Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web mobile">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_6.jpg" alt="LifeHub Education"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">08</span>
+              <h3 class="card-title-ref">LifeHub Education</h3>
+              <span class="card-category-ref">EdTech & Learn & Earn Platform</span>
+              <p class="card-desc-ref">Real-world skill learning with gamified achievement rewards for students.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">EdTech</span>
+                <button onclick="openCaseStudy('lifehub-education')" class="btn-circle" aria-label="View LifeHub Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux mobile">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_7.jpg" alt="DriveX"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">09</span>
+              <h3 class="card-title-ref">DriveX</h3>
+              <span class="card-category-ref">Mobility & Vehicle Rental App</span>
+              <p class="card-desc-ref">Vehicle subscriptions, electric bike rentals, and instant parcel delivery ecosystem.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Mobility</span>
+                <button onclick="openCaseStudy('drivex')" class="btn-circle" aria-label="View DriveX Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web saas">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_8.jpg" alt="BetBricks7"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">10</span>
+              <h3 class="card-title-ref">BetBricks7</h3>
+              <span class="card-category-ref">Online Sports Betting Platform</span>
+              <p class="card-desc-ref">High-density live match statistics, odds updates, and fast bet slip processing.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Gaming / SaaS</span>
+                <button onclick="openCaseStudy('betbricks7')" class="btn-circle" aria-label="View BetBricks7 Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux web">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_10.jpg" alt="Bhutan Travel Now"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">11</span>
+              <h3 class="card-title-ref">Bhutan Travel Now</h3>
+              <span class="card-category-ref">Travel & Tourism Portal</span>
+              <p class="card-desc-ref">Conversion-focused tourism portal showcasing Bhutan's cultural tours and trekking itineraries.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Tourism</span>
+                <button onclick="openCaseStudy('bhutan-travel-now')" class="btn-circle" aria-label="View Bhutan Travel Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card-ref archive-card" data-category="uiux saas web">
+            <div class="card-media-box"><img src="assets/images/portfolio_extracted_11.jpg" alt="Per Diem"></div>
+            <div class="card-body-ref">
+              <span class="card-num-ref">12</span>
+              <h3 class="card-title-ref">Per Diem</h3>
+              <span class="card-category-ref">Restaurant Technology Platform</span>
+              <p class="card-desc-ref">White-label digital ordering platform and recurring loyalty subscription management system.</p>
+              <div class="card-footer-ref">
+                <span class="tag-badge">Restaurant SaaS</span>
+                <button onclick="openCaseStudy('per-diem')" class="btn-circle" aria-label="View Per Diem Case Study">→</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL CTA BANNER ("LET'S WORK TOGETHER") -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner-dark">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="color: #38BDF8;">LET'S WORK TOGETHER</span>
+            <h2>Have a project in mind?</h2>
+            <p>I'm open to opportunities where I can contribute as a Senior UI/UX Designer, Product Designer or Design Lead.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 16px;">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-accent" style="padding: 14px 32px;">Get in Touch →</a>
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">Download CV ↓</a>
+            </div>
+            <div style="font-family: var(--font-handwriting); font-size: 1.5rem; color: #94A3B8; transform: rotate(-3deg);">
+              Let's create something meaningful.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="site-logo">
+          <div class="logo-monogram">HS</div>
+          <div class="logo-text-group">
+            <span class="logo-name" style="color:white;">Harish Singh</span>
+            <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+          </div>
+        </div>
+
+        <ul class="nav-links" style="display: flex; gap: 24px;">
+          <li><a href="index.html" class="nav-link" style="color: #94A3B8;">Home</a></li>
+          <li><a href="work.html" class="nav-link active" style="color: #FFFFFF;">Work</a></li>
+          <li><a href="about.html" class="nav-link" style="color: #94A3B8;">About</a></li>
+          <li><a href="experience.html" class="nav-link" style="color: #94A3B8;">Experience</a></li>
+          <li><a href="skills.html" class="nav-link" style="color: #94A3B8;">Skills</a></li>
+          <li><a href="contact.html" class="nav-link" style="color: #94A3B8;">Contact</a></li>
+        </ul>
+
+        <div class="footer-social-links">
+          <a href="https://linkedin.com" target="_blank" class="footer-social-icon" aria-label="LinkedIn">in</a>
+          <a href="https://behance.net" target="_blank" class="footer-social-icon" aria-label="Behance">Be</a>
+          <a href="mailto:hariwork92@gmail.com" class="footer-social-icon" aria-label="Email">✉️</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.8125rem; color: #64748B;">
+        <span>📍 Chandigarh, India</span>
+        <span>© 2026 Harish Singh. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY MODAL DRAWER -->
+  <div class="modal-overlay" id="caseStudyModal">
+    <div class="modal-drawer">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modalTitle">Case Study View</h3>
+          <p id="modalCategory">Product & UX Showcase</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- CV MODAL -->
+  <div class="modal-overlay" id="cvModal">
+    <div class="modal-drawer">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>Curriculum Vitae</h3>
+          <p>Harish Singh · Senior UI/UX Designer & Product Designer</p>
+        </div>
+        <button class="modal-close-btn" id="cvModalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="cv-paper">
+          <div class="cv-header-block">
+            <h1>HARISH SINGH</h1>
+            <p style="font-size: 1.125rem; font-weight: 700; color: #2563EB;">Senior UI/UX Designer | Product Designer</p>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 4px;">📍 Chandigarh, India · ✉️ hariwork92@gmail.com · 📱 +91 95018 36814</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

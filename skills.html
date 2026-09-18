@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Skills & Technologies — Harish Singh | Senior UI/UX Designer</title>
+  <meta name="description" content="Structured design matrix of UI/UX, Product Design, Graphic Design, Figma Design Systems, and tools by Harish Singh.">
+  <meta name="author" content="Harish Singh">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B132B'/><text x='50%' y='68%' font-size='48' font-weight='900' fill='%232563EB' text-anchor='middle' font-family='sans-serif'>HS</text></svg>">
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-monogram">HS</div>
+        <div class="logo-text-group">
+          <span class="logo-name">Harish Singh</span>
+          <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="skills.html" class="nav-link active">Skills</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
+          Let's Talk →
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link">Work</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="experience.html" class="mobile-nav-link">Experience</a>
+      <a href="skills.html" class="mobile-nav-link active">Skills</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <button onclick="openModal('cvModal')" class="btn btn-secondary" style="margin-top: 10px;">View Curriculum Vitae</button>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
+    </div>
+  </header>
+
+  <main style="padding-top: 100px;">
+    <!-- SKILLS PAGE CONTENT -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <span class="section-eyebrow">CAPABILITIES</span>
+        <h1 class="section-title">Skills & Technologies</h1>
+        <p class="section-subtitle">Structured matrix of design capabilities, software stack, and visual communication background.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px;">
+          <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">PRODUCT & UX</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+              UI/UX Design · Product Design · UX Research · User Flows · Information Architecture · Wireframing · Prototyping · Interaction Design · Design Thinking · Usability Testing
+            </p>
+          </div>
+
+          <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">UI & VISUAL</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+              Visual Design · Responsive Web Design · Mobile App Design · Design Systems · Typography · Visual Hierarchy
+            </p>
+          </div>
+
+          <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">COLLABORATION</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+              Client Communication · Stakeholder Collaboration · Design Reviews · Developer Handoff · Requirement Analysis
+            </p>
+          </div>
+
+          <div style="padding: 32px; background: #0F172A; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
+            <h3 style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; border-bottom: 2px solid rgba(255,255,255,0.08); padding-bottom: 8px;">GRAPHIC</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.8;">
+              Graphic Design · Branding · Identity Design · Marketing Design
+            </p>
+          </div>
+        </div>
+
+        <!-- BEYOND PRODUCT DESIGN (GRAPHIC DESIGN) -->
+        <div style="margin-top: 80px; padding: 40px; background: #0F172A; border-radius: var(--radius-xl); border: 1px solid rgba(255,255,255,0.08);">
+          <span class="section-eyebrow">VISUAL COMMUNICATION</span>
+          <h2 class="section-title">Beyond Product Design</h2>
+          <p style="font-size: 1rem; color: var(--text-muted); max-width: 720px; margin-bottom: 32px;">
+            5+ years of experience in visual communication, branding and digital design. My graphic design background gives me a strong foundation in typography, composition, visual hierarchy, branding and communication.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Logo Design</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Brand Identity</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Social Media Design</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Marketing Creatives</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Brochures</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Promotional Graphics</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Web Design</span>
+            <span class="tag-badge" style="padding: 8px 16px; font-size: 0.875rem;">Digital Campaigns</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL CTA BANNER ("LET'S WORK TOGETHER") -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner-dark">
+          <div class="cta-banner-content">
+            <span class="section-eyebrow" style="color: #38BDF8;">LET'S WORK TOGETHER</span>
+            <h2>Have a project in mind?</h2>
+            <p>I'm open to opportunities where I can contribute as a Senior UI/UX Designer, Product Designer or Design Lead.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 16px;">
+            <div class="cta-banner-actions">
+              <a href="contact.html" class="btn btn-accent" style="padding: 14px 32px;">Get in Touch →</a>
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">Download CV ↓</a>
+            </div>
+            <div style="font-family: var(--font-handwriting); font-size: 1.5rem; color: #94A3B8; transform: rotate(-3deg);">
+              Let's create something meaningful.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="site-logo">
+          <div class="logo-monogram">HS</div>
+          <div class="logo-text-group">
+            <span class="logo-name" style="color:white;">Harish Singh</span>
+            <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+          </div>
+        </div>
+
+        <ul class="nav-links" style="display: flex; gap: 24px;">
+          <li><a href="index.html" class="nav-link" style="color: #94A3B8;">Home</a></li>
+          <li><a href="work.html" class="nav-link" style="color: #94A3B8;">Work</a></li>
+          <li><a href="about.html" class="nav-link" style="color: #94A3B8;">About</a></li>
+          <li><a href="experience.html" class="nav-link" style="color: #94A3B8;">Experience</a></li>
+          <li><a href="skills.html" class="nav-link active" style="color: #FFFFFF;">Skills</a></li>
+          <li><a href="contact.html" class="nav-link" style="color: #94A3B8;">Contact</a></li>
+        </ul>
+
+        <div class="footer-social-links">
+          <a href="https://linkedin.com" target="_blank" class="footer-social-icon" aria-label="LinkedIn">in</a>
+          <a href="https://behance.net" target="_blank" class="footer-social-icon" aria-label="Behance">Be</a>
+          <a href="mailto:hariwork92@gmail.com" class="footer-social-icon" aria-label="Email">✉️</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.8125rem; color: #64748B;">
+        <span>📍 Chandigarh, India</span>
+        <span>© 2026 Harish Singh. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
