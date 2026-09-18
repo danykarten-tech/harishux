@@ -1122,18 +1122,21 @@ button {
 }
 
 main {
-  min-height: 85vh;
+  min-height: calc(100vh - 120px);
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 /* MODAL OVERLAYS & ROUTING VIEWS */
 .page-view {
   display: none;
-  min-height: 70vh;
+  min-height: 75vh;
+  width: 100%;
 }
 
-.page-view.active {
+.page-view.active,
+.page-view:target {
   display: block !important;
   opacity: 1 !important;
   visibility: visible !important;

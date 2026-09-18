@@ -3,11 +3,101 @@
    Supports Single Page Navigation, Case Studies, Work Archive Filtering & CV Modal
    ========================================================================== */
 
+// Global Bulletproof SPA Navigation Router (Available immediately)
+window.navigateTo = function(viewId, event) {
+  if (event && event.preventDefault) {
+    event.preventDefault();
+  }
+
+  // Clean viewId parameter
+  if (typeof viewId === 'string') {
+    viewId = viewId.replace(/^#/, '').trim().toLowerCase();
+  }
+  if (!viewId) viewId = 'home';
+
+  // Handle case study modal routes
+  if (viewId.startsWith('cs-')) {
+    const projectId = viewId.replace('cs-', '');
+    if (typeof window.openCaseStudy === 'function') {
+      window.openCaseStudy(projectId);
+    }
+    return;
+  }
+
+  const allViews = document.querySelectorAll('.page-view');
+  let matched = false;
+
+  allViews.forEach(view => {
+    if (view.id === viewId) {
+      view.classList.add('active');
+      view.style.setProperty('display', 'block', 'important');
+      view.style.setProperty('opacity', '1', 'important');
+      view.style.setProperty('visibility', 'visible', 'important');
+      matched = true;
+    } else {
+      view.classList.remove('active');
+      view.style.setProperty('display', 'none', 'important');
+    }
+  });
+
+  // Fallback to home if targeted view ID is not found
+  if (!matched) {
+    const homeView = document.getElementById('home');
+    if (homeView) {
+      homeView.classList.add('active');
+      homeView.style.setProperty('display', 'block', 'important');
+      homeView.style.setProperty('opacity', '1', 'important');
+      homeView.style.setProperty('visibility', 'visible', 'important');
+    }
+    viewId = 'home';
+  }
+
+  // Update active nav link indicators across Header, Mobile, and Footer navigation
+  const allNavLinks = document.querySelectorAll('[data-view]');
+  allNavLinks.forEach(link => {
+    const linkView = link.getAttribute('data-view');
+    if (linkView === viewId) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  // Close mobile menu if open
+  const mobileNav = document.getElementById('mobileNav');
+  if (mobileNav) mobileNav.classList.remove('active');
+
+  // Sync URL hash without page scroll jump
+  if (history.pushState) {
+    history.pushState(null, null, '#' + viewId);
+  }
+
+  // Instant scroll to top
+  window.scrollTo(0, 0);
+};
+
+// Handle Hash Routing
+function handleRoute() {
+  const currentHash = window.location.hash.replace('#', '').trim().toLowerCase();
+  const validViews = ['home', 'work', 'about', 'experience', 'skills', 'contact'];
+  if (currentHash && validViews.includes(currentHash)) {
+    window.navigateTo(currentHash);
+  } else if (currentHash.startsWith('cs-')) {
+    window.navigateTo('home');
+    if (typeof window.openCaseStudy === 'function') {
+      window.openCaseStudy(currentHash.replace('cs-', ''));
+    }
+  } else {
+    window.navigateTo('home');
+  }
+}
+
+window.addEventListener('popstate', handleRoute);
+
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // Single Page View Router
-  const views = document.querySelectorAll('.page-view');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // Execute initial routing once DOM is ready
+  handleRoute();
+
   const mobileNav = document.getElementById('mobileNav');
   const menuToggle = document.getElementById('menuToggle');
 
@@ -24,89 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Bulletproof SPA Navigation Router
-  window.navigateTo = function(viewId, event) {
-    if (event && event.preventDefault) {
-      event.preventDefault();
-    }
-
-    if (!viewId) viewId = 'home';
-
-    // Handle case study modal routes
-    if (viewId.startsWith('cs-')) {
-      const projectId = viewId.replace('cs-', '');
-      openCaseStudy(projectId);
-      return;
-    }
-
-    const allViews = document.querySelectorAll('.page-view');
-    let matched = false;
-
-    allViews.forEach(view => {
-      if (view.id === viewId) {
-        view.classList.add('active');
-        view.style.display = 'block';
-        matched = true;
-      } else {
-        view.classList.remove('active');
-        view.style.display = 'none';
-      }
-    });
-
-    // Fallback to home if targeted view ID is not found
-    if (!matched) {
-      const homeView = document.getElementById('home');
-      if (homeView) {
-        homeView.classList.add('active');
-        homeView.style.display = 'block';
-      }
-      viewId = 'home';
-    }
-
-    // Update active nav link indicator across header & footer
-    const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-    allNavLinks.forEach(link => {
-      const linkView = link.getAttribute('data-view');
-      if (linkView === viewId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-
-    // Close mobile menu if open
-    const mobileNav = document.getElementById('mobileNav');
-    if (mobileNav) mobileNav.classList.remove('active');
-
-    // Sync URL hash without page scroll jump
-    if (history.pushState) {
-      history.pushState(null, null, '#' + viewId);
-    }
-
-    // Instant scroll to top
-    window.scrollTo(0, 0);
-  };
-
-  // Check initial URL hash on page load
-  const currentHash = window.location.hash.replace('#', '');
-  if (currentHash && ['home', 'work', 'about', 'experience', 'skills', 'contact'].includes(currentHash)) {
-    navigateTo(currentHash);
-  } else {
-    navigateTo('home');
-  }
-
-  // Handle browser back/forward buttons
-  window.addEventListener('popstate', () => {
-    const hash = window.location.hash.replace('#', '') || 'home';
-    navigateTo(hash);
-  });
-
   // Nav link click listeners
-  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+  document.querySelectorAll('[data-view]').forEach(link => {
     link.addEventListener('click', (e) => {
       const targetView = link.getAttribute('data-view');
       if (targetView) {
-        navigateTo(targetView, e);
+        window.navigateTo(targetView, e);
       }
     });
   });
