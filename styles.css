@@ -1121,13 +1121,22 @@ button {
   background: var(--accent-blue);
 }
 
+main {
+  min-height: 85vh;
+  position: relative;
+  z-index: 1;
+}
+
 /* MODAL OVERLAYS & ROUTING VIEWS */
 .page-view {
   display: none;
+  min-height: 70vh;
 }
 
 .page-view.active {
-  display: block;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .modal-overlay {

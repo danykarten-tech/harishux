@@ -24,42 +24,85 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Navigate Function
+  // Bulletproof SPA Navigation Router
   window.navigateTo = function(viewId, event) {
-    if (event) event.preventDefault();
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
 
-    // Handle case study routes
+    if (!viewId) viewId = 'home';
+
+    // Handle case study modal routes
     if (viewId.startsWith('cs-')) {
       const projectId = viewId.replace('cs-', '');
       openCaseStudy(projectId);
       return;
     }
 
-    // Hide all views, show targeted view
-    views.forEach(view => {
-      view.classList.remove('active');
+    const allViews = document.querySelectorAll('.page-view');
+    let matched = false;
+
+    allViews.forEach(view => {
       if (view.id === viewId) {
         view.classList.add('active');
+        view.style.display = 'block';
+        matched = true;
+      } else {
+        view.classList.remove('active');
+        view.style.display = 'none';
       }
     });
 
-    // Update nav link active status
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('data-view') === viewId) {
+    // Fallback to home if targeted view ID is not found
+    if (!matched) {
+      const homeView = document.getElementById('home');
+      if (homeView) {
+        homeView.classList.add('active');
+        homeView.style.display = 'block';
+      }
+      viewId = 'home';
+    }
+
+    // Update active nav link indicator across header & footer
+    const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    allNavLinks.forEach(link => {
+      const linkView = link.getAttribute('data-view');
+      if (linkView === viewId) {
         link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
 
-    // Close mobile nav if open
+    // Close mobile menu if open
+    const mobileNav = document.getElementById('mobileNav');
     if (mobileNav) mobileNav.classList.remove('active');
 
-    // Scroll to top of window smoothly
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Sync URL hash without page scroll jump
+    if (history.pushState) {
+      history.pushState(null, null, '#' + viewId);
+    }
+
+    // Instant scroll to top
+    window.scrollTo(0, 0);
   };
 
-  // Nav link click events
-  navLinks.forEach(link => {
+  // Check initial URL hash on page load
+  const currentHash = window.location.hash.replace('#', '');
+  if (currentHash && ['home', 'work', 'about', 'experience', 'skills', 'contact'].includes(currentHash)) {
+    navigateTo(currentHash);
+  } else {
+    navigateTo('home');
+  }
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    navigateTo(hash);
+  });
+
+  // Nav link click listeners
+  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
       const targetView = link.getAttribute('data-view');
       if (targetView) {
