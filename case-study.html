@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | Harish Singh — Senior UI/UX & Product Designer</title>
+  <meta name="description" content="Detailed UI/UX product design case study by Harish Singh, Senior UI/UX Designer & Product Designer with 11+ years of experience.">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* STICKY TOC NAVIGATION BAR FOR CASE STUDY */
+    .cs-toc-bar {
+      position: sticky;
+      top: 80px;
+      z-index: 900;
+      background: rgba(3, 7, 18, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 0;
+      margin-top: 80px;
+      margin-bottom: 32px;
+    }
+    
+    .cs-toc-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .cs-toc-inner::-webkit-scrollbar { display: none; }
+    
+    .cs-toc-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .cs-toc-link {
+      font-size: 0.84375rem;
+      font-weight: 700;
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .cs-toc-link:hover, .cs-toc-link.active {
+      color: #60A5FA;
+    }
+
+    .cs-hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      background: #0F172A;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      margin: 32px 0 40px 0;
+    }
+
+    .cs-meta-item h6 {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #60A5FA;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .cs-meta-item p {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .cs-cover-box {
+      width: 100%;
+      max-height: 540px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      margin-bottom: 60px;
+      background: #090D1E;
+    }
+
+    .cs-cover-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .cs-block {
+      background: #0F172A;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 32px;
+      scroll-margin-top: 148px;
+    }
+
+    @media (max-width: 640px) {
+      .cs-block { padding: 24px; }
+    }
+
+    .cs-block-num {
+      font-size: 0.8125rem;
+      font-weight: 800;
+      color: #60A5FA;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .cs-block-title {
+      font-size: 1.625rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .cs-body-text {
+      font-size: 1rem;
+      color: #CBD5E1;
+      line-height: 1.75;
+    }
+
+    /* USER FLOW VISUAL DIAGRAM */
+    .flow-diagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .flow-step-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      text-align: center;
+      position: relative;
+    }
+
+    .flow-step-num {
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: #60A5FA;
+      margin-bottom: 4px;
+    }
+
+    .flow-step-title {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .flow-step-desc {
+      font-size: 0.78125rem;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    /* GOALS & CARDS GRID */
+    .cs-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .cs-subcard {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .cs-subcard h5 {
+      font-size: 1.0625rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .cs-subcard p {
+      font-size: 0.875rem;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* PREV / NEXT NAVIGATION */
+    .cs-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 60px;
+    }
+
+    .cs-nav-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .cs-nav-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .cs-nav-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #60A5FA;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .cs-nav-title {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo">
+        <div class="logo-monogram">HS</div>
+        <div class="logo-text-group">
+          <span class="logo-name">Harish Singh</span>
+          <span class="logo-title">Senior UI/UX Designer | Product Designer</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
+          Let's Talk →
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link active">Work</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="experience.html" class="mobile-nav-link">Experience</a>
+      <a href="skills.html" class="mobile-nav-link">Skills</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 10px;">Download CV PDF ↓</a>
+    </div>
+  </header>
+
+  <!-- STICKY CASE STUDY TOC NAV -->
+  <div class="cs-toc-bar">
+    <div class="container">
+      <div class="cs-toc-inner">
+        <a href="work.html" class="btn-link" style="font-size: 0.875rem; font-weight: 700; color: #60A5FA;">
+          ← Back to Work
+        </a>
+        <div class="cs-toc-links">
+          <a href="#overview" class="cs-toc-link">Overview</a>
+          <a href="#challenge" class="cs-toc-link">Challenge</a>
+          <a href="#goals" class="cs-toc-link">Goals</a>
+          <a href="#ecosystem" class="cs-toc-link">Ecosystem</a>
+          <a href="#contribution" class="cs-toc-link">Contribution</a>
+          <a href="#flows" class="cs-toc-link">Flows</a>
+          <a href="#design" class="cs-toc-link">Design System</a>
+          <a href="#outcome" class="cs-toc-link">Outcome</a>
+        </div>
+        <a id="hdrLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm" style="padding: 6px 14px; font-size: 0.8125rem;">
+          Visit Live Project ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container" style="max-width: 1040px;">
+      
+      <!-- HERO -->
+      <section style="padding-top: 20px;">
+        <span id="csCategory" class="section-eyebrow" style="color: #60A5FA;">MARKETPLACE · WEB · PRODUCT DESIGN</span>
+        <h1 id="csTitle" class="hero-title" style="font-size: 3.25rem; font-weight: 900; margin-bottom: 16px; color: #FFFFFF;">
+          Turo Art Gallery
+        </h1>
+        <p id="csShortDesc" style="font-size: 1.25rem; color: #94A3B8; max-width: 840px; line-height: 1.6;">
+          A premium digital art marketplace designed around artwork discovery, artist onboarding, purchasing and rewards.
+        </p>
+
+        <!-- METADATA GRID -->
+        <div class="cs-hero-meta-grid">
+          <div class="cs-meta-item">
+            <h6>ROLE</h6>
+            <p id="csRole">UI/UX Designer · Product Designer</p>
+          </div>
+          <div class="cs-meta-item">
+            <h6>PLATFORM</h6>
+            <p id="csPlatform">Responsive Web</p>
+          </div>
+          <div class="cs-meta-item">
+            <h6>PROJECT TYPE</h6>
+            <p id="csProjectType">Art Marketplace Platform</p>
+          </div>
+          <div class="cs-meta-item">
+            <h6>FOCUS AREAS</h6>
+            <p id="csFocusAreas">Marketplace UX · Artist Onboarding · E-commerce</p>
+          </div>
+        </div>
+
+        <!-- COVER IMAGE -->
+        <div class="cs-cover-box">
+          <img id="csCoverImg" src="assets/images/portfolio_extracted_1.jpg" alt="Case Study Showcase Cover">
+        </div>
+      </section>
+
+      <!-- 01 — OVERVIEW -->
+      <div id="overview" class="cs-block">
+        <div class="cs-block-num">01 — PROJECT OVERVIEW</div>
+        <h2 class="cs-block-title">Product Vision & Context</h2>
+        <div id="csOverviewContent" class="cs-body-text">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 02 — THE CHALLENGE -->
+      <div id="challenge" class="cs-block">
+        <div class="cs-block-num">02 — THE CHALLENGE</div>
+        <h2 class="cs-block-title">The Design Problem</h2>
+        <div id="csChallengeContent" class="cs-body-text">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 03 — PROJECT GOALS -->
+      <div id="goals" class="cs-block">
+        <div class="cs-block-num">03 — PROJECT GOALS</div>
+        <h2 class="cs-block-title">Core Objectives</h2>
+        <div id="csGoalsGrid" class="cs-cards-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 04 — USERS / ECOSYSTEM -->
+      <div id="ecosystem" class="cs-block">
+        <div class="cs-block-num">04 — USER ECOSYSTEM</div>
+        <h2 class="cs-block-title">User Personas & Mindsets</h2>
+        <div id="csUsersGrid" class="cs-cards-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 05 — MY ROLE & CONTRIBUTION -->
+      <div id="contribution" class="cs-block">
+        <div class="cs-block-num">05 — MY ROLE & CONTRIBUTION</div>
+        <h2 class="cs-block-title">What I Designed & Delivered</h2>
+        <div id="csContributionContent" class="cs-body-text">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 06 — UX APPROACH -->
+      <div class="cs-block">
+        <div class="cs-block-num">06 — UX APPROACH</div>
+        <h2 class="cs-block-title">Design Philosophy & Strategy</h2>
+        <div id="csApproachContent" class="cs-body-text">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 07 — USER FLOWS -->
+      <div id="flows" class="cs-block">
+        <div class="cs-block-num">07 — USER FLOWS & ARCHITECTURE</div>
+        <h2 class="cs-block-title">Step-by-Step Task Journeys</h2>
+        <p style="font-size: 0.9375rem; color: #94A3B8; margin-bottom: 20px;">
+          Structured user movement from initial product entry through task completion:
+        </p>
+        <div id="csFlowsGrid" class="flow-diagram-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 08 — DESIGN DIRECTION & SYSTEM -->
+      <div id="design" class="cs-block">
+        <div class="cs-block-num">08 — DESIGN DIRECTION & SYSTEM</div>
+        <h2 class="cs-block-title">Visual Language & Component Tokens</h2>
+        <div id="csDesignSystemContent" class="cs-body-text">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 09 — KEY FEATURES -->
+      <div class="cs-block">
+        <div class="cs-block-num">09 — KEY FEATURES & SCREENS</div>
+        <h2 class="cs-block-title">Core Interface Highlights</h2>
+        <div id="csFeaturesGrid" class="cs-cards-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- 10 — OUTCOME & REFLECTION -->
+      <div id="outcome" class="cs-block">
+        <div class="cs-block-num">10 — OUTCOME & REFLECTION</div>
+        <h2 class="cs-block-title">Qualitative Impact & Learnings</h2>
+        <div id="csOutcomeContent" class="cs-body-text" style="margin-bottom: 20px;">
+          <!-- Populated dynamically -->
+        </div>
+        <div id="csLearningsContent" class="cs-body-text" style="padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08);">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- PREV / NEXT NAVIGATION -->
+      <div class="cs-nav-bar">
+        <a id="prevProjectBtn" href="#" class="cs-nav-btn">
+          <span class="cs-nav-label">← Previous Project</span>
+          <span id="prevProjectTitle" class="cs-nav-title">Project Title</span>
+        </a>
+        <a href="work.html" class="btn btn-secondary" style="font-size: 0.875rem;">
+          View All Projects →
+        </a>
+        <a id="nextProjectBtn" href="#" class="cs-nav-btn" style="text-align: right;">
+          <span class="cs-nav-label">Next Project →</span>
+          <span id="nextProjectTitle" class="cs-nav-title">Project Title</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="background-color: #030712; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+      <div>
+        <p style="font-size: 0.875rem; color: #94A3B8; margin: 0;">
+          © 2026 Harish Singh · Senior UI/UX Designer & Product Designer
+        </p>
+      </div>
+      <div style="display: flex; gap: 20px;">
+        <a href="https://www.linkedin.com/in/harish-singh-40b540a6/" target="_blank" rel="noopener noreferrer" style="color: #60A5FA; font-weight: 600; text-decoration: none; font-size: 0.875rem;">LinkedIn ↗</a>
+        <a href="work.html" style="color: #94A3B8; font-weight: 600; text-decoration: none; font-size: 0.875rem;">Work Archive</a>
+        <a href="contact.html" style="color: #94A3B8; font-weight: 600; text-decoration: none; font-size: 0.875rem;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script>
+    function renderCaseStudy() {
+      // Parse Project Slug / ID from URL params or hash
+      const urlParams = new URLSearchParams(window.location.search);
+      let query = urlParams.get('project') || window.location.hash.replace('#', '').trim();
+      if (!query) query = 'turo-art-gallery';
+
+      const getProj = (window.getProjectByIdOrSlug && window.getProjectByIdOrSlug(query)) 
+                      || (window.projectsData && window.projectsData.find(p => p.id === query || p.slug === query))
+                      || (window.projectsData && window.projectsData[0]);
+
+      if (!getProj) return;
+
+      const project = getProj;
+      const adjacent = window.getAdjacentProjects ? window.getAdjacentProjects(project.id) : { prev: project, next: project };
+
+      // Page Title
+      document.title = `${project.title} — UI/UX Case Study | Harish Singh`;
+
+      // Header & Hero Elements
+      const liveLink = document.getElementById('hdrLiveLink');
+      if (liveLink) liveLink.href = project.externalUrl || '#';
+      
+      const catEl = document.getElementById('csCategory');
+      if (catEl) catEl.textContent = (project.category || '').toUpperCase();
+
+      const titleEl = document.getElementById('csTitle');
+      if (titleEl) titleEl.textContent = project.title || '';
+
+      const descEl = document.getElementById('csShortDesc');
+      if (descEl) descEl.textContent = project.shortDescription || '';
+
+      // Metadata Grid
+      const roleEl = document.getElementById('csRole');
+      if (roleEl) roleEl.textContent = project.role || '';
+
+      const platformEl = document.getElementById('csPlatform');
+      if (platformEl) platformEl.textContent = project.platform || '';
+
+      const pTypeEl = document.getElementById('csProjectType');
+      if (pTypeEl) pTypeEl.textContent = project.projectType || '';
+
+      const focusEl = document.getElementById('csFocusAreas');
+      if (focusEl) focusEl.textContent = Array.isArray(project.focusAreas) ? project.focusAreas.join(' · ') : (project.focusAreas || '');
+
+      // Cover Image
+      const coverImg = document.getElementById('csCoverImg');
+      if (coverImg) {
+        coverImg.src = project.image || 'assets/images/portfolio_extracted_1.jpg';
+        coverImg.alt = `${project.title} UI UX Case Study Cover`;
+      }
+
+      // 01 Overview
+      const overviewEl = document.getElementById('csOverviewContent');
+      if (overviewEl) overviewEl.innerHTML = `<p>${project.longDescription || project.shortDescription}</p>`;
+
+      // 02 Challenge
+      const challengeEl = document.getElementById('csChallengeContent');
+      if (challengeEl) challengeEl.innerHTML = `<p>${project.challenge || 'Structuring complex user requirements into a unified digital experience.'}</p>`;
+
+      // 03 Goals
+      const goalsGrid = document.getElementById('csGoalsGrid');
+      if (goalsGrid) {
+        let goalsHtml = '';
+        if (Array.isArray(project.goals) && project.goals.length > 0) {
+          project.goals.forEach((g, idx) => {
+            goalsHtml += `
+              <div class="cs-subcard">
+                <h5>Goal 0${idx + 1}</h5>
+                <p>${g}</p>
+              </div>
+            `;
+          });
+        } else {
+          goalsHtml = `<div class="cs-subcard"><h5>Core Goal</h5><p>Establish a clear visual hierarchy and intuitive user navigation.</p></div>`;
+        }
+        goalsGrid.innerHTML = goalsHtml;
+      }
+
+      // 04 Ecosystem / Users
+      const usersGrid = document.getElementById('csUsersGrid');
+      if (usersGrid) {
+        let usersHtml = '';
+        if (Array.isArray(project.users) && project.users.length > 0) {
+          project.users.forEach(u => {
+            usersHtml += `
+              <div class="cs-subcard">
+                <h5>${u.title}</h5>
+                <p>${u.desc}</p>
+              </div>
+            `;
+          });
+        } else {
+          usersHtml = `<div class="cs-subcard"><h5>Primary Users</h5><p>Platform users requiring intuitive digital workflows.</p></div>`;
+        }
+        usersGrid.innerHTML = usersHtml;
+      }
+
+      // 05 My Contribution
+      const contribContainer = document.getElementById('csContributionContent');
+      if (contribContainer) {
+        let contribHtml = '<ul style="padding-left: 20px; line-height: 1.8;">';
+        if (Array.isArray(project.myContribution) && project.myContribution.length > 0) {
+          project.myContribution.forEach(c => {
+            contribHtml += `<li style="margin-bottom: 8px;">${c}</li>`;
+          });
+        } else {
+          contribHtml += `<li style="margin-bottom: 8px;">Responsible for end-to-end UI/UX product design, information architecture, and prototyping.</li>`;
+        }
+        contribHtml += '</ul>';
+        contribContainer.innerHTML = contribHtml;
+      }
+
+      // 06 UX Approach
+      const approachEl = document.getElementById('csApproachContent');
+      if (approachEl) {
+        approachEl.innerHTML = `
+          <p>${project.uxApproach || 'Structured user-centred design strategy focused on scannability and clarity.'}</p>
+          <div style="margin-top: 14px; padding: 16px 20px; background: rgba(59,130,246,0.1); border-left: 3px solid #60A5FA; border-radius: 4px;">
+            <strong style="color: #60A5FA;">UX Process Pipeline:</strong> ${project.process || 'Discovery → Defining requirements → Wireframing → Prototyping → UI Design'}
+          </div>
+        `;
+      }
+
+      // 07 User Flows
+      const flowsGrid = document.getElementById('csFlowsGrid');
+      if (flowsGrid) {
+        let flowsHtml = '';
+        if (Array.isArray(project.keyFlows) && project.keyFlows.length > 0) {
+          project.keyFlows.forEach(f => {
+            flowsHtml += `
+              <div class="flow-step-card">
+                <div class="flow-step-num">STEP ${f.step}</div>
+                <div class="flow-step-title">${f.title}</div>
+                <div class="flow-step-desc">${f.desc}</div>
+              </div>
+            `;
+          });
+        } else {
+          flowsHtml = `<div class="flow-step-card"><div class="flow-step-num">STEP 01</div><div class="flow-step-title">User Journey</div><div class="flow-step-desc">Frictionless task flow</div></div>`;
+        }
+        flowsGrid.innerHTML = flowsHtml;
+      }
+
+      // 08 Design System
+      const dsEl = document.getElementById('csDesignSystemContent');
+      if (dsEl) {
+        dsEl.innerHTML = `
+          <p style="margin-bottom: 12px;"><strong style="color: #60A5FA;">Design Direction:</strong> ${project.designDirection || 'Refined typography, high contrast, and clean layout grid.'}</p>
+          <p><strong style="color: #FFFFFF;">System Tokens & Primitives:</strong> ${project.designSystem || 'Modular Figma component primitives, accessible color tokens, and responsive layout guidelines.'}</p>
+        `;
+      }
+
+      // 09 Features
+      const featGrid = document.getElementById('csFeaturesGrid');
+      if (featGrid) {
+        let featHtml = '';
+        if (Array.isArray(project.keyFeatures) && project.keyFeatures.length > 0) {
+          project.keyFeatures.forEach((ft, idx) => {
+            featHtml += `
+              <div class="cs-subcard">
+                <h5>Feature 0${idx + 1}</h5>
+                <p>${ft}</p>
+              </div>
+            `;
+          });
+        }
+        featGrid.innerHTML = featHtml;
+      }
+
+      // 10 Outcome & Learnings
+      const outcomeEl = document.getElementById('csOutcomeContent');
+      if (outcomeEl) {
+        outcomeEl.innerHTML = `<p><strong style="color: #60A5FA;">Qualitative Impact:</strong> ${project.outcome || 'Created a structured digital experience with improved information hierarchy.'}</p>`;
+      }
+      
+      const learningsEl = document.getElementById('csLearningsContent');
+      if (learningsEl) {
+        learningsEl.innerHTML = `<p><strong style="color: #FFFFFF;">Key Reflection:</strong> ${project.learnings || 'Reinforced the importance of user testing and modular component design.'}</p>`;
+      }
+
+      // Prev / Next Project Links
+      const prevBtn = document.getElementById('prevProjectBtn');
+      const nextBtn = document.getElementById('nextProjectBtn');
+      
+      if (prevBtn && adjacent.prev) {
+        prevBtn.href = `case-study.html?project=${adjacent.prev.slug}`;
+        const pTitle = document.getElementById('prevProjectTitle');
+        if (pTitle) pTitle.textContent = adjacent.prev.title;
+      }
+
+      if (nextBtn && adjacent.next) {
+        nextBtn.href = `case-study.html?project=${adjacent.next.slug}`;
+        const nTitle = document.getElementById('nextProjectTitle');
+        if (nTitle) nTitle.textContent = adjacent.next.title;
+      }
+    }
+
+    // Run render immediately & on DOMContentLoaded
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      renderCaseStudy();
+    } else {
+      document.addEventListener('DOMContentLoaded', renderCaseStudy);
+    }
+
+    // Active Highlight on Scroll & Mobile Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const tocLinks = document.querySelectorAll('.cs-toc-link');
+      window.addEventListener('scroll', () => {
+        let fromTop = window.scrollY + 160;
+        tocLinks.forEach(link => {
+          const section = document.querySelector(link.hash);
+          if (section) {
+            if (section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          }
+        });
+      });
+
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          mobileNav.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

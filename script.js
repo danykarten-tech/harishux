@@ -298,53 +298,12 @@ function closeModal() {
 }
 
 function openCaseStudy(projectId) {
-  const data = caseStudies[projectId] || {
-    title: projectId.replace(/-/g, ' ').toUpperCase(),
-    category: "Digital Product UX",
-    role: "Senior UI/UX Designer",
-    sections: [{ num: "01", title: "Overview", content: "Detailed case study showcase for " + projectId }]
-  };
-
-  const modalTitle = document.getElementById('modalTitle');
-  const modalCategory = document.getElementById('modalCategory');
-  const modalBody = document.getElementById('modalBody');
-
-  if (modalTitle) modalTitle.textContent = data.title;
-  if (modalCategory) modalCategory.textContent = `${data.category} · ${data.role}`;
-
-  if (modalBody) {
-    let html = `
-      <div style="margin-bottom: 28px; padding: 24px; background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-        <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 4px;">${data.title} Case Study</h4>
-          <p style="font-size: 0.875rem; color: var(--text-muted);">Role: <strong style="color: #60A5FA;">${data.role}</strong> | Category: <strong style="color: #FFFFFF;">${data.category}</strong></p>
-        </div>
-        ${data.url ? `<a href="${data.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;">Visit Live Project ↗</a>` : ''}
-      </div>
-    `;
-
-    if (data.image) {
-      html += `
-        <div style="margin-bottom: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 12px 30px rgba(0,0,0,0.6);">
-          <img src="${data.image}" alt="${data.title} Cover" style="width: 100%; display: block;" />
-        </div>
-      `;
-    }
-
-    data.sections.forEach(sec => {
-      html += `
-        <div class="cs-section" style="margin-bottom: 24px; padding: 24px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
-          <div class="cs-num" style="font-size: 0.75rem; font-weight: 800; color: #60A5FA; letter-spacing: 0.08em; margin-bottom: 6px;">SECTION ${sec.num}</div>
-          <h4 class="cs-title" style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 10px;">${sec.title}</h4>
-          <p class="cs-text" style="font-size: 0.9375rem; color: #94A3B8; line-height: 1.7;">${sec.content}</p>
-        </div>
-      `;
-    });
-
-    modalBody.innerHTML = html;
+  let targetSlug = projectId;
+  if (window.getProjectByIdOrSlug) {
+    const proj = window.getProjectByIdOrSlug(projectId);
+    if (proj) targetSlug = proj.slug;
   }
-
-  openModal('caseStudyModal');
+  window.location.href = `case-study.html?project=${encodeURIComponent(targetSlug)}`;
 }
 
 function handleRoute() {
@@ -353,7 +312,6 @@ function handleRoute() {
   if (currentHash && validViews.includes(currentHash)) {
     navigateTo(currentHash);
   } else if (currentHash.startsWith('cs-')) {
-    navigateTo('home');
     openCaseStudy(currentHash.replace('cs-', ''));
   } else {
     navigateTo('home');

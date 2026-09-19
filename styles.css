@@ -720,17 +720,33 @@ button {
 }
 
 .card-category-ref {
-  font-size: 0.84375rem;
-  font-weight: 700;
+  font-size: 0.8125rem;
+  font-weight: 800;
   color: #60A5FA;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .card-desc-ref {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card-meta-line {
+  font-size: 0.75rem;
+  font-weight: 800;
   color: #94A3B8;
-  line-height: 1.65;
-  margin-bottom: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: inline-block;
 }
 
 .card-footer-ref {
