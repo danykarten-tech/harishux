@@ -1257,6 +1257,361 @@ button {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.35);
 }
 
+/* ==========================================================================
+   RECREATED 3-SECTION SHOWCASE (EXACT MATCH TO REFERENCE DESIGN)
+   ========================================================================== */
+
+/* 1. PROCESS PIPELINE ROW */
+.process-showcase-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .process-showcase-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.process-sidebar-title {
+  max-width: 220px;
+  flex-shrink: 0;
+}
+
+.process-sidebar-title h2 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.process-sidebar-title p {
+  font-size: 0.84375rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.process-steps-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .process-steps-track {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+}
+
+.process-steps-track::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.4), rgba(59, 130, 246, 0.7) 60%, rgba(139, 92, 246, 0.6));
+  z-index: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .process-steps-track::before {
+    display: block;
+  }
+}
+
+.process-node-box {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.process-node-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #1D4ED8 0%, #060B19 80%);
+  border: 1.5px solid rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.5), inset 0 0 15px rgba(96, 165, 250, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.process-node-circle-last {
+  background: radial-gradient(circle at 30% 30%, #6D28D9 0%, #060B19 80%);
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.5), inset 0 0 15px rgba(192, 132, 252, 0.3);
+}
+
+.process-node-box:hover .process-node-circle {
+  transform: translateY(-5px) scale(1.08);
+  border-color: #60A5FA;
+  box-shadow: 0 0 35px rgba(37, 99, 235, 0.8), inset 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+.process-node-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #60A5FA;
+  margin-bottom: 2px;
+}
+
+.process-node-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.process-node-sub {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  line-height: 1.3;
+}
+
+
+/* 2. CAREER JOURNEY HORIZONTAL TIMELINE */
+.career-horizontal-wrapper {
+  position: relative;
+  padding: 30px 0 50px 0;
+  margin-bottom: 60px;
+}
+
+.career-track-line {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(59, 130, 246, 0.4) 70%, #38BDF8);
+  z-index: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .career-track-line {
+    display: block;
+  }
+}
+
+.career-grid-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .career-grid-layout {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+}
+
+.career-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.career-node-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #030712;
+  border: 2px solid #3B82F6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.career-step-item.active-step .career-node-dot {
+  width: 18px;
+  height: 18px;
+  background: #38BDF8;
+  border-color: #FFFFFF;
+  box-shadow: 0 0 20px #38BDF8, 0 0 35px rgba(56, 189, 248, 0.9);
+  animation: pulsingNodeGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulsingNodeGlow {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 20px #38BDF8; }
+  50% { transform: scale(1.3); box-shadow: 0 0 35px #38BDF8, 0 0 50px rgba(56, 189, 248, 0.9); }
+}
+
+.career-period {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #64748B;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.career-step-item.active-step .career-period {
+  color: #60A5FA;
+}
+
+.career-title-label {
+  font-size: 0.90625rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.career-sub-company {
+  font-size: 0.78125rem;
+  color: #94A3B8;
+  line-height: 1.2;
+}
+
+
+/* 3. SQUIRCLE APP TILES SHOWCASE */
+.tools-squircle-section {
+  margin-top: 10px;
+}
+
+.tools-squircles-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.squircle-tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.squircle-box-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: #0B1120;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+}
+
+.squircle-box-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.squircle-tool-item:hover .squircle-box-icon {
+  transform: translateY(-6px) scale(1.06);
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75), 0 0 30px rgba(37, 99, 235, 0.4);
+  background: #131C33;
+}
+
+.squircle-tool-item:hover .squircle-box-icon img {
+  transform: scale(1.15) rotate(4deg);
+}
+
+.squircle-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #CBD5E1;
+}
+
+.squircle-arrow-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.squircle-arrow-btn:hover {
+  transform: scale(1.08);
+  background: rgba(37, 99, 235, 0.3);
+  border-color: rgba(96, 165, 250, 0.6);
+}
+
+.skills-pill-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.pill-skill-badge {
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #CBD5E1;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.pill-skill-badge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #FFFFFF;
+  background: rgba(37, 99, 235, 0.2);
+}
+
+.pill-plus-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pill-plus-btn:hover {
+  transform: scale(1.1);
+  background: rgba(37, 99, 235, 0.25);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
 .tag-badge {
   display: inline-flex;
   align-items: center;
