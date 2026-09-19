@@ -403,9 +403,28 @@ button {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  padding: 120px 0 60px 0;
-  background: radial-gradient(circle at 75% 30%, rgba(37, 99, 235, 0.18) 0%, rgba(5, 8, 20, 0) 65%), var(--bg-primary);
+  padding: 120px 0 70px 0;
+  background: radial-gradient(1200px circle at 50% 10%, rgba(37, 99, 235, 0.22) 0%, rgba(124, 58, 237, 0.12) 40%, rgba(3, 7, 18, 0.98) 75%), var(--bg-primary);
   overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(56, 189, 248, 0.1) 45%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+  animation: meshGlowPulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes meshGlowPulse {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-40px, 40px); }
 }
 
 .hero-grid {
@@ -421,14 +440,35 @@ button {
   }
 }
 
-.hero-eyebrow {
-  display: inline-block;
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: var(--radius-full);
   font-size: 0.8125rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #38BDF8;
-  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+  color: #60A5FA;
+  margin-bottom: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.22);
+}
+
+.badge-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #38BDF8;
+  box-shadow: 0 0 10px #38BDF8;
+  animation: badgeDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes badgeDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
 }
 
 .hero-headline {
@@ -452,10 +492,19 @@ button {
   }
 }
 
-.highlight-text {
-  background: linear-gradient(90deg, #38BDF8 0%, #3B82F6 50%, #60A5FA 100%);
+.highlight-text-creative {
+  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 25%, #C084FC 50%, #F472B6 75%, #60A5FA 100%);
+  background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: creativeGradientFlow 7s linear infinite;
+  font-weight: 900;
+}
+
+@keyframes creativeGradientFlow {
+  0% { background-position: 0% center; }
+  50% { background-position: 150% center; }
+  100% { background-position: 300% center; }
 }
 
 .hero-description {
@@ -488,15 +537,15 @@ button {
   top: -10px;
   left: 30%;
   transform: translateX(-50%);
-  width: 420px;
-  height: 420px;
+  width: 460px;
+  height: 460px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.75) 0%, rgba(59, 130, 246, 0.45) 45%, rgba(124, 58, 237, 0.25) 70%, transparent 100%);
-  box-shadow: 0 0 70px rgba(37, 99, 235, 0.5), inset 0 0 40px rgba(96, 165, 250, 0.3);
-  filter: blur(6px);
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.85) 0%, rgba(139, 92, 246, 0.6) 45%, rgba(56, 189, 248, 0.3) 70%, transparent 100%);
+  box-shadow: 0 0 90px rgba(37, 99, 235, 0.65), 0 0 50px rgba(139, 92, 246, 0.4), inset 0 0 40px rgba(96, 165, 250, 0.4);
+  filter: blur(8px);
   z-index: 1;
   pointer-events: none;
-  animation: auraGlowPulse 8s ease-in-out infinite;
+  animation: heroAuraPulse 6s ease-in-out infinite;
 }
 
 .hero-annotation {
@@ -505,12 +554,19 @@ button {
   left: -20px;
   z-index: 12;
   font-family: var(--font-handwriting);
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: 700;
-  color: #E2E8F0;
+  color: #38BDF8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
   transform: rotate(-6deg);
   pointer-events: none;
   line-height: 1.1;
+  animation: floatAnnotation 4.5s ease-in-out infinite;
+}
+
+@keyframes floatAnnotation {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50% { transform: rotate(-4deg) translateY(-5px); }
 }
 
 .annotation-svg {
@@ -1689,18 +1745,225 @@ main {
   transform: translateY(0) scale(0.98);
 }
 
-/* 7. Reduced Motion Fallback */
+/* 7. Cursor Following Ambient Glow Orb */
+.cursor-glow-orb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, rgba(37, 99, 235, 0.04) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 999;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  will-change: transform;
+  filter: blur(20px);
+}
+
+body:hover .cursor-glow-orb {
+  opacity: 1;
+}
+
+@media (hover: none), (max-width: 768px) {
+  .cursor-glow-orb {
+    display: none !important;
+  }
+}
+
+/* 8. Scrolled Header Frosted Glass Enhancement */
+.site-header.header-scrolled {
+  background: rgba(3, 7, 18, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(37, 99, 235, 0.15);
+  padding: 12px 0;
+}
+
+/* 9. 3D Card Parallax & Smooth Depth Zoom */
+.project-card-ref, .archive-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.project-card-ref .card-media-box img, .archive-card .card-media-box img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-ref:hover .card-media-box img, .archive-card:hover .card-media-box img {
+  transform: scale(1.06);
+}
+
+/* 10. Interactive Button Click Ripple */
+.btn-ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: btnRippleAnim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes btnRippleAnim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* 11. Skill Chips Spring Micro-Interaction */
+.fc-pill-item, .chip, .skill-card-ref {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.fc-pill-item:hover, .chip:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: rgba(37, 99, 235, 0.2);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+/* 13. Ambient Background Mesh Orbs */
+.ambient-mesh-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(130px);
+  opacity: 0.28;
+  will-change: transform;
+}
+
+.ambient-mesh-orb.orb-1 {
+  top: -100px;
+  left: -100px;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, #2563EB 0%, #4F46E5 50%, transparent 75%);
+  animation: orbFloatLoop1 14s ease-in-out infinite alternate;
+}
+
+.ambient-mesh-orb.orb-2 {
+  bottom: 5%;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #7C3AED 0%, #0284C7 50%, transparent 75%);
+  animation: orbFloatLoop2 16s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloatLoop1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(120px, 80px) scale(1.12); }
+}
+
+@keyframes orbFloatLoop2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-100px, -90px) scale(1.08); }
+}
+
+/* 14. Hero Page Load Entrance Stagger Animations */
+.hero-left .hero-eyebrow {
+  animation: heroEntranceFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-left .hero-headline {
+  animation: heroEntranceFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.hero-left .hero-description {
+  animation: heroEntranceFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.hero-left .hero-actions {
+  animation: heroEntranceFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+.hero-left .stats-bar {
+  animation: heroEntranceFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.hero-visual-wrapper {
+  animation: heroEntranceScale 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+@keyframes heroEntranceFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroEntranceScale {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heroAuraPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.85;
+    box-shadow: 0 0 90px rgba(37, 99, 235, 0.65), 0 0 50px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 130px rgba(37, 99, 235, 0.85), 0 0 75px rgba(147, 51, 234, 0.6);
+  }
+}
+
+/* 15. Enhanced Project Card Hover Effects */
+.project-card-ref, .archive-card {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s ease;
+}
+
+.project-card-ref:hover, .archive-card:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.85), 0 0 40px rgba(37, 99, 235, 0.35);
+}
+
+.btn-card-action {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-card-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+/* Reduced Motion Safety */
 @media (prefers-reduced-motion: reduce) {
   .hero-glow-circle,
   .hero-portrait-cutout,
   .fc-top-right,
-  .fc-mid-right {
+  .fc-mid-right,
+  .highlight-text,
+  .ambient-mesh-orb {
     animation: none !important;
   }
-  .reveal-on-scroll {
+  .hero-left .hero-eyebrow,
+  .hero-left .hero-headline,
+  .hero-left .hero-description,
+  .hero-left .hero-actions,
+  .hero-left .stats-bar,
+  .hero-visual-wrapper {
+    animation: none !important;
     opacity: 1 !important;
     transform: none !important;
-    transition: none !important;
   }
 }
+
+
 

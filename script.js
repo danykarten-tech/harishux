@@ -390,27 +390,129 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // MINIMAL INTERACTIVE ANIMATIONS & SCROLL REVEAL OBSERVER
+  // ULTRA-PREMIUM INTERACTIVE ANIMATIONS & CONTROLLERS
   // ==========================================================================
   
-  // 1. Interactive Spotlight Gradient Following Mouse on Cards
-  const interactiveCards = document.querySelectorAll('.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref');
-  interactiveCards.forEach(card => {
+  // 1. Ambient Following Cursor Glow Trailer (Lerp Damping)
+  const cursorOrb = document.getElementById('cursorGlowOrb');
+  if (cursorOrb) {
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+
+    window.addEventListener('mousemove', (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    });
+
+    function renderCursorOrb() {
+      currentX += (targetX - currentX) * 0.12;
+      currentY += (targetY - currentY) * 0.12;
+      cursorOrb.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(renderCursorOrb);
+    }
+    renderCursorOrb();
+  }
+
+  // 2. 3D Card Parallax Tilt on Hover
+  const tiltCards = document.querySelectorAll('.project-card-ref, .archive-card');
+  tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -6; // max 6deg
+      const rotateY = ((x - centerX) / centerX) * 6; // max 6deg
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
     });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+    });
   });
 
-  // 2. Intersection Observer for Smooth Scroll Reveal
-  const elementsToReveal = document.querySelectorAll('.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref, .section-eyebrow, .section-title, .hero-left, .hero-visual-wrapper');
+  // 3. Dynamic Number Count-Up Animation for Stats Bar
+  const statCounters = document.querySelectorAll('.stat-counter');
+  if (statCounters.length > 0 && 'IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const endVal = parseInt(target.getAttribute('data-count'), 10) || 0;
+          const suffix = target.getAttribute('data-suffix') || '';
+          let startVal = 0;
+          const duration = 1600; // ms
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = Math.floor(easeProgress * endVal);
+            target.textContent = `${currentVal}${suffix}`;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              target.textContent = `${endVal}${suffix}`;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+          observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    statCounters.forEach(sc => countObserver.observe(sc));
+  }
+
+  // 4. Header Frosted Glass Transition on Scroll
+  const siteHeader = document.getElementById('siteHeader');
+  if (siteHeader) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        siteHeader.classList.add('header-scrolled');
+      } else {
+        siteHeader.classList.remove('header-scrolled');
+      }
+    });
+  }
+
+  // 5. Button Click Ripple Micro-Interaction
+  const rippleBtns = document.querySelectorAll('.btn, .filter-btn');
+  rippleBtns.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const rect = this.getBoundingClientRect();
+      const circle = document.createElement('span');
+      const diameter = Math.max(rect.width, rect.height);
+      const radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${e.clientX - rect.left - radius}px`;
+      circle.style.top = `${e.clientY - rect.top - radius}px`;
+      circle.classList.add('btn-ripple-effect');
+
+      const existing = this.querySelector('.btn-ripple-effect');
+      if (existing) existing.remove();
+
+      this.appendChild(circle);
+      setTimeout(() => circle.remove(), 600);
+    });
+  });
+
+  // 6. Intersection Observer for Smooth Scroll Reveal (Below-the-fold content)
+  const elementsToReveal = document.querySelectorAll('.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref, .section-eyebrow, .section-title');
   
   elementsToReveal.forEach((el, index) => {
     el.classList.add('reveal-on-scroll');
-    // Stagger items slightly
     const delay = (index % 4) * 0.08;
     el.style.transitionDelay = `${delay}s`;
   });
@@ -424,17 +526,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -20px 0px'
     });
 
     elementsToReveal.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback if IntersectionObserver is unsupported
     elementsToReveal.forEach(el => el.classList.add('is-visible'));
   }
 
-  // 3. Magnetic Hover Physics on Primary CTA Buttons
+  // 7. Magnetic Hover Physics on Primary Action Buttons
   const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
   magneticBtns.forEach(btn => {
     btn.addEventListener('mousemove', (e) => {
@@ -449,4 +550,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 

@@ -25,6 +25,10 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B132B'/><text x='50%' y='68%' font-size='48' font-weight='900' fill='%232563EB' text-anchor='middle' font-family='sans-serif'>HS</text></svg>">
 </head>
 <body>
+  <!-- Ambient Cursor Glow Spotlight & Background Mesh Orbs -->
+  <div class="cursor-glow-orb" id="cursorGlowOrb"></div>
+  <div class="ambient-mesh-orb orb-1"></div>
+  <div class="ambient-mesh-orb orb-2"></div>
 
   <!-- ==========================================
        GLOBAL STICKY NAVIGATION HEADER
@@ -86,9 +90,12 @@
       <section class="hero-section">
         <div class="container hero-grid">
           <div class="hero-left">
-            <span class="hero-eyebrow">CRAFTING · USER-CENTRED · DIGITAL PRODUCTS</span>
+            <div class="hero-badge-pill">
+              <span class="badge-pulse-dot"></span>
+              <span>CRAFTING · USER-CENTRED · DIGITAL PRODUCTS</span>
+            </div>
             <h1 class="hero-headline">
-              Designing <span class="highlight-text">digital experiences</span> for a better tomorrow.
+              Designing <span class="highlight-text-creative">digital experiences</span> for a better tomorrow.
             </h1>
             <p class="hero-description">
               I'm Harish Singh, a Senior UI/UX Designer and Product Designer with 11+ years of overall design experience, creating intuitive, scalable and visually refined digital products across web, mobile, SaaS, eCommerce and emerging technologies.
@@ -109,15 +116,15 @@
             <!-- STATS BAR -->
             <div class="stats-bar">
               <div class="stat-item">
-                <h3>11+</h3>
+                <h3 class="stat-counter" data-count="11" data-suffix="+">0+</h3>
                 <p>Years Experience</p>
               </div>
               <div class="stat-item">
-                <h3>6+</h3>
+                <h3 class="stat-counter" data-count="6" data-suffix="+">0+</h3>
                 <p>Years in UI/UX</p>
               </div>
               <div class="stat-item">
-                <h3>5+</h3>
+                <h3 class="stat-counter" data-count="5" data-suffix="+">0+</h3>
                 <p>Years in Graphic Design</p>
               </div>
             </div>
@@ -1175,8 +1182,8 @@
             </p>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 48px;">
-              <a href="tel:+919501836814" class="btn btn-accent" style="padding: 14px 28px;">
-                📞 Call / WhatsApp: +91 95018 36814
+              <a href="tel:+919876895034" class="btn btn-accent" style="padding: 14px 28px;">
+                📞 Call / WhatsApp: +91 98768 95034
               </a>
               <a href="mailto:hariwork92@gmail.com" class="btn btn-secondary" style="padding: 14px 28px;">
                 ✉️ Email: hariwork92@gmail.com
