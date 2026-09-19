@@ -763,11 +763,11 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* MORE PROJECTS COMPACT GRID - EXPANDED IMAGE */
+/* MORE PROJECTS COMPACT GRID - PERFECT 3-COLUMN ALIGNMENT MATCHING SELECTED PROJECTS */
 .more-projects-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  gap: 28px;
 }
 
 @media (min-width: 640px) {
@@ -778,7 +778,7 @@ button {
 
 @media (min-width: 1024px) {
   .more-projects-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -897,8 +897,25 @@ button {
   line-height: 1.5;
 }
 
+.compact-card {
+  background-color: #0F172A;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.compact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(37, 99, 235, 0.25);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
 .compact-img-box {
-  height: 120px;
+  height: 220px;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -912,21 +929,29 @@ button {
   object-fit: cover;
   object-position: top center;
   display: block;
+  transition: transform var(--transition-slow);
+}
+
+.compact-card:hover .compact-img-box img {
+  transform: scale(1.05);
 }
 
 .compact-card-body {
-  padding: 16px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .compact-card h4 {
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .compact-card p {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #94A3B8;
 }
 
