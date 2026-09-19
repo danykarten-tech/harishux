@@ -388,4 +388,65 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // ==========================================================================
+  // MINIMAL INTERACTIVE ANIMATIONS & SCROLL REVEAL OBSERVER
+  // ==========================================================================
+  
+  // 1. Interactive Spotlight Gradient Following Mouse on Cards
+  const interactiveCards = document.querySelectorAll('.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref');
+  interactiveCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // 2. Intersection Observer for Smooth Scroll Reveal
+  const elementsToReveal = document.querySelectorAll('.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref, .section-eyebrow, .section-title, .hero-left, .hero-visual-wrapper');
+  
+  elementsToReveal.forEach((el, index) => {
+    el.classList.add('reveal-on-scroll');
+    // Stagger items slightly
+    const delay = (index % 4) * 0.08;
+    el.style.transitionDelay = `${delay}s`;
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    elementsToReveal.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is unsupported
+    elementsToReveal.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // 3. Magnetic Hover Physics on Primary CTA Buttons
+  const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = `translate(0px, 0px)`;
+    });
+  });
 });
+

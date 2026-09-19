@@ -473,23 +473,41 @@ button {
   gap: 16px;
 }
 
-/* HERO RIGHT VISUAL WITH FLOATING CARDS */
+/* HERO RIGHT VISUAL WITH FLOATING CARDS & TRANSPARENT CUTOUT */
 .hero-visual-wrapper {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 500px;
+  padding-left: 10px;
+}
+
+.hero-glow-circle {
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.75) 0%, rgba(59, 130, 246, 0.45) 45%, rgba(124, 58, 237, 0.25) 70%, transparent 100%);
+  box-shadow: 0 0 70px rgba(37, 99, 235, 0.5), inset 0 0 40px rgba(96, 165, 250, 0.3);
+  filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
+  animation: auraGlowPulse 8s ease-in-out infinite;
 }
 
 .hero-annotation {
   position: absolute;
-  top: -45px;
-  left: -10px;
+  top: -65px;
+  left: -20px;
   z-index: 12;
   font-family: var(--font-handwriting);
   font-size: 1.5rem;
   font-weight: 700;
-  color: #94A3B8;
+  color: #E2E8F0;
   transform: rotate(-6deg);
   pointer-events: none;
   line-height: 1.1;
@@ -497,27 +515,27 @@ button {
 
 .annotation-svg {
   display: block;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-top: 4px;
   color: #60A5FA;
 }
 
-.hero-portrait-card {
+.hero-portrait-cutout {
   position: relative;
-  width: 100%;
-  max-width: 440px;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(37, 99, 235, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: #0B1120;
-}
-
-.portrait-img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: top center;
+  z-index: 5;
+  width: 115%;
+  max-width: 680px;
+  height: auto;
+  max-height: 700px;
+  object-fit: contain;
+  display: block;
+  margin-left: -105px;
+  margin-top: -75px;
+  transform: scale(1.04);
+  transform-origin: bottom center;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.85));
+  animation: heroPortraitFloat 6s ease-in-out infinite;
+  transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* FLOATING GLASS CARDS */
@@ -529,20 +547,21 @@ button {
   -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-md);
   padding: 16px 20px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 20px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 20px rgba(37, 99, 235, 0.2);
   z-index: 10;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .floating-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.35);
 }
 
 .fc-top-right {
-  top: 8%;
-  right: -24px;
-  max-width: 190px;
+  top: 4%;
+  right: -30px;
+  max-width: 200px;
+  animation: floatBadge1 5s ease-in-out infinite;
 }
 
 .fc-accent-bar {
@@ -561,12 +580,13 @@ button {
 }
 
 .fc-mid-right {
-  right: -32px;
-  top: 44%;
+  right: -40px;
+  top: 40%;
   padding: 14px 18px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation: floatBadge2 6.5s ease-in-out 0.8s infinite;
 }
 
 .fc-pill-item {
@@ -587,8 +607,8 @@ button {
 }
 
 .fc-bottom-right {
-  bottom: 4%;
-  right: -12px;
+  bottom: 2%;
+  right: -25px;
   background: rgba(7, 11, 22, 0.92);
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -1544,3 +1564,143 @@ main {
     color: black;
   }
 }
+
+/* ==========================================================================
+   MINIMAL INTERACTIVE ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* 1. Hero Aura Breathing Pulse */
+@keyframes auraGlowPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.85;
+    box-shadow: 0 0 70px rgba(37, 99, 235, 0.5), inset 0 0 40px rgba(96, 165, 250, 0.3);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 95px rgba(37, 99, 235, 0.75), inset 0 0 55px rgba(96, 165, 250, 0.5);
+  }
+}
+
+/* 2. Hero Portrait Gentle Float */
+@keyframes heroPortraitFloat {
+  0%, 100% {
+    transform: scale(1.04) translateY(0px);
+  }
+  50% {
+    transform: scale(1.04) translateY(-8px);
+  }
+}
+
+/* 3. Floating Glass Cards Levitation */
+@keyframes floatBadge1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes floatBadge2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 4. Interactive Card Radial Mouse Spotlight */
+.project-card-ref, .archive-card, .stat-card-clean, .experience-card-ref, .skill-card-ref {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-ref::before, .archive-card::before, .stat-card-clean::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.15), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-card-ref:hover::before, .archive-card:hover::before, .stat-card-clean:hover::before {
+  opacity: 1;
+}
+
+.project-card-ref:hover {
+  transform: translateY(-7px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.75), 0 0 30px rgba(37, 99, 235, 0.25);
+}
+
+.card-media-box img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-ref:hover .card-media-box img {
+  transform: scale(1.04);
+}
+
+/* 5. Scroll-Reveal Observer */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 6. Button Interactive Hover Shimmer & Scale */
+.btn-primary, .btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.22) 50%, transparent 70%);
+  transform: rotate(30deg) translateX(-100%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::after {
+  transform: rotate(30deg) translateX(100%);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* 7. Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow-circle,
+  .hero-portrait-cutout,
+  .fc-top-right,
+  .fc-mid-right {
+    animation: none !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+

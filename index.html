@@ -123,40 +123,32 @@
             </div>
           </div>
 
-          <!-- HERO RIGHT VISUAL WITH FLOATING CARDS -->
+          <!-- HERO RIGHT VISUAL WITH FLOATING CARDS & CUTOUT PORTRAIT -->
           <div class="hero-visual-wrapper">
+            <!-- Glowing Blue Circular Aura -->
+            <div class="hero-glow-circle"></div>
+
             <!-- Handwritten Annotation Arrow -->
             <div class="hero-annotation">
               <span class="annotation-text">Good Design<br>Brighter<br>Tomorrow</span>
               <svg width="45" height="35" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="2" class="annotation-svg"><path d="M5 5 Q 25 35 45 30 M 35 32 L 45 30 L 40 20"/></svg>
             </div>
 
-            <div class="hero-portrait-card">
-              <img src="assets/images/portfolio_extracted_1.jpg" alt="Harish Singh Senior UI/UX Designer" class="portrait-img">
-              
-              <!-- Floating Card 1 (Top Right) -->
-              <div class="floating-card fc-top-right">
-                <div class="fc-accent-bar"></div>
-                <h5>User Focused<br>Designs for<br>Real People</h5>
-              </div>
+            <!-- Transparent Cutout Portrait Image (No Box Container) -->
+            <img src="assets/images/harish_hero_portrait.png" alt="Harish Singh Senior UI/UX Designer" class="hero-portrait-cutout">
+            
+            <!-- Floating Card 1 (Top Right) -->
+            <div class="floating-card fc-top-right">
+              <div class="fc-accent-bar"></div>
+              <h5>User Focused<br>Designs for<br>Real People</h5>
+            </div>
 
-              <!-- Floating Card 2 (Middle Right) -->
-              <div class="floating-card fc-mid-right">
-                <div class="fc-pill-item"><span class="fc-icon">🎨</span> UI/UX Design</div>
-                <div class="fc-pill-item"><span class="fc-icon">💎</span> Product Design</div>
-                <div class="fc-pill-item"><span class="fc-icon">✨</span> Branding</div>
-                <div class="fc-pill-item"><span class="fc-icon">📐</span> Design Systems</div>
-              </div>
-
-              <!-- Floating Card 3 (Bottom Right) -->
-              <div class="floating-card fc-bottom-right">
-                <div class="fc-stack-text">
-                  <div class="fc-stack-row">Ideas <span class="plus-accent">+</span></div>
-                  <div>Design</div>
-                  <div>Solutions</div>
-                  <div>Impact</div>
-                </div>
-              </div>
+            <!-- Floating Card 2 (Middle Right) -->
+            <div class="floating-card fc-mid-right">
+              <div class="fc-pill-item"><span class="fc-icon">🎨</span> UI/UX Design</div>
+              <div class="fc-pill-item"><span class="fc-icon">💎</span> Product Design</div>
+              <div class="fc-pill-item"><span class="fc-icon">✨</span> Branding</div>
+              <div class="fc-pill-item"><span class="fc-icon">📐</span> Design Systems</div>
             </div>
           </div>
         </div>
@@ -1195,24 +1187,28 @@
             </div>
 
             <!-- DIRECT CONTACT FORM -->
-            <form style="background: #0F172A; border-radius: var(--radius-xl); padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: left;" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to Harish.');">
+            <form action="https://formsubmit.co/hariwork92@gmail.com" method="POST" style="background: #0F172A; border-radius: var(--radius-xl); padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: left;">
+              <input type="hidden" name="_subject" value="New Portfolio Inquiry for Harish Singh">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+
               <div style="margin-bottom: 20px;">
                 <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Your Name</label>
-                <input type="text" required placeholder="Enter your name" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+                <input type="text" name="name" required placeholder="Enter your name" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
               </div>
               <div style="margin-bottom: 20px;">
                 <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Your Email</label>
-                <input type="email" required placeholder="name@company.com" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+                <input type="email" name="email" required placeholder="name@company.com" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
               </div>
               <div style="margin-bottom: 20px;">
                 <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Company / Project</label>
-                <input type="text" placeholder="Company name or project title" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
+                <input type="text" name="company" placeholder="Company name or project title" style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;">
               </div>
               <div style="margin-bottom: 24px;">
                 <label style="display: block; font-size: 0.875rem; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Message</label>
-                <textarea rows="4" required placeholder="Tell me about your product or opportunity..." style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;"></textarea>
+                <textarea name="message" rows="4" required placeholder="Tell me about your product or opportunity..." style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.9375rem; color: white;"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Let's Talk →</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message →</button>
             </form>
           </div>
         </div>
