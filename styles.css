@@ -111,14 +111,14 @@ button {
   }
 }
 
-/* Page Section Spacing */
+/* Page Section Spacing - Refined, Premium Spacing matching reference layout */
 .section {
-  padding: 90px 0;
+  padding: 56px 0;
 }
 
 @media (min-width: 992px) {
   .section {
-    padding: 120px 0;
+    padding: 72px 0;
   }
 }
 
@@ -403,7 +403,7 @@ button {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  padding: 160px 0 100px 0;
+  padding: 120px 0 60px 0;
   background: radial-gradient(circle at 75% 30%, rgba(37, 99, 235, 0.18) 0%, rgba(5, 8, 20, 0) 65%), var(--bg-primary);
   overflow: hidden;
 }
@@ -709,12 +709,7 @@ button {
 }
 
 .card-num-ref {
-  display: block !important;
-  font-size: 0.8125rem;
-  font-weight: 800;
-  color: #64748B;
-  margin-bottom: 6px;
-  letter-spacing: 0.05em;
+  display: none !important;
 }
 
 .card-title-ref {
@@ -734,17 +729,25 @@ button {
 .card-desc-ref {
   font-size: 0.875rem;
   color: #94A3B8;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.65;
+  margin-bottom: 20px;
 }
 
 .card-footer-ref {
   margin-top: auto;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-actions-group {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding-top: 16px;
+  gap: 10px;
+  width: 100%;
 }
 
 .card-tags-ref {
@@ -761,6 +764,106 @@ button {
   font-weight: 600;
   border-radius: var(--radius-full);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* DUAL ACTION BUTTONS (CASE STUDY & DIRECT LINK) */
+.card-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.btn-card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.2;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-card-action.btn-cs {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.btn-card-action.btn-cs:hover {
+  background: linear-gradient(135deg, #1D4ED8, #1E40AF);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-card-action.btn-live {
+  background: rgba(255, 255, 255, 0.05);
+  color: #60A5FA;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+.btn-card-action.btn-live:hover {
+  background: rgba(96, 165, 250, 0.16);
+  color: #FFFFFF;
+  border-color: #60A5FA;
+  transform: translateY(-2px);
+}
+
+.compact-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.btn-compact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-compact.btn-cs {
+  background: rgba(37, 99, 235, 0.22);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.btn-compact.btn-cs:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn-compact.btn-live {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94A3B8;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-compact.btn-live:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
 }
 
 /* MORE PROJECTS COMPACT GRID - PERFECT 3-COLUMN ALIGNMENT MATCHING SELECTED PROJECTS */

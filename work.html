@@ -59,11 +59,11 @@
       <a href="skills.html" class="mobile-nav-link">Skills</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
       <button onclick="openModal('cvModal')" class="btn btn-secondary" style="margin-top: 10px;">View Curriculum Vitae</button>
-      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
     </div>
   </header>
 
-  <main style="padding-top: 100px;">
+  <main style="padding-top: 80px;">
     <!-- WORK ARCHIVE PAGE CONTENT -->
     <section class="section" style="padding-top: 40px;">
       <div class="container">
@@ -88,13 +88,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web marketplace">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">01</span>
               <h3 class="card-title-ref">Turo Art Gallery</h3>
               <span class="card-category-ref">Art Marketplace Platform</span>
-              <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork with artist onboarding and rewards.</p>
+              <p class="card-desc-ref">A premium digital art marketplace connecting collectors, independent artists, and galleries. Features multi-tier artist onboarding, verified artwork authenticity, live auctions, and a loyalty rewards ecosystem.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Marketplace</span>
-                <button onclick="openCaseStudy('turo')" class="btn-circle" aria-label="View Turo Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Marketplace</span>
+                  <span class="tag-badge">Web</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('turo')" class="btn-card-action btn-cs" aria-label="View Turo Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://dev.indeedtraining.in:8021/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -102,13 +111,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web web3">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">02</span>
               <h3 class="card-title-ref">IBC Media</h3>
               <span class="card-category-ref">Web3 & Blockchain Platform</span>
-              <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
+              <p class="card-desc-ref">Leading Web3 media ecosystem driving global developer hackathons and tech summits. Streamlines developer registration, Web3 wallet verification, team project submissions, and protocol bounty tracks.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Web3</span>
-                <button onclick="openCaseStudy('ibc')" class="btn-circle" aria-label="View IBC Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Web3</span>
+                  <span class="tag-badge">Events</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('ibc')" class="btn-card-action btn-cs" aria-label="View IBC Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://ibc.media/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -116,13 +134,22 @@
           <article class="project-card-ref archive-card" data-category="uiux mobile">
             <div class="card-media-box"><img src="assets/images/droobna_app.jpg" alt="Droobna"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">03</span>
               <h3 class="card-title-ref">Droobna</h3>
               <span class="card-category-ref">Mobility & Food Delivery Platform</span>
-              <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
+              <p class="card-desc-ref">Comprehensive multi-service super-app serving mobility and food delivery across Saudi Arabia. Connects riders, restaurant partners, and captain drivers with real-time GPS tracking and automated dispatch heatmaps.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Mobile</span>
-                <button onclick="openCaseStudy('droobna')" class="btn-circle" aria-label="View Droobna Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Mobility</span>
+                  <span class="tag-badge">Mobile</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('droobna')" class="btn-card-action btn-cs" aria-label="View Droobna Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://play.google.com/store/search?q=droobna&c=apps&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -130,13 +157,22 @@
           <article class="project-card-ref archive-card" data-category="uiux saas ai">
             <div class="card-media-box"><img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">04</span>
               <h3 class="card-title-ref">Rankyfy</h3>
               <span class="card-category-ref">AI-Powered SEO Platform</span>
-              <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
+              <p class="card-desc-ref">All-in-one AI-driven SEO automation and digital agency SaaS platform. Enables digital marketers to track live SERP rankings, discover high-intent keywords, auto-generate SEO articles, and export white-label reports.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">AI / SaaS</span>
-                <button onclick="openCaseStudy('rankyfy')" class="btn-circle" aria-label="View Rankyfy Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">AI</span>
+                  <span class="tag-badge">SaaS</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('rankyfy')" class="btn-card-action btn-cs" aria-label="View Rankyfy Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://rankyfy.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -144,13 +180,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web mobile">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">05</span>
               <h3 class="card-title-ref">Invisalearn</h3>
               <span class="card-category-ref">EdTech & Online Learning</span>
-              <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
+              <p class="card-desc-ref">Interactive EdTech learning ecosystem connecting students with certified educators. Features personalized skill pathways, distraction-free video player modules, live interactive quizzes, and course completion badges.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">EdTech</span>
-                <button onclick="openCaseStudy('invisalearn')" class="btn-circle" aria-label="View Invisalearn Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">EdTech</span>
+                  <span class="tag-badge">Web</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('invisalearn')" class="btn-card-action btn-cs" aria-label="View Invisalearn Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://www.invisalearn.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -158,13 +203,22 @@
           <article class="project-card-ref archive-card" data-category="uiux mobile ai">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">06</span>
               <h3 class="card-title-ref">Skin-Pal</h3>
               <span class="card-category-ref">AI Powered Skincare Platform</span>
-              <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and product suggestions.</p>
+              <p class="card-desc-ref">AI-powered mobile skincare diagnostic application utilizing computer vision face scans to analyze skin conditions. Generates personalized morning/evening skincare routines and automated product subscriptions.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">AI / Mobile</span>
-                <button onclick="openCaseStudy('skin-pal')" class="btn-circle" aria-label="View Skin-Pal Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">AI</span>
+                  <span class="tag-badge">Mobile</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('skin-pal')" class="btn-card-action btn-cs" aria-label="View Skin-Pal Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://skin-pal.in/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -172,13 +226,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_5.jpg" alt="Reign Pilates"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">07</span>
               <h3 class="card-title-ref">Reign Pilates</h3>
               <span class="card-category-ref">Wellness & Studio Platform</span>
-              <p class="card-desc-ref">Luxury studio booking system with trainer schedules and membership portal.</p>
+              <p class="card-desc-ref">Luxury Pilates & wellness studio management platform featuring an intuitive class reservation system, real-time trainer availability schedules, interactive seat pickers, and automated membership renewals.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Wellness</span>
-                <button onclick="openCaseStudy('reign-pilates')" class="btn-circle" aria-label="View Reign Pilates Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Wellness</span>
+                  <span class="tag-badge">Web</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('reign-pilates')" class="btn-card-action btn-cs" aria-label="View Reign Pilates Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://reignpilates.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -186,13 +249,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web mobile">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_6.jpg" alt="LifeHub Education"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">08</span>
               <h3 class="card-title-ref">LifeHub Education</h3>
               <span class="card-category-ref">EdTech & Learn & Earn Platform</span>
-              <p class="card-desc-ref">Real-world skill learning with gamified achievement rewards for students.</p>
+              <p class="card-desc-ref">Gamified EdTech platform bridging classroom education with real-world financial literacy and practical life skills. Features interactive skill tree progression, XP reward unlocks, and student peer leaderboards.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">EdTech</span>
-                <button onclick="openCaseStudy('lifehub-education')" class="btn-circle" aria-label="View LifeHub Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">EdTech</span>
+                  <span class="tag-badge">Gamified</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('lifehub-education')" class="btn-card-action btn-cs" aria-label="View LifeHub Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://lifehub.education/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -200,13 +272,22 @@
           <article class="project-card-ref archive-card" data-category="uiux mobile">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_7.jpg" alt="DriveX"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">09</span>
               <h3 class="card-title-ref">DriveX</h3>
               <span class="card-category-ref">Mobility & Vehicle Rental App</span>
-              <p class="card-desc-ref">Vehicle subscriptions, electric bike rentals, and instant parcel delivery ecosystem.</p>
+              <p class="card-desc-ref">Urban EV mobility and multi-service transportation app offering electric bike rentals, vehicle subscriptions, and on-demand parcel courier delivery with Bluetooth keyless vehicle unlocking.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Mobility</span>
-                <button onclick="openCaseStudy('drivex')" class="btn-circle" aria-label="View DriveX Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Mobility</span>
+                  <span class="tag-badge">Mobile</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('drivex')" class="btn-card-action btn-cs" aria-label="View DriveX Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://drivex.in/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -214,13 +295,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web saas">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_8.jpg" alt="BetBricks7"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">10</span>
               <h3 class="card-title-ref">BetBricks7</h3>
               <span class="card-category-ref">Online Sports Betting Platform</span>
-              <p class="card-desc-ref">High-density live match statistics, odds updates, and fast bet slip processing.</p>
+              <p class="card-desc-ref">High-frequency sports betting and live match analytics platform built for international sports. Features real-time odds matrix updating, persistent bet-slip drawers, and instant wallet cashout.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Gaming / SaaS</span>
-                <button onclick="openCaseStudy('betbricks7')" class="btn-circle" aria-label="View BetBricks7 Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Gaming</span>
+                  <span class="tag-badge">SaaS</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('betbricks7')" class="btn-card-action btn-cs" aria-label="View BetBricks7 Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://betbricks7.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -228,13 +318,22 @@
           <article class="project-card-ref archive-card" data-category="uiux web">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_10.jpg" alt="Bhutan Travel Now"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">11</span>
               <h3 class="card-title-ref">Bhutan Travel Now</h3>
               <span class="card-category-ref">Travel & Tourism Portal</span>
-              <p class="card-desc-ref">Conversion-focused tourism portal showcasing Bhutan's cultural tours and trekking itineraries.</p>
+              <p class="card-desc-ref">High-conversion international tourism portal promoting Bhutan's cultural heritage tours, Himalayan trekking expeditions, and luxury eco-resorts with interactive custom tour builders and visa guidance modules.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Tourism</span>
-                <button onclick="openCaseStudy('bhutan-travel-now')" class="btn-circle" aria-label="View Bhutan Travel Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Tourism</span>
+                  <span class="tag-badge">Web</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('bhutan-travel-now')" class="btn-card-action btn-cs" aria-label="View Bhutan Travel Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://bhutantravelnow.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -242,13 +341,22 @@
           <article class="project-card-ref archive-card" data-category="uiux saas web">
             <div class="card-media-box"><img src="assets/images/portfolio_extracted_11.jpg" alt="Per Diem"></div>
             <div class="card-body-ref">
-              <span class="card-num-ref">12</span>
               <h3 class="card-title-ref">Per Diem</h3>
               <span class="card-category-ref">Restaurant Technology Platform</span>
-              <p class="card-desc-ref">White-label digital ordering platform and recurring loyalty subscription management system.</p>
+              <p class="card-desc-ref">White-label restaurant technology SaaS empowering independent cafes and dining brands to launch custom mobile ordering apps with digital menu builders and recurring loyalty subscription engines.</p>
               <div class="card-footer-ref">
-                <span class="tag-badge">Restaurant SaaS</span>
-                <button onclick="openCaseStudy('per-diem')" class="btn-circle" aria-label="View Per Diem Case Study">→</button>
+                <div class="card-tags-ref">
+                  <span class="tag-badge">Restaurant</span>
+                  <span class="tag-badge">SaaS</span>
+                </div>
+                <div class="card-btn-group">
+                  <button onclick="openCaseStudy('per-diem')" class="btn-card-action btn-cs" aria-label="View Per Diem Case Study">
+                    Case Study →
+                  </button>
+                  <a href="https://perdiem.ai/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                    Direct Link ↗
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -270,7 +378,7 @@
           <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 16px;">
             <div class="cta-banner-actions">
               <a href="contact.html" class="btn btn-accent" style="padding: 14px 32px;">Get in Touch →</a>
-              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">Download CV ↓</a>
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">Download CV ↓</a>
             </div>
             <div style="font-family: var(--font-handwriting); font-size: 1.5rem; color: #94A3B8; transform: rotate(-3deg);">
               Let's create something meaningful.

@@ -71,7 +71,7 @@
       <a href="skills.html" class="mobile-nav-link">Skills</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
       <button onclick="openModal('cvModal')" class="btn btn-secondary" style="margin-top: 10px;">View Curriculum Vitae</button>
-      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
+      <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-primary" style="margin-top: 6px;">Download CV PDF ↓</a>
     </div>
   </header>
 
@@ -98,7 +98,7 @@
               <a href="#" onclick="navigateTo('work', event)" class="btn btn-primary">
                 View My Work →
               </a>
-              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
                 Download CV ↓
               </a>
               <button onclick="openModal('cvModal')" class="btn btn-secondary" style="border: none; background: transparent; color: var(--accent-blue); text-decoration: underline; padding: 0 8px;">
@@ -184,10 +184,9 @@
                 <img src="assets/images/portfolio_extracted_1.jpg" alt="Turo Art Gallery UI Mockup" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">01</span>
                 <h3 class="card-title-ref">Turo Art Gallery</h3>
                 <span class="card-category-ref">Art Marketplace Platform</span>
-                <p class="card-desc-ref">Marketplace experience for discovering and purchasing artwork, with artist onboarding and rewards.</p>
+                <p class="card-desc-ref">A premium digital art marketplace connecting collectors, independent artists, and galleries. Features multi-tier artist onboarding, verified artwork authenticity, live auctions, and a loyalty rewards ecosystem.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -195,9 +194,14 @@
                     <span class="tag-badge">Web</span>
                     <span class="tag-badge">UI/UX</span>
                   </div>
-                  <button onclick="openCaseStudy('turo')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('turo')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://dev.indeedtraining.in:8021/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -208,10 +212,9 @@
                 <img src="assets/images/portfolio_extracted_2.jpg" alt="IBC Media Web3 Mockup" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">02</span>
                 <h3 class="card-title-ref">IBC Media</h3>
                 <span class="card-category-ref">Web3 & Blockchain Platform</span>
-                <p class="card-desc-ref">Digital platform for blockchain events, education, hackathons and ecosystem initiatives.</p>
+                <p class="card-desc-ref">Leading Web3 media ecosystem driving global developer hackathons and tech summits. Streamlines developer registration, Web3 wallet verification, team project submissions, and protocol bounty tracks.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -219,9 +222,14 @@
                     <span class="tag-badge">Events</span>
                     <span class="tag-badge">Web</span>
                   </div>
-                  <button onclick="openCaseStudy('ibc')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('ibc')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://ibc.media/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -232,10 +240,9 @@
                 <img src="assets/images/droobna_app.jpg" alt="Droobna Mobility App UI" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">03</span>
                 <h3 class="card-title-ref">Droobna</h3>
                 <span class="card-category-ref">Mobility & Food Delivery Platform</span>
-                <p class="card-desc-ref">Multi-service platform covering ride booking, food delivery and merchant experiences.</p>
+                <p class="card-desc-ref">Comprehensive multi-service super-app serving mobility and food delivery across Saudi Arabia. Connects riders, restaurant partners, and captain drivers with real-time GPS tracking and automated dispatch heatmaps.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -243,9 +250,14 @@
                     <span class="tag-badge">Food Delivery</span>
                     <span class="tag-badge">Mobile</span>
                   </div>
-                  <button onclick="openCaseStudy('droobna')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('droobna')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://play.google.com/store/search?q=droobna&c=apps&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -256,10 +268,9 @@
                 <img src="assets/images/rankyfy_dashboard.png" alt="Rankyfy AI SEO Dashboard" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">04</span>
                 <h3 class="card-title-ref">Rankyfy</h3>
                 <span class="card-category-ref">AI-Powered SEO Platform</span>
-                <p class="card-desc-ref">All-in-one SEO and agency management platform for businesses and digital agencies.</p>
+                <p class="card-desc-ref">All-in-one AI-driven SEO automation and digital agency SaaS platform. Enables digital marketers to track live SERP rankings, discover high-intent keywords, auto-generate SEO articles, and export white-label reports.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -267,9 +278,14 @@
                     <span class="tag-badge">SEO</span>
                     <span class="tag-badge">SaaS</span>
                   </div>
-                  <button onclick="openCaseStudy('rankyfy')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('rankyfy')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://rankyfy.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -280,10 +296,9 @@
                 <img src="assets/images/portfolio_extracted_3.jpg" alt="Invisalearn EdTech Platform" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">05</span>
                 <h3 class="card-title-ref">Invisalearn</h3>
                 <span class="card-category-ref">EdTech & Online Learning Platform</span>
-                <p class="card-desc-ref">Web and mobile learning platform connecting students and educators through courses.</p>
+                <p class="card-desc-ref">Interactive EdTech learning ecosystem connecting students with certified educators. Features personalized skill pathways, distraction-free video player modules, live interactive quizzes, and course completion badges.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -291,9 +306,14 @@
                     <span class="tag-badge">Learning</span>
                     <span class="tag-badge">Web</span>
                   </div>
-                  <button onclick="openCaseStudy('invisalearn')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('invisalearn')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://www.invisalearn.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -304,10 +324,9 @@
                 <img src="assets/images/portfolio_extracted_4.jpg" alt="Skin-Pal AI Skincare Platform" loading="lazy">
               </div>
               <div class="card-body-ref">
-                <span class="card-num-ref">06</span>
                 <h3 class="card-title-ref">Skin-Pal</h3>
                 <span class="card-category-ref">AI Powered Skincare Platform</span>
-                <p class="card-desc-ref">Personalized skincare recommendations with AI-powered analysis and product suggestions.</p>
+                <p class="card-desc-ref">AI-powered mobile skincare diagnostic application utilizing computer vision face scans to analyze skin conditions. Generates personalized morning/evening skincare routines and automated product subscriptions.</p>
                 
                 <div class="card-footer-ref">
                   <div class="card-tags-ref">
@@ -315,9 +334,14 @@
                     <span class="tag-badge">Healthcare</span>
                     <span class="tag-badge">Mobile</span>
                   </div>
-                  <button onclick="openCaseStudy('skin-pal')" class="btn-circle" aria-label="View Case Study">
-                    →
-                  </button>
+                  <div class="card-btn-group">
+                    <button onclick="openCaseStudy('skin-pal')" class="btn-card-action btn-cs" aria-label="View Case Study">
+                      Case Study →
+                    </button>
+                    <a href="https://skin-pal.in/" target="_blank" rel="noopener noreferrer" class="btn-card-action btn-live" aria-label="Direct Live Link">
+                      Direct Link ↗
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -338,46 +362,70 @@
           </div>
 
           <div class="more-projects-grid">
-            <div class="compact-card" onclick="openCaseStudy('reign-pilates')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_5.jpg" alt="Reign Pilates"></div>
               <div class="compact-card-body">
                 <h4>Reign Pilates</h4>
                 <p>Wellness & Studio Platform</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('reign-pilates')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://reignpilates.com/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
-            <div class="compact-card" onclick="openCaseStudy('lifehub-education')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_6.jpg" alt="LifeHub Education"></div>
               <div class="compact-card-body">
                 <h4>LifeHub Education</h4>
                 <p>EdTech & Gamified Learning</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('lifehub-education')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://lifehub.education/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
-            <div class="compact-card" onclick="openCaseStudy('drivex')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_7.jpg" alt="DriveX"></div>
               <div class="compact-card-body">
                 <h4>DriveX</h4>
                 <p>Mobility & Rental App</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('drivex')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://drivex.in/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
-            <div class="compact-card" onclick="openCaseStudy('betbricks7')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_8.jpg" alt="BetBricks7"></div>
               <div class="compact-card-body">
                 <h4>BetBricks7</h4>
                 <p>Online Sports Platform</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('betbricks7')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://betbricks7.com/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
-            <div class="compact-card" onclick="openCaseStudy('bhutan-travel-now')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_10.jpg" alt="Bhutan Travel Now"></div>
               <div class="compact-card-body">
                 <h4>Bhutan Travel Now</h4>
                 <p>Travel & Tourism Portal</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('bhutan-travel-now')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://bhutantravelnow.com/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
-            <div class="compact-card" onclick="openCaseStudy('per-diem')">
+            <div class="compact-card">
               <div class="compact-img-box"><img src="assets/images/portfolio_extracted_11.jpg" alt="Per Diem"></div>
               <div class="compact-card-body">
                 <h4>Per Diem</h4>
                 <p>Restaurant Technology SaaS</p>
+                <div class="compact-btn-group">
+                  <button onclick="openCaseStudy('per-diem')" class="btn-compact btn-cs">Case Study →</button>
+                  <a href="https://perdiem.ai/" target="_blank" rel="noopener noreferrer" class="btn-compact btn-live">Direct Link ↗</a>
+                </div>
               </div>
             </div>
           </div>
@@ -544,7 +592,7 @@
                 <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
                   Get in Touch →
                 </a>
-                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
                   Download CV ↓
                 </a>
               </div>
@@ -562,7 +610,7 @@
          PAGE VIEW 2: WORK ARCHIVE (/work)
          ========================================== -->
     <div class="page-view" id="work">
-      <section class="section" style="padding-top: 140px;">
+      <section class="section" style="padding-top: 60px;">
         <div class="container">
           <span class="section-eyebrow">COMPLETE ARCHIVE</span>
           <h1 class="section-title">Selected Work</h1>
@@ -769,7 +817,7 @@
                 <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
                   Get in Touch →
                 </a>
-                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
                   Download CV ↓
                 </a>
               </div>
@@ -786,7 +834,7 @@
          PAGE VIEW 3: ABOUT (/about)
          ========================================== -->
     <div class="page-view" id="about">
-      <section class="section" style="padding-top: 140px;">
+      <section class="section" style="padding-top: 60px;">
         <div class="container">
           <span class="section-eyebrow">ABOUT HARISH SINGH</span>
           <h1 class="section-title">Design is more than how it looks.</h1>
@@ -905,7 +953,7 @@
                 <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
                   Get in Touch →
                 </a>
-                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
                   Download CV ↓
                 </a>
               </div>
@@ -922,7 +970,7 @@
          PAGE VIEW 4: EXPERIENCE (/experience)
          ========================================== -->
     <div class="page-view" id="experience">
-      <section class="section" style="padding-top: 140px;">
+      <section class="section" style="padding-top: 60px;">
         <div class="container">
           <span class="section-eyebrow">CAREER HISTORY</span>
           <h1 class="section-title">11+ Years of Continuous Design Experience</h1>
@@ -1042,7 +1090,7 @@
                 <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
                   Get in Touch →
                 </a>
-                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
                   Download CV ↓
                 </a>
               </div>
@@ -1059,7 +1107,7 @@
          PAGE VIEW 5: SKILLS & TOOLS (/skills)
          ========================================== -->
     <div class="page-view" id="skills">
-      <section class="section" style="padding-top: 140px;">
+      <section class="section" style="padding-top: 60px;">
         <div class="container">
           <span class="section-eyebrow">CAPABILITIES</span>
           <h1 class="section-title">Skills & Technologies</h1>
@@ -1132,7 +1180,7 @@
                 <a href="#" onclick="navigateTo('contact', event)" class="btn btn-accent" style="padding: 14px 32px;">
                   Get in Touch →
                 </a>
-                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
                   Download CV ↓
                 </a>
               </div>
@@ -1149,7 +1197,7 @@
          PAGE VIEW 6: CONTACT (/contact)
          ========================================== -->
     <div class="page-view" id="contact">
-      <section class="section" style="padding-top: 140px;">
+      <section class="section" style="padding-top: 60px;">
         <div class="container">
           <div style="max-width: 720px; margin: 0 auto; text-align: center;">
             <span class="section-eyebrow">GET IN TOUCH</span>
@@ -1162,7 +1210,7 @@
               <a href="mailto:hariwork92@gmail.com" class="btn btn-accent" style="padding: 14px 32px;">
                 ✉️ Email Me: hariwork92@gmail.com
               </a>
-              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
+              <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-secondary">
                 📄 Download CV PDF
               </a>
             </div>
@@ -1260,7 +1308,7 @@
           <p>Harish Singh · Senior UI/UX Designer & Product Designer</p>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
-          <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-accent" style="padding: 8px 16px; font-size: 0.8125rem;">📥 Download PDF</a>
+          <a href="assets/Harish_Singh_UI_UX_designer_CV.pdf" target="_blank" rel="noopener noreferrer" download="Harish_Singh_UI_UX_designer_CV.pdf" class="btn btn-accent" style="padding: 8px 16px; font-size: 0.8125rem;">📥 Download PDF</a>
           <button onclick="window.print()" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8125rem;">🖨️ Print</button>
           <button class="modal-close-btn" id="cvModalCloseBtn" aria-label="Close CV modal">&times;</button>
         </div>

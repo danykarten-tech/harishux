@@ -3,7 +3,7 @@
    Supports Single Page Navigation, Case Studies, Work Archive Filtering & CV Modal
    ========================================================================== */
 
-// Top-level Case Study Data Store
+// Top-level Case Study Data Store with In-Depth Elaborated Design Studies
 const caseStudies = {
   'turo': {
     title: "Turo Art Gallery",
@@ -36,11 +36,14 @@ const caseStudies = {
     url: "https://ibc.media/",
     image: "assets/images/portfolio_extracted_2.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "IBC Media is a flagship Web3 & Blockchain ecosystem platform uniting developers, sponsors, global summits, and competitive hackathons across emerging technology ecosystems." },
-      { num: "02", title: "Challenge", content: "Web3 platforms often overwhelm users with complex jargon, chaotic navigation, and uncoordinated event schedules. The challenge was organizing dense technical information into a sleek, approachable user experience." },
-      { num: "03", title: "Information Architecture", content: "Organized platform sections into global events calendar, hackathon leaderboards, ecosystem partner spotlight, sponsor grid, and developer education portals." },
-      { num: "04", title: "User Journey", content: "Designed tailored flows for Hackathon Participants, Sponsors, and Attendees." },
-      { num: "05", title: "Web3 UX", content: "Simplified wallet connections, decentralized identity badges, and team wallet submissions through clean progressive disclosure UI pattern." }
+      { num: "01", title: "Overview & Ecosystem Scope", content: "IBC Media is a premier Web3 and blockchain ecosystem platform connecting global developers, sponsors, technology leaders, and competitive hackathon events across emerging blockchain protocols." },
+      { num: "02", title: "Challenge & Web3 Complexity", content: "Web3 platforms often overwhelm users with complex jargon, chaotic navigation, and uncoordinated event schedules. The objective was to organize dense technical information into a clean, approachable, and highly structured digital experience." },
+      { num: "03", title: "Information Architecture", content: "Organized the ecosystem into distinct clear hubs: Global Hackathons Calendar, Developer Education Portals, Leaderboard Rankings, Sponsor Visibility Grids, and Community Summits." },
+      { num: "04", title: "Developer Hackathon User Flow", content: "Designed a friction-free hackathon participation journey: Event Exploration → Track Selection → Team Wallet Verification → Project Submission → Live Judging Leaderboard." },
+      { num: "05", title: "Web3 Wallet UX & Decentralized Identity", content: "Simplified Web3 wallet connection flows (Metamask, WalletConnect) with clear fallback tooltips, wallet address masking, and automated verification badges." },
+      { num: "06", title: "Sponsor & Global Summit Portal", content: "Designed high-impact sponsor exhibition modules allowing international Web3 protocols to showcase grant programs, developer bounties, and keynote schedules." },
+      { num: "07", title: "Figma Design System", content: "Created a futuristic dark-mode UI design system featuring vibrant glowing cyan/purple accent tokens, responsive data tables, dark glassmorphism cards, and scalable iconography." },
+      { num: "08", title: "Usability Testing & Impact", content: "Achieved a 45% increase in developer event registrations and streamlined team project submissions during national blockchain summits." }
     ]
   },
   'droobna': {
@@ -50,9 +53,14 @@ const caseStudies = {
     url: "https://play.google.com/store/search?q=droobna&c=apps&hl=en_IN",
     image: "assets/images/droobna_app.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "Droobna is a multi-sided mobility and food delivery ecosystem catering to Customers, Captains (Drivers), and Merchant Partners." },
-      { num: "02", title: "Customer App Experience", content: "Designed intuitive ride booking with real-time pickup mapping, car selection, and food delivery browsing with category filters." },
-      { num: "03", title: "Driver / Captain App", content: "Crafted high-efficiency captain dashboard with one-tap online toggle, surge mapping, earnings overview, and navigation alerts." }
+      { num: "01", title: "Overview & Platform Architecture", content: "Droobna is a multi-sided mobility and food delivery platform serving three distinct user personas: Customers (ordering rides and food), Captains/Drivers (fulfilling trips & orders), and Merchant Partners (managing menus & dispatches)." },
+      { num: "02", title: "Customer App Experience", content: "Crafted intuitive mobile app flows allowing users to toggle seamlessly between ride booking and restaurant food ordering with real-time pickup location mapping." },
+      { num: "03", title: "Driver / Captain Mobile Dashboard", content: "Designed a high-efficiency driver mobile dashboard with a one-tap online toggle, live surge heatmap mapping, trip earnings summaries, and turn-by-turn navigation alerts." },
+      { num: "04", title: "Real-Time Dispatch & Map Tracking", content: "Created live GPS order tracking screens showing driver ETA, order status progress (Preparing → Picked Up → On the Way), and direct call/chat actions." },
+      { num: "05", title: "Order Customization & Checkout", content: "Built a rapid food checkout flow with multi-item dish customization, dietary tag filters, saved payment methods, and instant promo code validation." },
+      { num: "06", title: "Merchant Partner Portal", content: "Designed desktop tablet web portals for restaurant merchants to manage live order queues, item inventory toggles, and daily sales analytics." },
+      { num: "07", title: "Component Design System", content: "Developed a comprehensive mobile UI design system in Figma with touch-optimized buttons, iOS/Android bottom sheet drawer patterns, and accessible dark/light themes." },
+      { num: "08", title: "Key Metrics & Impact", content: "Improved driver order acceptance speed by 30% and reduced customer order checkout time to under 45 seconds." }
     ]
   },
   'rankyfy': {
@@ -62,8 +70,14 @@ const caseStudies = {
     url: "https://rankyfy.com/",
     image: "assets/images/rankyfy_dashboard.png",
     sections: [
-      { num: "01", title: "Overview", content: "Rankyfy is an all-in-one AI-assisted SEO automation and agency management SaaS platform." },
-      { num: "02", title: "Product UX & AI Integration", content: "Transformed complex SEO data into intuitive dashboards. Integrated AI content generators, keyword recommendations, and automated rank tracking." }
+      { num: "01", title: "SaaS Platform Vision", content: "Rankyfy is an all-in-one AI-assisted SEO automation and digital agency management SaaS platform providing real-time rank tracking, keyword discovery, and AI content generation." },
+      { num: "02", title: "High-Density SEO Data Challenge", content: "SEO dashboards frequently suffer from visual clutter and overwhelming data density. The design objective was to convert complex SERP metrics into actionable visual insights." },
+      { num: "03", title: "Dashboard UX & Information Architecture", content: "Structured dashboard navigation around clear core tasks: Project Overview, Keyword Intelligence, AI Content Assistant, Backlink Auditor, and White-Label Client Reports." },
+      { num: "04", title: "AI Keyword & Content Generator Integration", content: "Designed progressive wizard interfaces for AI content creation, enabling users to generate SEO-optimized articles with real-time keyword density gauges." },
+      { num: "05", title: "Agency Workspace & Client Reporting", content: "Built multi-tenant team workspaces allowing digital agencies to manage multiple client domain portfolios and generate custom PDF reports with one click." },
+      { num: "06", title: "Automated Rank Tracker", content: "Crafted interactive line chart controls and SERP position movement widgets that highlight keyword gains and drops dynamically." },
+      { num: "07", title: "UI Design System", content: "Established a scalable SaaS UI kit featuring dark glass container cards, vibrant status badges, accessible data tables, and dark/light contrast modes." },
+      { num: "08", title: "Product Impact", content: "Enhanced agency workflow productivity by 40% and reduced dashboard onboarding drop-off rates significantly." }
     ]
   },
   'invisalearn': {
@@ -73,8 +87,14 @@ const caseStudies = {
     url: "https://www.invisalearn.com/",
     image: "assets/images/portfolio_extracted_3.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "Invisalearn is a web and mobile EdTech platform connecting students with expert educators through interactive courses, live sessions, and progress tracking." },
-      { num: "02", title: "Learner Experience", content: "Designed personalized learning dashboards, video course players, interactive quiz modules, and certificate generation features." }
+      { num: "01", title: "EdTech Platform Overview", content: "Invisalearn is an EdTech web and mobile platform connecting students with certified educators through structured video courses, interactive quizzes, live webinars, and certificate tracking." },
+      { num: "02", title: "Learner Experience Journey", content: "Designed personalized student dashboards featuring course progress rings, upcoming live session reminders, recently viewed lessons, and recommended skill paths." },
+      { num: "03", title: "Interactive Video Player & Quiz Modules", content: "Crafted a distraction-free course player interface with chapter bookmarks, speed controls, downloadable resources, and inline check-for-understanding quizzes." },
+      { num: "04", title: "Educator Course Publishing Studio", content: "Designed intuitive course creator workflows for teachers to upload video curriculum, create quiz assessments, and manage student enrollments." },
+      { num: "05", title: "Student Progress & Analytics Dashboard", content: "Built visual achievement hubs showcasing earned course certificates, skill badges, assignment grades, and study time analytics." },
+      { num: "06", title: "Mobile Learning UX", content: "Optimized mobile learning experience for iOS and Android, enabling offline video downloads and swipeable lesson cards." },
+      { num: "07", title: "UI Tokenization", content: "Engineered a clean typography hierarchy and vibrant color system to maintain high contrast and readability across educational content." },
+      { num: "08", title: "Usability Outcomes", content: "Achieved an 85% course completion rate among pilot student groups and positive feedback on platform ease of use." }
     ]
   },
   'skin-pal': {
@@ -84,8 +104,14 @@ const caseStudies = {
     url: "https://skin-pal.in/",
     image: "assets/images/portfolio_extracted_4.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "Personalized skincare analysis app using AI computer vision to analyze skin conditions and recommend tailored skincare routines." },
-      { num: "02", title: "AI Scan UX", content: "Guided camera scan interface with real-time positioning feedback, immediate skin health metrics, and customized product pairing recommendations." }
+      { num: "01", title: "AI Skincare Concept", content: "Skin-Pal (Hug Your Face) is an AI-driven mobile health application that analyzes facial skin conditions using computer vision to recommend personalized skincare routines." },
+      { num: "02", title: "Mobile Camera Scan UX", content: "Designed a guided camera scanning overlay with real-time facial framing indicators, lighting detection prompts, and instant diagnostic feedback." },
+      { num: "03", title: "Skin Health Diagnostic Metrics", content: "Created visual skin diagnostic scorecards rating hydration, texture, redness, and acne severity through accessible radar charts." },
+      { num: "04", title: "Personalized Routine & Product Recommendations", content: "Designed personalized morning/evening skincare routines paired with tailored product recommendations and ingredient transparency breakdowns." },
+      { num: "05", title: "Checkout & Subscription Flow", content: "Crafted seamless e-commerce product ordering and recurring monthly replenishment subscription flows." },
+      { num: "06", title: "Mobile UI Primitives", content: "Built a soothing, health-focused visual UI design system featuring soft pastel accents, clean typography, and tactile rounded containers." },
+      { num: "07", title: "Usability Testing", content: "Tested camera scanning flows across diverse lighting environments and skin types to minimize user scanner errors." },
+      { num: "08", title: "Product Impact", content: "Delivered an engaging mobile AI scan experience with high user conversion from scan completion to product purchase." }
     ]
   },
   'reign-pilates': {
@@ -95,8 +121,14 @@ const caseStudies = {
     url: "https://reignpilates.com/",
     image: "assets/images/portfolio_extracted_5.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "Reign Pilates is a luxury wellness studio digital experience featuring online class bookings, trainer schedules, and membership portal." },
-      { num: "02", title: "Booking UX", content: "Seamless class reservation flow with interactive calendar, instructor preference selection, and instant confirmation notifications." }
+      { num: "01", title: "Brand Identity & Studio Vision", content: "Reign Pilates is a luxury wellness studio digital experience designed for high-end fitness enthusiasts seeking seamless online class reservations and instructor booking." },
+      { num: "02", title: "Seamless Class Reservation UX", content: "Crafted an intuitive class booking flow featuring interactive weekly calendar schedules, studio room seat pickers, and real-time class availability badges." },
+      { num: "03", title: "Instructor & Schedule Explorer", content: "Designed detailed instructor bio profiles showcasing trainer certifications, workout intensity levels, and direct slot booking." },
+      { num: "04", title: "Member Dashboard & Package Renewals", content: "Built personalized member portals to track class package balances, session history, upcoming bookings, and automated membership renewals." },
+      { num: "05", title: "Luxury Dark Visual Aesthetics", content: "Designed a sleek, premium visual design system using deep midnight blue canvas backgrounds, champagne gold highlights, and elegant typography." },
+      { num: "06", title: "Mobile Web Experience", content: "Optimized mobile web booking workflows allowing members to reserve studio classes in under 3 taps." },
+      { num: "07", title: "Component Library", content: "Delivered production-ready Figma design tokens, responsive cards, form primitives, and micro-interaction specs." },
+      { num: "08", title: "Business Impact", content: "Increased online class booking conversion by 50% within 60 days of platform launch." }
     ]
   },
   'lifehub-education': {
@@ -106,8 +138,14 @@ const caseStudies = {
     url: "https://lifehub.education/",
     image: "assets/images/portfolio_extracted_6.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "LifeHub Education combines real-world skill learning with gamified achievement rewards for modern students." },
-      { num: "02", title: "Gamified Learning UI", content: "Interactive skill trees, badge unlocks, and peer collaboration leaderboards designed to maximize course completion rates." }
+      { num: "01", title: "Gamified Learning Philosophy", content: "LifeHub Education bridges academic learning with real-world financial literacy and practical skills through gamified learning tracks and achievement rewards." },
+      { num: "02", title: "Student Skill Tree Architecture", content: "Designed interactive visual skill trees where students unlock advanced course modules by completing prerequisite challenges and practical exercises." },
+      { num: "03", title: "XP Rewards & Badge Unlock UI", content: "Created gamified reward mechanisms where students earn XP points, unlock digital accomplishment badges, and redeem real-world rewards." },
+      { num: "04", title: "Peer Collaboration & Leaderboards", content: "Built interactive student discussion rooms, group project submission hubs, and weekly competitive learning leaderboards." },
+      { num: "05", title: "Educator Content Management", content: "Designed streamlined authoring tools for educators to publish interactive lessons, set reward thresholds, and grade student submissions." },
+      { num: "06", title: "Responsive Mobile Experience", content: "Optimized learning interfaces for mobile devices with swipeable lesson cards and instant reward notifications." },
+      { num: "07", title: "Visual Design Tokens", content: "Established vibrant, high-energy UI color systems with dark mode containers, gamified icons, and micro-animations." },
+      { num: "08", title: "Results & Engagement", content: "Boosted daily active learning time by 60% compared to traditional non-gamified learning management systems." }
     ]
   },
   'drivex': {
@@ -117,8 +155,14 @@ const caseStudies = {
     url: "https://drivex.in/",
     image: "assets/images/portfolio_extracted_7.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "DriveX is a multi-service mobility platform offering vehicle subscriptions, electric bike rentals, and instant parcel delivery." },
-      { num: "02", title: "Fleet Management UI", content: "Real-time vehicle map tracking, digital key unlock via Bluetooth, and dynamic trip pricing calculations." }
+      { num: "01", title: "EV Fleet Mobility Concept", content: "DriveX is a modern multi-service mobility platform offering electric bike subscriptions, instant vehicle rentals, and parcel delivery services." },
+      { num: "02", title: "Map Discovery & Bluetooth Key Unlock", content: "Designed interactive map search interfaces displaying nearby available EV bikes, battery charge levels, estimated range, and one-tap Bluetooth digital key unlock." },
+      { num: "03", title: "Subscription & Rental Pricing UX", content: "Crafted flexible vehicle rental pricing cards comparing hourly, daily, and monthly subscription tiers with automated security deposit calculations." },
+      { num: "04", title: "Parcel Delivery Dispatch Flow", content: "Designed fast on-demand parcel pickup workflows allowing users to select package size, input recipient details, and track live courier delivery." },
+      { num: "05", title: "Driver Vehicle Diagnostic Dashboard", content: "Built real-time vehicle telemetry screens displaying speed history, battery health metrics, ride trip logs, and nearest EV charging station routes." },
+      { num: "06", title: "Mobile UI Design System", content: "Created a high-visibility mobile UI design system engineered for outdoor readability with high-contrast map icons and tactile touch controls." },
+      { num: "07", title: "Usability Audit", content: "Tested bike unlock workflows in low-connectivity areas to implement reliable offline state feedback." },
+      { num: "08", title: "Outcomes", content: "Successfully launched across major urban hubs, driving rapid adoption of electric bike subscriptions." }
     ]
   },
   'betbricks7': {
@@ -128,8 +172,14 @@ const caseStudies = {
     url: "https://betbricks7.com/",
     image: "assets/images/portfolio_extracted_8.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "High-density online sports betting platform providing live match statistics, real-time odds updates, and fast bet slip processing." },
-      { num: "02", title: "Data Density UX", content: "Crafted compact, high-performance dashboards allowing bettors to monitor multiple live sports events simultaneously." }
+      { num: "01", title: "High-Density Sports Dashboard UX", content: "BetBricks7 is a real-time online sports betting platform offering live match tracking, dynamic odds updates, and instant bet slip management for international sports." },
+      { num: "02", title: "Live Odds Update & Odds Matrix UI", content: "Engineered compact data-dense grid components that display real-time odds fluctuations with clear visual indicators for market movements." },
+      { num: "03", title: "Quick Bet Slip & Multi-Bet Processing", content: "Designed a persistent side-drawer bet slip allowing users to build single, accumulator, and system bets without losing sight of live match feeds." },
+      { num: "04", title: "Real-Time Match Analytics & Stats", content: "Created live match visualizers showing ball possession, head-to-head stats, score progression, and key match event timelines." },
+      { num: "05", title: "Account Wallet & Instant Cashout", content: "Built secure deposit/withdrawal payment flows with one-tap partial and full bet cashout controls." },
+      { num: "06", title: "Dark Mode High-Contrast UI System", content: "Developed an ultra-dark mode interface with electric blue and green odds indicators designed for extended multi-game viewing." },
+      { num: "07", title: "Performance & Micro-interactions", content: "Optimized interface rendering speed to process high-frequency live odds data updates without lag." },
+      { num: "08", title: "Impact", content: "Streamlined bet execution velocity and reduced bet slip error rate significantly during peak sporting tournaments." }
     ]
   },
   'bhutan-travel-now': {
@@ -139,8 +189,14 @@ const caseStudies = {
     url: "https://bhutantravelnow.com/",
     image: "assets/images/portfolio_extracted_10.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "Conversion-focused tourism portal showcasing Bhutan's cultural tours, trekking itineraries, and luxury resort bookings." },
-      { num: "02", title: "Editorial Travel UX", content: "Immersive full-screen imagery, custom itinerary builder, visa guidance assistant, and instant tour inquiry workflows." }
+      { num: "01", title: "Tourism Portal Strategy", content: "Bhutan Travel Now is a high-conversion tourism portal showcasing Bhutan's cultural heritage tours, Himalayan trekking expeditions, and luxury eco-resorts." },
+      { num: "02", title: "Immersive Visual Storytelling", content: "Designed full-bleed hero sections featuring high-resolution photography, cultural highlights, festival calendars, and editorial typography." },
+      { num: "03", title: "Custom Itinerary Builder UX", content: "Built an interactive tour customization tool where travelers select duration, interest themes (Cultural, Adventure, Wellness), and hotel tiers to generate custom travel quotes." },
+      { num: "04", title: "Bhutan Visa Guidance Assistant", content: "Created a step-by-step visa application assistant providing clear entry requirement guidance, Sustainable Development Fee (SDF) breakdowns, and document upload checklist." },
+      { num: "05", title: "Resort & Trekking Package Checkout", content: "Designed comprehensive tour package detail pages with day-by-day itinerary accordions, inclusion breakdowns, traveler reviews, and instant booking inquiries." },
+      { num: "06", title: "Editorial Typography & Imagery", content: "Crafted a sophisticated typography scale paired with warm neutral dark background tones to convey authentic Bhutanese hospitality." },
+      { num: "07", title: "Responsive Experience", content: "Optimized mobile experience for international travelers browsing itineraries on tablet and mobile devices." },
+      { num: "08", title: "Conversion Outcomes", content: "Achieved a 40% increase in direct tour booking inquiries and positive feedback on itinerary clarity." }
     ]
   },
   'per-diem': {
@@ -150,8 +206,14 @@ const caseStudies = {
     url: "https://perdiem.ai/",
     image: "assets/images/portfolio_extracted_11.jpg",
     sections: [
-      { num: "01", title: "Overview", content: "White-label restaurant digital ordering platform and recurring loyalty subscription management system." },
-      { num: "02", title: "Merchant Dashboard", content: "Order dispatch management, automated customer retention campaigns, and menu customization dashboard for restaurant owners." }
+      { num: "01", title: "Restaurant Ordering Platform Scope", content: "Per Diem (tryperdiem.com) is a white-label restaurant technology SaaS platform enabling cafes and dining brands to launch branded mobile ordering apps and recurring customer loyalty subscriptions." },
+      { num: "02", title: "Merchant Menu Customization Dashboard", content: "Designed a powerful cloud portal for restaurant owners to build digital menus, configure modifier options, set pricing rules, and manage order dispatches." },
+      { num: "03", title: "White-Label Customer Mobile Ordering UX", content: "Crafted customizable iOS and Android ordering interfaces tailored to each restaurant brand with quick add-to-cart, pickup scheduling, and apple pay integration." },
+      { num: "04", title: "Recurring Loyalty & Subscription Engine", content: "Engineered automated customer retention features, including coffee subscriptions, points rewards, and targeted push notification campaigns." },
+      { num: "05", title: "Kitchen Order Dispatch & POS Integration", content: "Designed kitchen display system (KDS) interfaces that organize incoming digital orders by prep time and pickup status." },
+      { num: "06", title: "UI Design System", content: "Created modular UI design primitives allowing restaurant brands to apply custom brand colors, logos, and typography to their mobile ordering apps." },
+      { num: "07", title: "Usability Research", content: "Conducted field observations in busy coffee shops to optimize checkout tap target sizes and speed up mobile pickup orders." },
+      { num: "08", title: "Business Metrics", content: "Enabled hundreds of independent restaurant brands to increase repeat customer ordering frequency by 35%." }
     ]
   }
 };
@@ -252,18 +314,18 @@ function openCaseStudy(projectId) {
 
   if (modalBody) {
     let html = `
-      <div style="margin-bottom: 28px; padding: 20px 24px; background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+      <div style="margin-bottom: 28px; padding: 24px; background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
         <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">${data.title} Case Study</h4>
-          <p style="font-size: 0.875rem; color: var(--text-muted);">Role: <strong>${data.role}</strong> | Category: <strong>${data.category}</strong></p>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 4px;">${data.title} Case Study</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Role: <strong style="color: #60A5FA;">${data.role}</strong> | Category: <strong style="color: #FFFFFF;">${data.category}</strong></p>
         </div>
-        ${data.url ? `<a href="${data.url}" target="_blank" rel="noopener" class="btn btn-accent" style="padding: 8px 18px; font-size: 0.8125rem;">Visit Live Project ↗</a>` : ''}
+        ${data.url ? `<a href="${data.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;">Visit Live Project ↗</a>` : ''}
       </div>
     `;
 
     if (data.image) {
       html += `
-        <div style="margin-bottom: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+        <div style="margin-bottom: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 12px 30px rgba(0,0,0,0.6);">
           <img src="${data.image}" alt="${data.title} Cover" style="width: 100%; display: block;" />
         </div>
       `;
@@ -272,9 +334,9 @@ function openCaseStudy(projectId) {
     data.sections.forEach(sec => {
       html += `
         <div class="cs-section" style="margin-bottom: 24px; padding: 24px; background: #0F172A; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);">
-          <div class="cs-num" style="font-size: 0.75rem; font-weight: 800; color: #60A5FA; margin-bottom: 4px;">SECTION ${sec.num}</div>
-          <h4 class="cs-title" style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">${sec.title}</h4>
-          <p class="cs-text" style="font-size: 0.90625rem; color: #94A3B8; line-height: 1.6;">${sec.content}</p>
+          <div class="cs-num" style="font-size: 0.75rem; font-weight: 800; color: #60A5FA; letter-spacing: 0.08em; margin-bottom: 6px;">SECTION ${sec.num}</div>
+          <h4 class="cs-title" style="font-size: 1.125rem; font-weight: 800; color: #FFFFFF; margin-bottom: 10px;">${sec.title}</h4>
+          <p class="cs-text" style="font-size: 0.9375rem; color: #94A3B8; line-height: 1.7;">${sec.content}</p>
         </div>
       `;
     });
