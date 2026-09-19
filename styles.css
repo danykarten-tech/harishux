@@ -1231,14 +1231,17 @@ button {
   background: #131C33;
 }
 
+.tool-badge img.tool-icon-img,
 .tool-badge svg {
   display: block;
   width: 20px;
   height: 20px;
+  object-fit: contain;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
+.tool-badge:hover img.tool-icon-img,
 .tool-badge:hover svg {
   transform: scale(1.15) rotate(3deg);
 }
