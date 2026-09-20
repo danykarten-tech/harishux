@@ -34,7 +34,7 @@ const caseStudies = {
     category: "Web3 & Blockchain Ecosystem Platform",
     role: "Lead UI/UX Designer",
     url: "https://ibc.media/",
-    image: "assets/images/portfolio_extracted_2.jpg",
+    image: "assets/images/ibc_media_banner.png",
     sections: [
       { num: "01", title: "Overview & Ecosystem Scope", content: "IBC Media is a premier Web3 and blockchain ecosystem platform connecting global developers, sponsors, technology leaders, and competitive hackathon events across emerging blockchain protocols." },
       { num: "02", title: "Challenge & Web3 Complexity", content: "Web3 platforms often overwhelm users with complex jargon, chaotic navigation, and uncoordinated event schedules. The objective was to organize dense technical information into a clean, approachable, and highly structured digital experience." },
@@ -136,7 +136,7 @@ const caseStudies = {
     category: "EdTech & Learn & Earn Platform",
     role: "Product Designer",
     url: "https://www.lifehubeducation.com/",
-    image: "assets/images/portfolio_extracted_6.jpg",
+    image: "assets/images/lifehub_banner.png",
     sections: [
       { num: "01", title: "Gamified Learning Philosophy", content: "LifeHub Education bridges academic learning with real-world financial literacy and practical skills through gamified learning tracks and achievement rewards." },
       { num: "02", title: "Student Skill Tree Architecture", content: "Designed interactive visual skill trees where students unlock advanced course modules by completing prerequisite challenges and practical exercises." },

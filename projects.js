@@ -114,8 +114,8 @@ const projectsData = [
     outcome: "Created a structured digital experience that simplified complex Web3 initiatives, making hackathons and ecosystem programs easier to discover and navigate.",
     learnings: "Reinforced the importance of progressive disclosure when organizing high-density technical and decentralized Web3 data.",
     externalUrl: "https://ibc.media/",
-    image: "assets/images/portfolio_extracted_2.jpg",
-    galleryImages: ["assets/images/portfolio_extracted_2.jpg"],
+    image: "assets/images/ibc_media_banner.png",
+    galleryImages: ["assets/images/ibc_media_banner.png"],
     featured: true,
     tags: ["Web3", "Events", "Web"],
     depth: "deep"
@@ -447,8 +447,8 @@ const projectsData = [
     outcome: "Created a structured digital experience that clearly communicates the platform's different learning and reward-oriented areas.",
     learnings: "Reinforced how gamification patterns can increase student motivation when paired with intuitive navigation.",
     externalUrl: "https://www.lifehubeducation.com/",
-    image: "assets/images/portfolio_extracted_6.jpg",
-    galleryImages: ["assets/images/portfolio_extracted_6.jpg"],
+    image: "assets/images/lifehub_banner.png",
+    galleryImages: ["assets/images/lifehub_banner.png"],
     featured: false,
     tags: ["EdTech", "Gamified"],
     depth: "compact"
