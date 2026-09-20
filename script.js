@@ -135,7 +135,7 @@ const caseStudies = {
     title: "LifeHub Education",
     category: "EdTech & Learn & Earn Platform",
     role: "Product Designer",
-    url: "https://lifehub.education/",
+    url: "https://www.lifehubeducation.com/",
     image: "assets/images/portfolio_extracted_6.jpg",
     sections: [
       { num: "01", title: "Gamified Learning Philosophy", content: "LifeHub Education bridges academic learning with real-world financial literacy and practical skills through gamified learning tracks and achievement rewards." },

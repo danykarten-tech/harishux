@@ -446,7 +446,7 @@ const projectsData = [
     ],
     outcome: "Created a structured digital experience that clearly communicates the platform's different learning and reward-oriented areas.",
     learnings: "Reinforced how gamification patterns can increase student motivation when paired with intuitive navigation.",
-    externalUrl: "https://lifehub.education/",
+    externalUrl: "https://www.lifehubeducation.com/",
     image: "assets/images/portfolio_extracted_6.jpg",
     galleryImages: ["assets/images/portfolio_extracted_6.jpg"],
     featured: false,
