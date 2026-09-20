@@ -68,7 +68,7 @@ const caseStudies = {
     category: "AI-Powered SEO Platform",
     role: "UI/UX Designer",
     url: "https://rankyfy.com/",
-    image: "assets/images/rankyfy_dashboard.png",
+    image: "assets/images/rankyfy_banner.png",
     sections: [
       { num: "01", title: "SaaS Platform Vision", content: "Rankyfy is an all-in-one AI-assisted SEO automation and digital agency management SaaS platform providing real-time rank tracking, keyword discovery, and AI content generation." },
       { num: "02", title: "High-Density SEO Data Challenge", content: "SEO dashboards frequently suffer from visual clutter and overwhelming data density. The design objective was to convert complex SERP metrics into actionable visual insights." },
@@ -85,7 +85,7 @@ const caseStudies = {
     category: "EdTech & Online Learning Platform",
     role: "UI/UX Designer",
     url: "https://www.invisalearn.com/",
-    image: "assets/images/portfolio_extracted_3.jpg",
+    image: "assets/images/invisalearn_banner.png",
     sections: [
       { num: "01", title: "EdTech Platform Overview", content: "Invisalearn is an EdTech web and mobile platform connecting students with certified educators through structured video courses, interactive quizzes, live webinars, and certificate tracking." },
       { num: "02", title: "Learner Experience Journey", content: "Designed personalized student dashboards featuring course progress rings, upcoming live session reminders, recently viewed lessons, and recommended skill paths." },
@@ -102,7 +102,7 @@ const caseStudies = {
     category: "AI-Powered Skincare Platform",
     role: "UI/UX Designer",
     url: "https://skin-pal.in/",
-    image: "assets/images/portfolio_extracted_4.jpg",
+    image: "assets/images/skin_pal_banner.png",
     sections: [
       { num: "01", title: "AI Skincare Concept", content: "Skin-Pal (Hug Your Face) is an AI-driven mobile health application that analyzes facial skin conditions using computer vision to recommend personalized skincare routines." },
       { num: "02", title: "Mobile Camera Scan UX", content: "Designed a guided camera scanning overlay with real-time facial framing indicators, lighting detection prompts, and instant diagnostic feedback." },
@@ -119,7 +119,7 @@ const caseStudies = {
     category: "Wellness & Studio Platform",
     role: "UI/UX & Brand Designer",
     url: "https://reignpilates.com/",
-    image: "assets/images/portfolio_extracted_5.jpg",
+    image: "assets/images/reign_studio_banner.png",
     sections: [
       { num: "01", title: "Brand Identity & Studio Vision", content: "Reign Pilates is a luxury wellness studio digital experience designed for high-end fitness enthusiasts seeking seamless online class reservations and instructor booking." },
       { num: "02", title: "Seamless Class Reservation UX", content: "Crafted an intuitive class booking flow featuring interactive weekly calendar schedules, studio room seat pickers, and real-time class availability badges." },
@@ -153,7 +153,7 @@ const caseStudies = {
     category: "Mobility & Vehicle Rental App",
     role: "Lead Mobile App UI/UX",
     url: "https://drivex.in/",
-    image: "assets/images/portfolio_extracted_7.jpg",
+    image: "assets/images/drivex_banner.png",
     sections: [
       { num: "01", title: "EV Fleet Mobility Concept", content: "DriveX is a modern multi-service mobility platform offering electric bike subscriptions, instant vehicle rentals, and parcel delivery services." },
       { num: "02", title: "Map Discovery & Bluetooth Key Unlock", content: "Designed interactive map search interfaces displaying nearby available EV bikes, battery charge levels, estimated range, and one-tap Bluetooth digital key unlock." },
@@ -204,7 +204,7 @@ const caseStudies = {
     category: "Restaurant Technology Platform",
     role: "UI/UX & SaaS Product Designer",
     url: "https://perdiem.ai/",
-    image: "assets/images/portfolio_extracted_11.jpg",
+    image: "assets/images/perdiem_banner.png",
     sections: [
       { num: "01", title: "Restaurant Ordering Platform Scope", content: "Per Diem (tryperdiem.com) is a white-label restaurant technology SaaS platform enabling cafes and dining brands to launch branded mobile ordering apps and recurring customer loyalty subscriptions." },
       { num: "02", title: "Merchant Menu Customization Dashboard", content: "Designed a powerful cloud portal for restaurant owners to build digital menus, configure modifier options, set pricing rules, and manage order dispatches." },
