@@ -553,8 +553,8 @@ const projectsData = [
     outcome: "Created a high-density sports data interface designed around fast scanning, clear information grouping, and responsive interaction.",
     learnings: "Deepened my knowledge of real-time UI design patterns where minimal latency and high data clarity are vital.",
     externalUrl: "https://betbricks7.com/",
-    image: "assets/images/portfolio_extracted_8.jpg",
-    galleryImages: ["assets/images/portfolio_extracted_8.jpg"],
+    image: "assets/images/betbricks7_banner.png",
+    galleryImages: ["assets/images/betbricks7_banner.png"],
     featured: false,
     tags: ["Gaming", "SaaS"],
     depth: "compact"
@@ -606,8 +606,8 @@ const projectsData = [
     outcome: "Created a clearer travel discovery experience designed around inspiring exploration and streamlining direct tour inquiries.",
     learnings: "Reinforced the power of editorial visual storytelling when designing for international tourism and high-consideration purchases.",
     externalUrl: "https://bhutantravelnow.com/",
-    image: "assets/images/portfolio_extracted_10.jpg",
-    galleryImages: ["assets/images/portfolio_extracted_10.jpg"],
+    image: "assets/images/bhutan_banner.png",
+    galleryImages: ["assets/images/bhutan_banner.png"],
     featured: false,
     tags: ["Tourism", "Web"],
     depth: "compact"

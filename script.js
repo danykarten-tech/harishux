@@ -170,7 +170,7 @@ const caseStudies = {
     category: "Online Sports Betting Platform",
     role: "Senior UI/UX Designer",
     url: "https://betbricks7.com/",
-    image: "assets/images/portfolio_extracted_8.jpg",
+    image: "assets/images/betbricks7_banner.png",
     sections: [
       { num: "01", title: "High-Density Sports Dashboard UX", content: "BetBricks7 is a real-time online sports betting platform offering live match tracking, dynamic odds updates, and instant bet slip management for international sports." },
       { num: "02", title: "Live Odds Update & Odds Matrix UI", content: "Engineered compact data-dense grid components that display real-time odds fluctuations with clear visual indicators for market movements." },
@@ -187,7 +187,7 @@ const caseStudies = {
     category: "Travel & Tourism Platform",
     role: "UI/UX & Web Designer",
     url: "https://bhutantravelnow.com/",
-    image: "assets/images/portfolio_extracted_10.jpg",
+    image: "assets/images/bhutan_banner.png",
     sections: [
       { num: "01", title: "Tourism Portal Strategy", content: "Bhutan Travel Now is a high-conversion tourism portal showcasing Bhutan's cultural heritage tours, Himalayan trekking expeditions, and luxury eco-resorts." },
       { num: "02", title: "Immersive Visual Storytelling", content: "Designed full-bleed hero sections featuring high-resolution photography, cultural highlights, festival calendars, and editorial typography." },
