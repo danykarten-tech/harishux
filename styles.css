@@ -1763,19 +1763,49 @@ button {
 }
 
 .footer-social-icon {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #CBD5E1;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition-fast);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
 }
 
 .footer-social-icon:hover {
-  background: var(--accent-blue);
+  transform: translateY(-3px) scale(1.08);
+}
+
+.footer-social-icon.social-linkedin:hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.5);
+}
+
+.footer-social-icon.social-dribbble:hover {
+  background: #EA4C89;
+  border-color: #EA4C89;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(234, 76, 137, 0.5);
+}
+
+.footer-social-icon.social-email:hover {
+  background: #EA4335;
+  border-color: #EA4335;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(234, 67, 53, 0.5);
 }
 
 main {
@@ -2262,33 +2292,60 @@ body:hover .cursor-glow-orb {
   border-color: rgba(96, 165, 250, 0.4);
 }
 
-/* 13. Ambient Background Mesh Orbs */
+/* 13. Ambient Background Mesh Orbs & Tech Grid Canvas */
+.tech-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+  background-position: 0 0, 0 0, 0 0;
+  opacity: 0.7;
+}
+
 .ambient-mesh-orb {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  filter: blur(130px);
-  opacity: 0.28;
+  filter: blur(140px);
+  opacity: 0.32;
   will-change: transform;
 }
 
 .ambient-mesh-orb.orb-1 {
-  top: -100px;
-  left: -100px;
-  width: 650px;
-  height: 650px;
+  top: -120px;
+  left: -120px;
+  width: 700px;
+  height: 700px;
   background: radial-gradient(circle, #2563EB 0%, #4F46E5 50%, transparent 75%);
   animation: orbFloatLoop1 14s ease-in-out infinite alternate;
 }
 
 .ambient-mesh-orb.orb-2 {
   bottom: 5%;
-  right: -100px;
-  width: 600px;
-  height: 600px;
+  right: -120px;
+  width: 650px;
+  height: 650px;
   background: radial-gradient(circle, #7C3AED 0%, #0284C7 50%, transparent 75%);
   animation: orbFloatLoop2 16s ease-in-out infinite alternate;
+}
+
+.ambient-mesh-orb.orb-3 {
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(56, 189, 248, 0.15) 45%, transparent 75%);
+  animation: orbFloatLoop3 18s ease-in-out infinite alternate;
 }
 
 @keyframes orbFloatLoop1 {
@@ -2299,6 +2356,11 @@ body:hover .cursor-glow-orb {
 @keyframes orbFloatLoop2 {
   0% { transform: translate(0, 0) scale(1); }
   100% { transform: translate(-100px, -90px) scale(1.08); }
+}
+
+@keyframes orbFloatLoop3 {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-45%, -55%) scale(1.15); }
 }
 
 /* 14. Hero Page Load Entrance Stagger Animations */
@@ -2596,3 +2658,185 @@ body:hover .cursor-glow-orb {
   color: var(--text-muted);
   font-weight: 500;
 }
+
+/* ==========================================
+   PAGE TRANSITION CURTAIN & SPOTLIGHT MOUSE GLOW
+   ========================================== */
+
+/* 15. Smooth Page Transition Curtain Overlay */
+.page-transition-curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #090E1D 0%, #172554 50%, #1E1B4B 100%);
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 0 0 50px rgba(37, 99, 235, 0.5);
+}
+
+.page-transition-curtain.active {
+  transform: translateY(0);
+}
+
+/* 16. Spotlight Radial Glow Effect on Hovered Cards */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(99, 102, 241, 0.08) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+/* 17. Bento Grid Layout for "What I Bring to the Table" */
+.bento-expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+@media (min-width: 860px) {
+  .bento-expertise-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .bento-card-large {
+    grid-column: span 7;
+  }
+  .bento-card-medium {
+    grid-column: span 5;
+  }
+  .bento-card-medium-2 {
+    grid-column: span 5;
+  }
+  .bento-card-large-2 {
+    grid-column: span 7;
+  }
+}
+
+.bento-card {
+  position: relative;
+  background: rgba(11, 17, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3B82F6, #818CF8, #38BDF8);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(37, 99, 235, 0.25);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #60A5FA;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.bento-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.bento-card-desc {
+  font-size: 0.96875rem;
+  color: #94A3B8;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+/* Bento Mini Preview Widgets */
+.bento-widget-box {
+  background: rgba(5, 8, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.bento-pill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xs);
+  font-size: 0.78125rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  transition: all 0.2s ease;
+}
+
+.bento-card:hover .bento-pill-chip {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #FFFFFF;
+}
+
+.bento-chip-icon {
+  font-size: 0.875rem;
+}
+

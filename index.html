@@ -25,10 +25,13 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B132B'/><text x='50%' y='68%' font-size='48' font-weight='900' fill='%232563EB' text-anchor='middle' font-family='sans-serif'>HS</text></svg>">
 </head>
 <body>
-  <!-- Ambient Cursor Glow Spotlight & Background Mesh Orbs -->
+  <!-- Page Transition Curtain & Ambient Mesh Canvas -->
+  <div class="page-transition-curtain" id="pageTransitionCurtain"></div>
   <div class="cursor-glow-orb" id="cursorGlowOrb"></div>
+  <div class="tech-grid-overlay"></div>
   <div class="ambient-mesh-orb orb-1"></div>
   <div class="ambient-mesh-orb orb-2"></div>
+  <div class="ambient-mesh-orb orb-3"></div>
 
   <!-- ==========================================
        GLOBAL STICKY NAVIGATION HEADER
@@ -161,38 +164,72 @@
         </div>
       </section>
 
-      <!-- CORE SPECIALIZATIONS SHOWCASE -->
+      <!-- CORE SPECIALIZATIONS SHOWCASE (BENTO LAYOUT) -->
       <section class="section" style="padding-top: 30px; padding-bottom: 50px;">
         <div class="container">
           <div class="section-header" style="margin-bottom: 32px;">
             <span class="section-eyebrow">CORE EXPERTISE</span>
             <h2 class="section-title">What I Bring to the Table</h2>
-            <p class="section-subtitle" style="margin: 0;">Specialized design capabilities honed over 11+ years of building high-impact digital products.</p>
+            <p class="section-subtitle" style="margin: 0;">Specialized product design disciplines honed over 11+ years of building high-impact digital experiences.</p>
           </div>
 
-          <div class="specializations-grid">
-            <div class="spec-card">
-              <div class="spec-icon-box">🚀</div>
-              <h3>Product & Systems UX</h3>
-              <p>Scalable design systems, interactive component libraries, information architecture, and end-to-end user journey mapping.</p>
+          <div class="bento-expertise-grid">
+            <!-- BENTO CARD 1: PRODUCT & DESIGN SYSTEMS -->
+            <div class="bento-card bento-card-large spotlight-card">
+              <div>
+                <span class="bento-tag-badge">🚀 DESIGN SYSTEMS · COMPONENT ARCHITECTURE</span>
+                <h3 class="bento-card-title">Product & Design System Architecture</h3>
+                <p class="bento-card-desc">Architecting scalable Figma design systems, reusable atomic component libraries, cross-functional design tokens, and friction-free user journeys for enterprise software.</p>
+              </div>
+              <div class="bento-widget-box">
+                <span class="bento-pill-chip"><span class="bento-chip-icon">❖</span> Figma Tokens</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">⚡</span> Atomic Design</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">📐</span> UI Component Primitives</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">✨</span> 150+ Tokens</span>
+              </div>
             </div>
 
-            <div class="spec-card">
-              <div class="spec-icon-box">📱</div>
-              <h3>Mobile & Multi-Platform</h3>
-              <p>Native iOS, Android, and responsive web experiences designed with touch-first ergonomics and pixel-perfect clarity.</p>
+            <!-- BENTO CARD 2: MOBILE & MULTI-PLATFORM -->
+            <div class="bento-card bento-card-medium spotlight-card">
+              <div>
+                <span class="bento-tag-badge">📱 iOS · ANDROID · RESPONSIVE</span>
+                <h3 class="bento-card-title">Mobile & Multi-Platform UX</h3>
+                <p class="bento-card-desc">Designing native mobile app experiences with touch-first ergonomics, bottom sheet drawer flows, and responsive desktop web portals.</p>
+              </div>
+              <div class="bento-widget-box">
+                <span class="bento-pill-chip"><span class="bento-chip-icon">📱</span> Mobile Native</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">👆</span> Touch Gestures</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">🌐</span> Multi-Platform</span>
+              </div>
             </div>
 
-            <div class="spec-card">
-              <div class="spec-icon-box">⚡</div>
-              <h3>AI & SaaS Dashboards</h3>
-              <p>Data-dense control centers, real-time analytics visualizers, complex workflow automation, and conversion-focused UX.</p>
+            <!-- BENTO CARD 3: AI & SAAS CONTROL CENTERS -->
+            <div class="bento-card bento-card-medium-2 spotlight-card">
+              <div>
+                <span class="bento-tag-badge">⚡ REAL-TIME DATA · HIGH DENSITY</span>
+                <h3 class="bento-card-title">AI & SaaS Dashboards</h3>
+                <p class="bento-card-desc">Converting complex data, live sports odds, and AI workflows into ultra-clean, high-density analytics control centers.</p>
+              </div>
+              <div class="bento-widget-box">
+                <span class="bento-pill-chip"><span class="bento-chip-icon">📊</span> High-Density Data</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">🤖</span> AI Workflows</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">📈</span> Live Metrics</span>
+              </div>
             </div>
 
-            <div class="spec-card">
-              <div class="spec-icon-box">🎨</div>
-              <h3>Brand & Visual Identity</h3>
-              <p>Editorial typography systems, dark mode visual direction, micro-interactions, and high-conversion landing pages.</p>
+            <!-- BENTO CARD 4: BRAND IDENTITY & EDITORIAL UI -->
+            <div class="bento-card bento-card-large-2 spotlight-card">
+              <div>
+                <span class="bento-tag-badge">🎨 DARK MODE · TYPOGRAPHY & AESTHETICS</span>
+                <h3 class="bento-card-title">Brand Identity & Editorial Aesthetics</h3>
+                <p class="bento-card-desc">Crafting rich dark mode aesthetic directions, luxury editorial typography scales, ambient micro-interactions, and conversion-optimized landing pages.</p>
+              </div>
+              <div class="bento-widget-box">
+                <span class="bento-pill-chip"><span class="bento-chip-icon">🌙</span> Dark Mode UI</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">🖋️</span> Editorial Typography</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">💎</span> Micro-Animations</span>
+                <span class="bento-pill-chip"><span class="bento-chip-icon">🎯</span> Conversion UX</span>
+              </div>
             </div>
           </div>
         </div>
@@ -679,55 +716,6 @@
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- RECOMMENDATIONS & ENDORSEMENTS SECTION -->
-      <section class="section" style="padding-top: 40px; padding-bottom: 60px;">
-        <div class="container">
-          <div class="section-header" style="margin-bottom: 36px;">
-            <span class="section-eyebrow">ENDORSEMENTS</span>
-            <h2 class="section-title">What Collaborators & Leaders Say</h2>
-            <p class="section-subtitle" style="margin: 0;">Feedback from product managers, founders, and engineering teams I've worked alongside.</p>
-          </div>
-
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">"Harish possesses a rare combination of visual mastery and pragmatic product design thinking. He transformed our complex Web3 product specs into an intuitive, elegant platform."</p>
-              <div class="testimonial-author">
-                <div class="author-avatar">AP</div>
-                <div class="author-info">
-                  <h4>Ankit Patel</h4>
-                  <p>Product Lead · Web3 & Tech Startup</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">"Working with Harish on our SaaS analytics dashboard was a game changer. His attention to design system consistency and data density made our application feel world-class."</p>
-              <div class="testimonial-author">
-                <div class="author-avatar">RM</div>
-                <div class="author-info">
-                  <h4>Rohit Mehta</h4>
-                  <p>Founder & CEO · Rankyfy</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">"Harish's ability to craft mobile app workflows that balance speed, simplicity, and user delight is remarkable. He delivers top-tier UI components at incredible speed."</p>
-              <div class="testimonial-author">
-                <div class="author-avatar">SK</div>
-                <div class="author-info">
-                  <h4>Siddharth Kumar</h4>
-                  <p>Engineering Manager · Mobility Platform</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1427,9 +1415,15 @@
         </ul>
 
         <div class="footer-social-links">
-          <a href="https://www.linkedin.com/in/harishsinghnegi/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">in</a>
-          <a href="https://behance.net" target="_blank" class="footer-social-icon" aria-label="Behance">Be</a>
-          <a href="mailto:hariwork92@gmail.com" class="footer-social-icon" aria-label="Email">✉️</a>
+          <a href="https://www.linkedin.com/in/harishsinghnegi/" target="_blank" rel="noopener noreferrer" class="footer-social-icon social-linkedin" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg>
+          </a>
+          <a href="https://dribbble.com/Hariwork" target="_blank" rel="noopener noreferrer" class="footer-social-icon social-dribbble" aria-label="Dribbble">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm6.92 9.38a7.84 7.84 0 0 1-3.79 2.51 18.72 18.72 0 0 0-2.48-3.9 14.85 14.85 0 0 0 6.27-1.39v2.78zm-2.07-4.42a13.34 13.34 0 0 1-5.69 1.25 21.6 21.6 0 0 0-2.58-4.26 7.97 7.97 0 0 1 8.27 3.01zM10.1 3.52a19.78 19.78 0 0 1 2.68 4.38 12.91 12.91 0 0 1-6.19 1.44 8 8 0 0 1 3.51-5.82zM4.08 10.8a14.7 14.7 0 0 0 6.94-1.55 19.77 19.77 0 0 1 2.53 4A10.74 10.74 0 0 1 4 14.39v-3.59zm1.38 5.48a12.63 12.63 0 0 0 8.51-1.07 19.64 19.64 0 0 1 1.77 4.7 8.04 8.04 0 0 1-10.28-3.63zm11.75 3.3a17.82 17.82 0 0 0-1.63-4.32 9.68 9.68 0 0 0 3.39-2.18 8 8 0 0 1-1.76 6.5z"/></svg>
+          </a>
+          <a href="mailto:hariwork92@gmail.com" class="footer-social-icon social-email" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -1488,6 +1482,7 @@
               <span class="cv-meta-item">📞 +91 98768 95034</span>
               <span class="cv-meta-item">✉️ hariwork92@gmail.com</span>
               <span class="cv-meta-item">💼 <a href="https://www.linkedin.com/in/harishsinghnegi/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">LinkedIn Profile</a></span>
+              <span class="cv-meta-item">🎨 <a href="https://dribbble.com/Hariwork" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Dribbble Portfolio</a></span>
               <span class="cv-meta-item">📍 Chandigarh, India</span>
             </div>
           </div>

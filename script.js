@@ -235,51 +235,62 @@ function navigateTo(viewId, event) {
     return;
   }
 
-  const allViews = document.querySelectorAll('.page-view');
-  let matched = false;
-
-  allViews.forEach(view => {
-    if (view.id === viewId) {
-      view.classList.add('active');
-      view.style.setProperty('display', 'block', 'important');
-      view.style.setProperty('opacity', '1', 'important');
-      view.style.setProperty('visibility', 'visible', 'important');
-      matched = true;
-    } else {
-      view.classList.remove('active');
-      view.style.setProperty('display', 'none', 'important');
-    }
-  });
-
-  if (!matched) {
-    const homeView = document.getElementById('home');
-    if (homeView) {
-      homeView.classList.add('active');
-      homeView.style.setProperty('display', 'block', 'important');
-      homeView.style.setProperty('opacity', '1', 'important');
-      homeView.style.setProperty('visibility', 'visible', 'important');
-    }
-    viewId = 'home';
+  const curtain = document.getElementById('pageTransitionCurtain');
+  if (curtain) {
+    curtain.classList.add('active');
   }
 
-  const allNavLinks = document.querySelectorAll('[data-view]');
-  allNavLinks.forEach(link => {
-    const linkView = link.getAttribute('data-view');
-    if (linkView === viewId) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
+  setTimeout(() => {
+    const allViews = document.querySelectorAll('.page-view');
+    let matched = false;
+
+    allViews.forEach(view => {
+      if (view.id === viewId) {
+        view.classList.add('active');
+        view.style.setProperty('display', 'block', 'important');
+        view.style.setProperty('opacity', '1', 'important');
+        view.style.setProperty('visibility', 'visible', 'important');
+        matched = true;
+      } else {
+        view.classList.remove('active');
+        view.style.setProperty('display', 'none', 'important');
+      }
+    });
+
+    if (!matched) {
+      const homeView = document.getElementById('home');
+      if (homeView) {
+        homeView.classList.add('active');
+        homeView.style.setProperty('display', 'block', 'important');
+        homeView.style.setProperty('opacity', '1', 'important');
+        homeView.style.setProperty('visibility', 'visible', 'important');
+      }
+      viewId = 'home';
     }
-  });
 
-  const mobileNav = document.getElementById('mobileNav');
-  if (mobileNav) mobileNav.classList.remove('active');
+    const allNavLinks = document.querySelectorAll('[data-view]');
+    allNavLinks.forEach(link => {
+      const linkView = link.getAttribute('data-view');
+      if (linkView === viewId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
 
-  if (history.pushState) {
-    history.pushState(null, null, '#' + viewId);
-  }
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav) mobileNav.classList.remove('active');
 
-  window.scrollTo(0, 0);
+    if (history.pushState) {
+      history.pushState(null, null, '#' + viewId);
+    }
+
+    window.scrollTo(0, 0);
+
+    setTimeout(() => {
+      if (curtain) curtain.classList.remove('active');
+    }, 120);
+  }, 180);
 }
 
 function openModal(modalId) {
@@ -547,6 +558,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn.addEventListener('mouseleave', () => {
       btn.style.transform = `translate(0px, 0px)`;
+    });
+  });
+
+  // 8. Dynamic Mouse Spotlight Tracking on Interactive Cards
+  document.addEventListener('mousemove', (e) => {
+    const cards = document.querySelectorAll('.spotlight-card, .project-card-ref, .bento-card, .compact-card');
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
     });
   });
 });
